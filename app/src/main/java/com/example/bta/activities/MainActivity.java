@@ -2,31 +2,86 @@ package com.example.bta.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.bta.R;
+import com.example.bta.adapters.AdapterJatras;
+import com.example.bta.adapters.AdapterSquares;
+import com.example.bta.adapters.AdapterWorld;
 import com.example.bta.adapters.ImageAdapter;
+import com.example.bta.modals.ImageTitleSquares;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     CardView nyatapola,dattatraya,potterysquare;
     TextView findus;
+    private RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
+
+    private RecyclerView recyclerViewWHS;
+    RecyclerView.LayoutManager layoutManagerWHS;
+
+    private RecyclerView recyclerViewJatra;
+    RecyclerView.LayoutManager layoutManagerJatra;
+
+    AdapterSquares adapterSquares;
+    AdapterWorld adapterWorld;
+    AdapterJatras adapterJatras;
+
+    ArrayList<ImageTitleSquares> arrayList;
+    ArrayList<ImageTitleSquares> arrayList2;
+    ArrayList<ImageTitleSquares> arrayList3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //for the top horizontal scrolling images
         ViewPager mViewPager = findViewById(R.id.viewPage);
         ImageAdapter adapterView = new ImageAdapter(this);
         mViewPager.setAdapter(adapterView);
 
-        nyatapola = findViewById(R.id.nyatapola);
-        dattatraya = findViewById(R.id.dattatrya);
-        potterysquare = findViewById(R.id.potterysquare);
+        //declaration of lists
+        linearSquaresList();
+        linearWHS();
+        linearJatra();
+
+
+        recyclerView = findViewById(R.id.recycler);
+
+        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        adapterSquares = new AdapterSquares(this, arrayList);
+        recyclerView.setAdapter(adapterSquares);
+
+        recyclerViewWHS = findViewById(R.id.recyclerWHS);
+
+        layoutManagerWHS = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewWHS.setLayoutManager(layoutManagerWHS);
+        adapterWorld = new AdapterWorld(this, arrayList2);
+        recyclerViewWHS.setAdapter(adapterWorld);
+
+        recyclerViewJatra = findViewById(R.id.recyclerJatra);
+
+        layoutManagerJatra = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewJatra.setLayoutManager(layoutManagerJatra);
+        adapterJatras = new AdapterJatras(this, arrayList3);
+        recyclerViewJatra.setAdapter(adapterJatras);
+
+//        nyatapola = findViewById(R.id.nyatapola);
+//        dattatraya = findViewById(R.id.dattatrya);
+//        potterysquare = findViewById(R.id.potterysquare);
         findus = findViewById(R.id.find_us);
 
         findus.setOnClickListener(new View.OnClickListener() {
@@ -36,32 +91,65 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+//
+//        nyatapola.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
+//                intent.putExtra("KEY",1);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        dattatraya.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
+//                intent.putExtra("KEY",2);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        potterysquare.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
+//                intent.putExtra("KEY",3);
+//                startActivity(intent);
+//            }
+//        });
+    }
 
-        nyatapola.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
-                intent.putExtra("KEY",1);
-                startActivity(intent);
-            }
-        });
 
-        dattatraya.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
-                intent.putExtra("KEY",2);
-                startActivity(intent);
-            }
-        });
+    //world heritage sites
 
-        potterysquare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
-                intent.putExtra("KEY",3);
-                startActivity(intent);
-            }
-        });
+    private void linearWHS() {
+        arrayList2 = new ArrayList<>();
+
+        arrayList2.add(new ImageTitleSquares("Durbar Squares",R.drawable.nyatapola));
+        arrayList2.add(new ImageTitleSquares("Changunarayan",R.drawable.dattatraya));
+    }
+
+    //jatras lists
+    private void linearJatra() {
+        arrayList3 = new ArrayList<>();
+
+        arrayList3.add(new ImageTitleSquares("Ghintangisi",R.drawable.nyatapola));
+        arrayList3.add(new ImageTitleSquares("Tahamacha",R.drawable.dattatraya));
+        arrayList3.add(new ImageTitleSquares("Yomari punhi",R.drawable.nyatapola));
+        arrayList3.add(new ImageTitleSquares("Gathamuga chare",R.drawable.dattatraya));
+        arrayList3.add(new ImageTitleSquares("Biska Jatra",R.drawable.nyatapola));
+        arrayList3.add(new ImageTitleSquares("Pulu Kisi",R.drawable.dattatraya));
+    }
+
+//popular squares
+    private void linearSquaresList() {
+        arrayList = new ArrayList<>();
+
+        arrayList.add(new ImageTitleSquares("Nyatapola",R.drawable.nyatapola));
+        arrayList.add(new ImageTitleSquares("Dattatraya",R.drawable.dattatraya));
+        arrayList.add(new ImageTitleSquares("Pottery Square",R.drawable.potterysquare));
+        arrayList.add(new ImageTitleSquares("Durbar Square",R.drawable.akhijhyal));
+
     }
 }
