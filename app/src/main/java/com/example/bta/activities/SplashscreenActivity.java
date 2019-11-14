@@ -13,7 +13,7 @@ import com.example.bta.R;
  * status bar and navigation/system bar) with user interaction.
  */
 public class SplashscreenActivity extends AppCompatActivity {
-    int SPLASH_TIME = 3000; //This is 3 seconds
+    int SPLASH_TIME = 1000; //This is 3 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
