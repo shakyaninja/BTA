@@ -26,7 +26,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
     CardView nyatapola,dattatraya,potterysquare;
     TextView findus;
     private RecyclerView recyclerView;
@@ -193,20 +192,20 @@ public class MainActivity extends AppCompatActivity {
     private void linearWHS() {
         arrayList2 = new ArrayList<>();
 
-        arrayList2.add(new ImageTitleSquares("Durbar Squares",R.drawable.nyatapola));
-        arrayList2.add(new ImageTitleSquares("Changunarayan",R.drawable.dattatraya));
+        arrayList2.add(new ImageTitleSquares("Durbar Squares",R.drawable.durbar_square_bhaktapur));
+        arrayList2.add(new ImageTitleSquares("Changunarayan",R.drawable.changunarayan));
     }
 
     //jatras lists
     private void linearJatra() {
         arrayList3 = new ArrayList<>();
 
-        arrayList3.add(new ImageTitleSquares("Ghintangisi",R.drawable.nyatapola));
-        arrayList3.add(new ImageTitleSquares("Tahamacha",R.drawable.dattatraya));
-        arrayList3.add(new ImageTitleSquares("Yomari punhi",R.drawable.nyatapola));
-        arrayList3.add(new ImageTitleSquares("Gathamuga chare",R.drawable.dattatraya));
-        arrayList3.add(new ImageTitleSquares("Biska Jatra",R.drawable.nyatapola));
-        arrayList3.add(new ImageTitleSquares("Pulu Kisi",R.drawable.dattatraya));
+        arrayList3.add(new ImageTitleSquares("Ghintangisi",R.drawable.gaijatra));
+        arrayList3.add(new ImageTitleSquares("Tahamacha",R.drawable.tahamacha));
+        arrayList3.add(new ImageTitleSquares("Yomari punhi",R.drawable.yomaripunhi));
+        arrayList3.add(new ImageTitleSquares("Gathamuga chare",R.drawable.ghantagarna));
+        arrayList3.add(new ImageTitleSquares("Biska Jatra",R.drawable.bisket));
+        arrayList3.add(new ImageTitleSquares("Pulu Kisi",R.drawable.pulu_kisi));
     }
 
 //popular squares
@@ -216,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add(new ImageTitleSquares("Nyatapola",R.drawable.nyatapola));
         arrayList.add(new ImageTitleSquares("Dattatraya",R.drawable.dattatraya));
         arrayList.add(new ImageTitleSquares("Pottery Square",R.drawable.potterysquare));
-        arrayList.add(new ImageTitleSquares("Durbar Square",R.drawable.akhijhyal));
+        arrayList.add(new ImageTitleSquares("Durbar Square",R.drawable.durbar_square_bhaktapur));
 
     }
 }

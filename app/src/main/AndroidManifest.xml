@@ -28,10 +28,9 @@
         <activity
             android:name=".activities.SplashscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_splashscreen"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:label="@string/appname">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" android:theme="@style/NoActionBar" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

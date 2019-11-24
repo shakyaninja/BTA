@@ -8,12 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.bta.R;
 
-/**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- */
 public class SplashscreenActivity extends AppCompatActivity {
-    int SPLASH_TIME = 1000; //This is 3 seconds
+    int SPLASH_TIME = 1000; //This is 1 second
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +22,8 @@ public class SplashscreenActivity extends AppCompatActivity {
                 //Do any action here. Now we are moving to next page
                 Intent mySuperIntent = new Intent(SplashscreenActivity.this, MainActivity.class);
                 startActivity(mySuperIntent);
-
                 //This 'finish()' is for exiting the app when back button pressed from Home page which is ActivityHome
                 finish();
-
             }
         }, SPLASH_TIME);
     }
