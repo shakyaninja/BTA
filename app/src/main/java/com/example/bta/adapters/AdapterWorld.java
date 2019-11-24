@@ -1,0 +1,70 @@
+package com.example.bta.adapters;
+
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.bta.R;
+import com.example.bta.activities.DetailActivity;
+import com.example.bta.modals.ImageTitleSquares;
+
+import java.util.ArrayList;
+
+public class AdapterWorld extends RecyclerView.Adapter<AdapterWorld.MyHolder> {
+
+    Context context;
+    ArrayList<ImageTitleSquares> arrayList;
+    public AdapterWorld(Context context, ArrayList<ImageTitleSquares> arrayList) {
+        this.context = context;
+        this.arrayList = arrayList;
+    }
+
+    @NonNull
+    @Override
+    public AdapterWorld.MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.content_card, parent,false);
+        MyHolder myHolder = new MyHolder(view);
+        return myHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull AdapterWorld.MyHolder myHolder, int position) {
+        myHolder.title.setText(arrayList.get(position).getTitle());
+        myHolder.image.setImageResource(arrayList.get(position).getImages());
+    }
+
+    @Override
+    public int getItemCount() {
+        return arrayList.size();
+    }
+
+    public class MyHolder extends RecyclerView.ViewHolder {
+        TextView title;
+        ImageView image;
+
+        public MyHolder(final View itemView){
+            super(itemView);
+
+            title = itemView.findViewById(R.id.title);
+            image = itemView.findViewById(R.id.image);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(itemView.getContext(), "Position of world heritage site " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context, DetailActivity.class);
+                    intent.putExtra("KEY",getAdapterPosition()+10);
+                    context.startActivity(intent);
+                }
+            });
+        }
+    }
+}
