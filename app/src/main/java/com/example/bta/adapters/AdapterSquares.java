@@ -12,17 +12,19 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.bta.R;
 import com.example.bta.activities.DetailActivity;
-import com.example.bta.modals.ImageTitleSquares;
+import com.example.bta.modals.ImageTitle;
 
 import java.util.ArrayList;
 
 public class AdapterSquares extends RecyclerView.Adapter<AdapterSquares.MyHolder> {
-
+    private int imageWidthPixels = 1024;
+    private int imageHeightPixels = 768;
     Context context;
-    ArrayList<ImageTitleSquares> arrayList;
-    public AdapterSquares(Context context, ArrayList<ImageTitleSquares> arrayList) {
+    ArrayList<ImageTitle> arrayList;
+    public AdapterSquares(Context context, ArrayList<ImageTitle> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
     }

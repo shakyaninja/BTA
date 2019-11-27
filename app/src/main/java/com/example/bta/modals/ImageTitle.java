@@ -1,10 +1,10 @@
 package com.example.bta.modals;
 
-public class ImageTitleSquares {
+public class ImageTitle {
     private String title;
     private int images;
 
-    public ImageTitleSquares(String title, int images) {
+    public ImageTitle(String title, int images) {
         this.title = title;
         this.images = images;
     }

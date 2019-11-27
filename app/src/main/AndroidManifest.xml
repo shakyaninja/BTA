@@ -11,9 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".activities.DetailGuideActivity"
+            android:label="@string/title_activity_detail_guide"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".activities.GuidesActivity"
+            android:label="@string/title_activity_guides"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".activities.HistoryActivity" />
+        <activity
             android:name=".activities.DetailActivity"
             android:label="@string/title_activity_detail"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.FindusActivity"
+            android:label="@string/title_activity_findus" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -23,25 +35,25 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <activity
-            android:name=".activities.FindusActivity"
-            android:label="@string/title_activity_findus" />
-        <activity
             android:name=".activities.SplashscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/appname">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" android:theme="@style/NoActionBar" />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity"></activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />

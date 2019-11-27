@@ -14,15 +14,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bta.R;
 import com.example.bta.activities.DetailActivity;
-import com.example.bta.modals.ImageTitleSquares;
+import com.example.bta.modals.ImageTitle;
 
 import java.util.ArrayList;
 
 public class AdapterJatras extends RecyclerView.Adapter<AdapterJatras.MyHolder> {
 
     Context context;
-    ArrayList<ImageTitleSquares> arrayList;
-    public AdapterJatras(Context context, ArrayList<ImageTitleSquares> arrayList) {
+    ArrayList<ImageTitle> arrayList;
+    public AdapterJatras(Context context, ArrayList<ImageTitle> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
     }

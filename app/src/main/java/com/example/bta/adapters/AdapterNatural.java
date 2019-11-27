@@ -18,25 +18,25 @@ import com.example.bta.modals.ImageTitle;
 
 import java.util.ArrayList;
 
-public class AdapterWorld extends RecyclerView.Adapter<AdapterWorld.MyHolder> {
+public class AdapterNatural extends RecyclerView.Adapter<AdapterNatural.MyHolder> {
 
     Context context;
     ArrayList<ImageTitle> arrayList;
-    public AdapterWorld(Context context, ArrayList<ImageTitle> arrayList) {
+    public AdapterNatural(Context context, ArrayList<ImageTitle> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
     }
 
     @NonNull
     @Override
-    public AdapterWorld.MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AdapterNatural.MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.content_card, parent,false);
         MyHolder myHolder = new MyHolder(view);
         return myHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterWorld.MyHolder myHolder, int position) {
+    public void onBindViewHolder(@NonNull AdapterNatural.MyHolder myHolder, int position) {
         myHolder.title.setText(arrayList.get(position).getTitle());
         myHolder.image.setImageResource(arrayList.get(position).getImages());
     }
@@ -59,9 +59,9 @@ public class AdapterWorld extends RecyclerView.Adapter<AdapterWorld.MyHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(itemView.getContext(), "Position of world heritage site " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(itemView.getContext(), "Position" + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context, DetailActivity.class);
-                    intent.putExtra("KEY",getAdapterPosition()+10);
+                    intent.putExtra("KEY",getAdapterPosition()+40);
                     context.startActivity(intent);
                 }
             });
