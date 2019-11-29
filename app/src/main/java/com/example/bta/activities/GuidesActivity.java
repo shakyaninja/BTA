@@ -22,8 +22,9 @@ public class GuidesActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     AdapterGuides adapterGuides;
+    RecyclerView.LayoutManager layoutManager;
 
-    ArrayList<Guides> arrayList;
+    ArrayList<Guides> arrayList4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +33,9 @@ public class GuidesActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         recyclerView = findViewById(R.id.recyclerGuides);
-
-        RecyclerView.LayoutManager layoutManager;
-
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
-        adapterGuides = new AdapterGuides(this, arrayList);
+        adapterGuides = new AdapterGuides(this, arrayList4);
         recyclerView.setAdapter(adapterGuides);
 
 
@@ -52,12 +50,12 @@ public class GuidesActivity extends AppCompatActivity {
 
     }
 
-    public void linearGuide(){
-        arrayList = new ArrayList<>();
+    private void linearGuide(){
+        arrayList4 = new ArrayList<>();
 
-        arrayList.add(new Guides("Luja Shakya",R.drawable.akhijhyal,"Inacho","desc............................................. ","9860685929"));
-        arrayList.add(new Guides("Ram Bahadur gurung",R.drawable.durbar_square_bhaktapur,"Skuldhoka","desc............................................. ","9860685929"));
-        arrayList.add(new Guides("Subin raj pokhrel",R.drawable.nyatapola,"Gundu","desc............................................. ","9860685929"));
+        arrayList4.add(new Guides("Luja Shakya",R.drawable.akhijhyal,"Inacho","desc............................................. ","9860685929"));
+        arrayList4.add(new Guides("Ram Bahadur gurung",R.drawable.durbar_square_bhaktapur,"Skuldhoka","desc............................................. ","9860685929"));
+        arrayList4.add(new Guides("Subin raj pokhrel",R.drawable.nyatapola,"Gundu","desc............................................. ","9860685929"));
 
     }
 }

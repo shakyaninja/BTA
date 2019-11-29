@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.bumptech.glide.Glide;
 import com.example.bta.R;
 
 public class ImageAdapter extends PagerAdapter {
@@ -29,7 +30,11 @@ public class ImageAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         ImageView imageView = new ImageView(mContext);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setImageResource(sliderImageId[position]);
+//        imageView.setImageResource(sliderImageId[position]);
+        Glide.
+                with(mContext)
+                .load(sliderImageId[position])
+                .into(imageView);
         ((ViewPager) container).addView(imageView, 0);
         return imageView;
     }

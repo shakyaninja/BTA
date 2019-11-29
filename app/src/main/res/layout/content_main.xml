@@ -20,8 +20,8 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="176dp"
@@ -33,7 +33,7 @@
         android:visibility="invisible"
         app:backgroundTint="@color/colorPrimary"
         app:pressedTranslationZ="12dp"
-        app:srcCompat="@android:drawable/ic_dialog_info"
+        app:srcCompat="@drawable/ic_info"
         />
 
 <!--    <TextView-->
@@ -52,8 +52,8 @@
 <!--        />-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="248dp"
@@ -65,13 +65,13 @@
         android:visibility="invisible"
         app:backgroundTint="@color/colorPrimary"
         app:pressedTranslationZ="12dp"
-        app:srcCompat="@mipmap/ic_guide"
+        app:srcCompat="@drawable/ic_guide"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="24dp"
@@ -82,13 +82,13 @@
         android:focusable="true"
         android:visibility="invisible"
         app:backgroundTint="@color/colorPrimary"
-        app:pressedTranslationZ="12dp"
-        app:srcCompat="@mipmap/ic_location" />
+        app:srcCompat="@drawable/ic_location"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="32dp"
@@ -100,7 +100,7 @@
         android:visibility="visible"
         app:backgroundTint="@color/colorPrimary"
         app:pressedTranslationZ="12dp"
-        app:srcCompat="@mipmap/ic_add"
+        app:srcCompat="@drawable/ic_add"
          />
 
 </RelativeLayout>

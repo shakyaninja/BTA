@@ -272,7 +272,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 //    natural beauties
-private void linearNatural() {
+    private void linearNatural() {
     arrayList4 = new ArrayList<>();
 
     arrayList4.add(new ImageTitle("Nagarkot",R.drawable.nagarkot));

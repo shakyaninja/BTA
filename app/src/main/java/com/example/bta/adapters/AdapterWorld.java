@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.bta.R;
 import com.example.bta.activities.DetailActivity;
 import com.example.bta.modals.ImageTitle;
@@ -38,7 +39,11 @@ public class AdapterWorld extends RecyclerView.Adapter<AdapterWorld.MyHolder> {
     @Override
     public void onBindViewHolder(@NonNull AdapterWorld.MyHolder myHolder, int position) {
         myHolder.title.setText(arrayList.get(position).getTitle());
-        myHolder.image.setImageResource(arrayList.get(position).getImages());
+//        myHolder.image.setImageResource(arrayList.get(position).getImages());
+        Glide
+                .with(context)
+                .load(arrayList.get(position).getImages())
+                .into(myHolder.image);
     }
 
     @Override

@@ -98,7 +98,7 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 LatLng current_location = new LatLng(current_latitude, current_longitude);
                 mMap.addMarker(new MarkerOptions().position(current_location).title("You are here!!"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(current_location));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(current_location,5));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(current_location,16));
 //                mMap.addMarker(markerOptions);
 
                 break;
