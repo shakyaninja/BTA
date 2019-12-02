@@ -5,7 +5,9 @@ import com.example.bta.R;
 
 
 import android.os.Bundle;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class ViewWeb extends AppCompatActivity {
 protected WebView webView;
@@ -15,6 +17,9 @@ int key;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_web);
         webView = findViewById(R.id.viewWeb);
+        webView.setWebChromeClient(new WebChromeClient());
+        webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setJavaScriptEnabled(true);
         key = 1;
         switch (key){
             case 1:
