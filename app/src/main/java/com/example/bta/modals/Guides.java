@@ -1,11 +1,11 @@
 package com.example.bta.modals;
 
 public class Guides {
-    public String name;
-    public  int image;
-    public String Location;
-    public String Description;
-    public String PhoneNumber;
+    private String name;
+    private  int image;
+    private String Location;
+    private String Description;
+    private String PhoneNumber;
 
     public String getName() {
         return name;
