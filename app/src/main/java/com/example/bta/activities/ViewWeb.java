@@ -1,26 +1,29 @@
 package com.example.bta.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import com.example.bta.R;
-
-
 import android.os.Bundle;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.bta.R;
+
 public class ViewWeb extends AppCompatActivity {
 protected WebView webView;
-int key;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_web);
+
+        Bundle bundle= getIntent().getExtras();
+        int key = bundle.getInt("key");
+
         webView = findViewById(R.id.viewWeb);
         webView.setWebChromeClient(new WebChromeClient());
         webView.setWebViewClient(new WebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
-        key = 1;
         switch (key){
             case 1:
                 webView.loadUrl("https://en.wikipedia.org/wiki/Nyatapola_Temple");

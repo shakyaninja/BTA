@@ -1,5 +1,6 @@
 package com.example.bta.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -29,7 +30,6 @@ import com.example.bta.fragments.DetailTahamachaFragment;
 import com.example.bta.fragments.DetailYomariFragment;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -47,7 +47,7 @@ public class DetailActivity extends AppCompatActivity {
         FragmentTransaction transaction = manager.beginTransaction();
 
         Bundle bundle= getIntent().getExtras();
-        int key = bundle.getInt("KEY");
+        final int key = bundle.getInt("KEY");
 
         switch (key){
             case 1:
@@ -201,9 +201,9 @@ public class DetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
+                        Intent intent = new Intent(DetailActivity.this,ViewWeb.class);
+                        intent.putExtra("key",key);
+                        startActivity(intent);
             }
         });
     }

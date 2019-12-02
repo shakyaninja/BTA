@@ -115,8 +115,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
         fab2_Info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
