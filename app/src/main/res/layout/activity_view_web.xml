@@ -10,5 +10,11 @@
         android:layout_height="match_parent"
         android:id="@+id/viewWeb">
     </WebView>
+    <VideoView
+        android:id="@+id/viewVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </VideoView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
