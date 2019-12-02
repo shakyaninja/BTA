@@ -201,8 +201,8 @@ public class DetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                        Intent intent = new Intent(DetailActivity.this,HistoryActivity.class);
-                        intent.putExtra("Key_Location",key);
+                        Intent intent = new Intent(DetailActivity.this,ViewWeb.class);
+                        intent.putExtra("key",key);
                         startActivity(intent);
             }
         });
