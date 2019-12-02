@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.DetailNyatapolaFragment">
+    tools:context=".fragments.DetailChangunarayanFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,22 +14,16 @@
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
             android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/nyatapola_location_details1"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="16sp"
-                    android:text="@string/nyatapola_details2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/changu_detail2"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/nyatapola_link"
+                android:id="@+id/changunarayan_link"
                 android:text="@string/wiki_link" />
         </LinearLayout>
     </ScrollView>

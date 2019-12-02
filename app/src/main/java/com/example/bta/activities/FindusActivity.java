@@ -100,7 +100,6 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(current_location));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(current_location,16));
 //                mMap.addMarker(markerOptions);
-
                 break;
         }
     }

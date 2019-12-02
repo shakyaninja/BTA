@@ -13,18 +13,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.bta.R;
-public class DetailPotterysqFragment extends Fragment {
-    public DetailPotterysqFragment() {
+
+
+public class DetailGathamugaFragment extends Fragment {
+
+    public DetailGathamugaFragment() {
         // Required empty public constructor
     }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_detail_potterysq, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_detail_gathamuga, container, false);
         return rootView;
-    }
-    public DetailPotterysqFragment(int contentLayoutId) {
-        super(contentLayoutId);
     }
 }

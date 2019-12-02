@@ -1,11 +1,5 @@
 package com.example.bta.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +8,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.bta.R;
 import com.example.bta.adapters.AdapterJatras;
@@ -62,14 +61,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        for testing glide
-//        imageView = findViewById(R.id.img);
-//        int resourceId = R.drawable.durbar_square_bhaktapur;
-//        Glide
-//                .with(MainActivity.this)
-//                .load(resourceId)
-//                .into(imageView);
-
         //for floating action  button
         fab_main = findViewById(R.id.fab);
         fab1_location = findViewById(R.id.fab1);
@@ -92,9 +83,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-//        textview_location = (TextView) findViewById(R.id.textview_location);
-//        textview_Info = (TextView) findViewById(R.id.textview_Info);
 
         fab_main.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Info", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,InfoActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -196,9 +186,6 @@ public class MainActivity extends AppCompatActivity {
         adapterNatural = new AdapterNatural(this, arrayList4);
         recyclerViewNatural.setAdapter(adapterNatural);
 
-//        nyatapola = findViewById(R.id.nyatapola);
-//        dattatraya = findViewById(R.id.dattatrya);
-//        potterysquare = findViewById(R.id.potterysquare);
         findus = findViewById(R.id.find_us);
 
         findus.setOnClickListener(new View.OnClickListener() {
@@ -209,33 +196,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//
-//        nyatapola.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
-//                intent.putExtra("KEY",1);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        dattatraya.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
-//                intent.putExtra("KEY",2);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        potterysquare.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
-//                intent.putExtra("KEY",3);
-//                startActivity(intent);
-//            }
-//        });
     }
 
 
@@ -281,7 +241,6 @@ public class MainActivity extends AppCompatActivity {
     arrayList4.add(new ImageTitle("Maha Manjushree",R.drawable.mahamanjushree));
     arrayList4.add(new ImageTitle("Changu",R.drawable.changu));
     arrayList4.add(new ImageTitle("Ghyampe Dada",R.drawable.ghyampedada));
-    arrayList4.add(new ImageTitle("Gundu",R.drawable.gundu));
     arrayList4.add(new ImageTitle("MuhanPokhari",R.drawable.muhan));
 }
 }

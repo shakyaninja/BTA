@@ -10,8 +10,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.bta.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class DetailNyatapolaFragment extends Fragment {
+    FloatingActionButton location_nyatapola;
     public DetailNyatapolaFragment() {
 
 

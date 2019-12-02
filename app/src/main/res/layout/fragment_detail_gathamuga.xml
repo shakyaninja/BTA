@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.DetailDattatrayaFragment">
+    tools:context=".fragments.DetailGathamugaFragment">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,17 +18,24 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/dattatraya_location_detail1"/>
+                android:text="@string/gathamuga_detail1"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:textSize="16sp"
-                android:text="@string/dattatraya_detail2"/>
+                android:text="@string/gathamuga_detail2"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/dattatraya_link"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp"
+                android:text="@string/gathamuga_detail3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gathamuga_link"
                 android:text="@string/wiki_link" />
         </LinearLayout>
     </ScrollView>
