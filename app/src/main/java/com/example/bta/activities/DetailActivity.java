@@ -3,6 +3,7 @@ package com.example.bta.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,12 +35,15 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class DetailActivity extends AppCompatActivity {
 
     CollapsingToolbarLayout collapsingToolbarLayout;
+
     Toolbar toolbar;
+    TextView link;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         collapsingToolbarLayout = findViewById(R.id.toolbar_layout);
         toolbar = findViewById(R.id.toolbar);
 
@@ -56,7 +60,7 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.nyatapola);
                 toolbar.setTitle(R.string.nyatapola_title);
-                Toast.makeText(this, "fragment 1", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 1", Toast.LENGTH_SHORT).show();
                 break;
             case 2:
                 DetailDattatrayaFragment fragmentTwo = new DetailDattatrayaFragment();
@@ -64,7 +68,7 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.dattatraya);
                 toolbar.setTitle(R.string.dattatraya_title);
-                Toast.makeText(this, "fragment 2", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 2", Toast.LENGTH_SHORT).show();
                 break;
             case 3:
                 DetailPotterysqFragment fragmentThree = new DetailPotterysqFragment();
@@ -72,7 +76,7 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.potterysquare);
                 toolbar.setTitle(R.string.pottery_title);
-                Toast.makeText(this, "fragment 3", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 3", Toast.LENGTH_SHORT).show();
                 break;
             case 4:
             case 10:
@@ -81,7 +85,7 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.durbar_square_bhaktapur);
                 toolbar.setTitle(R.string.durbar_title);
-                Toast.makeText(this, "fragment 10", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 10", Toast.LENGTH_SHORT).show();
                 break;
             case 11:
             case 22:
@@ -90,56 +94,62 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.changunarayan);
                 toolbar.setTitle(R.string.changu_title);
-                Toast.makeText(this, "fragment 11", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 11", Toast.LENGTH_SHORT).show();
                 break;
 
             case 12:
+                fab.setVisibility(View.INVISIBLE);
                 DetailGhintangisiFragment fragment12 = new DetailGhintangisiFragment();
                 transaction.replace(R.id.container, fragment12);
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.gaijatra);
                 toolbar.setTitle(R.string.ghintangisi_title);
-                Toast.makeText(this, "fragment 12", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 12", Toast.LENGTH_SHORT).show();
                 break;
             case 13:
+                fab.setVisibility(View.INVISIBLE);
                 DetailTahamachaFragment fragment13 = new DetailTahamachaFragment();
                 transaction.replace(R.id.container, fragment13);
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.tahamacha);
                 toolbar.setTitle(R.string.tahamacha_title);
-                Toast.makeText(this, "fragment 13", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 13", Toast.LENGTH_SHORT).show();
                 break;
             case 14:
+                fab.setVisibility(View.INVISIBLE);
                 DetailYomariFragment fragment14 = new DetailYomariFragment();
                 transaction.replace(R.id.container, fragment14);
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.yomaripunhi);
                 toolbar.setTitle(R.string.yomaripunhi_title);
-                Toast.makeText(this, "fragment 14", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 14", Toast.LENGTH_SHORT).show();
                 break;
             case 15:
+                fab.setVisibility(View.INVISIBLE);
                 DetailGathamugaFragment fragment15 = new DetailGathamugaFragment();
                 transaction.replace(R.id.container, fragment15);
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.ghantagarna);
                 toolbar.setTitle(R.string.gathamuga_title);
-                Toast.makeText(this, "fragment 15", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 15", Toast.LENGTH_SHORT).show();
                 break;
             case 16:
+                fab.setVisibility(View.INVISIBLE);
                 DetailBisketFragment fragment16 = new DetailBisketFragment();
                 transaction.replace(R.id.container, fragment16);
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.bisketjatra);
                 toolbar.setTitle(R.string.biskajatra_title);
-                Toast.makeText(this, "fragment 16", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 16", Toast.LENGTH_SHORT).show();
                 break;
             case 17:
+                fab.setVisibility(View.INVISIBLE);
                 DetailPulukisiFragment fragment17 = new DetailPulukisiFragment();
                 transaction.replace(R.id.container, fragment17);
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.pulu_kisi);
                 toolbar.setTitle(R.string.pulukisi_title);
-                Toast.makeText(this, "fragment 17", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 17", Toast.LENGTH_SHORT).show();
                 break;
             case 18:
                 DetailNagarkotFragment fragment18 = new DetailNagarkotFragment();
@@ -147,7 +157,7 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.nagarkot);
                 toolbar.setTitle(R.string.nagarkot_title);
-                Toast.makeText(this, "fragment 18", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 18", Toast.LENGTH_SHORT).show();
                 break;
             case 19:
                 DetailPilotbabaFragment fragment19 = new DetailPilotbabaFragment();
@@ -163,7 +173,7 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.ranikot);
                 toolbar.setTitle(R.string.ranikot_title);
-                Toast.makeText(this, "fragment 17", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 17", Toast.LENGTH_SHORT).show();
                 break;
             case 21:
                 DetailManjushreeFragment fragment21 = new DetailManjushreeFragment();
@@ -171,7 +181,7 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.mahamanjushree);
                 toolbar.setTitle(R.string.manjushree_title);
-                Toast.makeText(this, "fragment 17", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 17", Toast.LENGTH_SHORT).show();
                 break;
             case 23:
                 DetailGhyampeFragment fragment23 = new DetailGhyampeFragment();
@@ -179,7 +189,7 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.ghyampedada);
                 toolbar.setTitle(R.string.ghyampe_title);
-                Toast.makeText(this, "fragment 23", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 23", Toast.LENGTH_SHORT).show();
                 break;
             case 24:
                 DetailMuhanFragment fragment24 = new DetailMuhanFragment();
@@ -187,7 +197,7 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.muhan);
                 toolbar.setTitle(R.string.muhan_title);
-                Toast.makeText(this, "fragment 24", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "fragment 24", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + key);
@@ -196,13 +206,22 @@ public class DetailActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 //        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        link = findViewById(R.id.linkwiki);
+        link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailActivity.this, ViewWeb.class);
+                intent.putExtra("key",key);
+                startActivity(intent);
+            }
+        });
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                        Intent intent = new Intent(DetailActivity.this,ViewWeb.class);
-                        intent.putExtra("key",key);
+                        Intent intent = new Intent(DetailActivity.this,FindusActivity.class);
+                        intent.putExtra("KEY",key);
                         startActivity(intent);
             }
         });

@@ -25,11 +25,6 @@
                 android:layout_marginBottom="10dp"
                 android:textSize="16sp"
                 android:text="@string/durbar_detail2"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/durbarsquare_link"
-                android:text="@string/wiki_link" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     private Animation fab_open, fab_close, fab_clock, fab_anticlock;
     TextView history;
 
-
     Boolean isOpen = false;
     RecyclerView.LayoutManager layoutManager;
 
@@ -55,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<ImageTitle> arrayList2;
     ArrayList<ImageTitle> arrayList3;
     ArrayList<ImageTitle> arrayList4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 //                Toast.makeText(getApplicationContext(), "Elocation", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this,FindusActivity.class);
-                intent.putExtra("KEY",2);
+                intent.putExtra("KEY",30);
                 startActivity(intent);
             }
         });
@@ -184,13 +184,16 @@ public class MainActivity extends AppCompatActivity {
         adapterNatural = new AdapterNatural(this, arrayList4);
         recyclerViewNatural.setAdapter(adapterNatural);
 
+
+
+
         findus = findViewById(R.id.find_us);
 
         findus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,FindusActivity.class);
-                intent.putExtra("KEY", 1);
+                intent.putExtra("KEY", 40);
                 startActivity(intent);
             }
         });
@@ -241,4 +244,6 @@ public class MainActivity extends AppCompatActivity {
     arrayList4.add(new ImageTitle("Ghyampe Dada",R.drawable.ghyampedada));
     arrayList4.add(new ImageTitle("MuhanPokhari",R.drawable.muhan));
 }
+
+
 }
