@@ -225,8 +225,8 @@ public class MainActivity extends AppCompatActivity {
     private void linearSquaresList() {
         arrayList = new ArrayList<>();
 
-        arrayList.add(new ImageTitle("Nyatapola",R.drawable.nyatapola));
-        arrayList.add(new ImageTitle("Dattatraya",R.drawable.dattatraya));
+        arrayList.add(new ImageTitle("Taumadhi Square",R.drawable.nyatapola));
+        arrayList.add(new ImageTitle("Dattatraya Square",R.drawable.dattatraya));
         arrayList.add(new ImageTitle("Pottery Square",R.drawable.potterysquare));
         arrayList.add(new ImageTitle("Durbar Square",R.drawable.durbar_square_bhaktapur));
 
