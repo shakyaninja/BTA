@@ -77,6 +77,7 @@ public class AdapterGuides extends RecyclerView.Adapter<AdapterGuides.MyHolder> 
         myHolder.phone.setText(arrayList.get(position).getPhoneNumber());
 
     }
+
     @Override
     public int getItemCount() {
         return arrayList.size();

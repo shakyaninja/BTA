@@ -28,6 +28,28 @@ public class AdapterJatras extends RecyclerView.Adapter<AdapterJatras.MyHolder> 
         this.arrayList = arrayList;
     }
 
+    public class MyHolder extends RecyclerView.ViewHolder {
+        TextView title;
+        ImageView image;
+
+        public MyHolder(final View itemView){
+            super(itemView);
+
+            title = itemView.findViewById(R.id.title);
+            image = itemView.findViewById(R.id.image);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(itemView.getContext(), "Position of jatra " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context, DetailActivity.class);
+                    intent.putExtra("KEY",getAdapterPosition()+12);
+                    context.startActivity(intent);
+                }
+            });
+        }
+    }
+
     @NonNull
     @Override
     public AdapterJatras.MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -49,28 +71,6 @@ public class AdapterJatras extends RecyclerView.Adapter<AdapterJatras.MyHolder> 
     @Override
     public int getItemCount() {
         return arrayList.size();
-    }
-
-    public class MyHolder extends RecyclerView.ViewHolder {
-        TextView title;
-        ImageView image;
-
-        public MyHolder(final View itemView){
-            super(itemView);
-
-            title = itemView.findViewById(R.id.title);
-            image = itemView.findViewById(R.id.image);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(itemView.getContext(), "Position of jatra " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(context, DetailActivity.class);
-                    intent.putExtra("KEY",getAdapterPosition()+12);
-                    context.startActivity(intent);
-                }
-            });
-        }
     }
 }
 
