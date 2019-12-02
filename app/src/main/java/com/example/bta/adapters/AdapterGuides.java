@@ -75,7 +75,6 @@ public class AdapterGuides extends RecyclerView.Adapter<AdapterGuides.MyHolder> 
         myHolder.location.setText(arrayList.get(position).getLocation());
         myHolder.description.setText(arrayList.get(position).getDescription());
         myHolder.phone.setText(arrayList.get(position).getPhoneNumber());
-
     }
 
     @Override
