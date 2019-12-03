@@ -50,7 +50,7 @@ protected AdapterContact adapterContact;
         arrayList.add(new EmergencyContact("Janswasthaya","5122035"));
         arrayList.add(new EmergencyContact("Bhaktapur Hospital","9843803828"));
         arrayList.add(new EmergencyContact("Janswasthaya","5122035"));
-        
+
 
     }
 }

@@ -77,6 +77,8 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                             break;
                         case 4:
                             Toast.makeText(itemView.getContext(), "Currency Conversion", Toast.LENGTH_SHORT).show();
+                            Intent intent4 = new Intent(context,FindusActivity.class);
+                            intent4.putExtra("KEY",1002);
                             break;
                         case 5:
                             Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();

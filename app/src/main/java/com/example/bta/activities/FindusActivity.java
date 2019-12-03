@@ -161,26 +161,39 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 mMap.addMarker(new MarkerOptions().position(dudpati).title(("Dudhpati")));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(khasibazar));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(khasibazar,14));
+                break;
             case 1001:
                 Toast.makeText(this, "Hospital", Toast.LENGTH_SHORT).show();
-//                LatLng chayamsingh = new LatLng(27.676372,85.4376489);
-//                LatLng bhaktapur = new LatLng(27.6770153,85.439282);
-//                LatLng khasibazar = new LatLng(27.6736984,85.4393027);
-//                LatLng iwamura = new LatLng(27.6719787,85.421788);
-//                LatLng cancer = new LatLng(27.6707015,85.4298535);
-//                LatLng dbsq = new LatLng(27.6726737,85.4290403);
-//                LatLng ram = new LatLng(27.6687115,85.4277505);
-//                LatLng dudpati = new LatLng(27.6712024,85.4240544);
-//                mMap.addMarker(new MarkerOptions().position(kamalbinayak1).title("Kamal Binayak Bus Park"));
-//                mMap.addMarker(new MarkerOptions().position(kamalbinayak2).title(("Kamal Pokhari")));
-//                mMap.addMarker(new MarkerOptions().position(chayamasingh).title(("Chayamasingh")));
-//                mMap.addMarker(new MarkerOptions().position(Siddhapokhari).title(("Siddha Pokhari")));
-//                mMap.addMarker(new MarkerOptions().position(khasibazar).title(("Khasi Bazar")));
-//                mMap.addMarker(new MarkerOptions().position(dbsq).title(("Durbar Square")));
-//                mMap.addMarker(new MarkerOptions().position(ram).title(("Ram Mandir")));
-//                mMap.addMarker(new MarkerOptions().position(dudpati).title(("Dudhpati")));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(khasibazar));
-//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(khasibazar,14));
+                LatLng HumanOrganTransplant = new LatLng(27.6729373,85.4216275);
+                LatLng bhaktapur1 = new LatLng(27.6719396,85.4219601);
+                LatLng bktcancerhospital = new LatLng(27.6732317,85.4222822);
+                LatLng memorial = new LatLng(27.6681797,85.4326653);
+                LatLng iwamura = new LatLng(27.6725332,85.4119414);
+                LatLng madhayapur = new LatLng(27.6722159,85.3881812);
+                LatLng korea = new LatLng(27.6790287,85.3838219);
+                LatLng kmc = new LatLng(27.6844899,85.4110025);
+                LatLng cec = new LatLng(27.6780417,85.4240238);
+                LatLng kcc = new LatLng(27.6693382,85.4654877);
+                LatLng jsc = new LatLng(27.6737042,85.4390963);
+                LatLng jskb = new LatLng(27.6706365,85.4299722);
+                mMap.addMarker(new MarkerOptions().position(HumanOrganTransplant).title("Human Organ Transplant Center (01-6614709)"));
+                mMap.addMarker(new MarkerOptions().position(bhaktapur1).title(("Bhaktapur Hospital (01-6610798)")));
+                mMap.addMarker(new MarkerOptions().position(bktcancerhospital).title(("Bhaktapur Cancer Hospital (01-6611532)")));
+                mMap.addMarker(new MarkerOptions().position(memorial).title(("Siddhi Memorial Children and Women Hospital (01-6612945)")));
+                mMap.addMarker(new MarkerOptions().position(iwamura).title(("Dr. Iwamura Hospital (01-6612705)")));
+                mMap.addMarker(new MarkerOptions().position(madhayapur).title("Madhayapur Hospita (01-5093388)"));
+                mMap.addMarker(new MarkerOptions().position(korea).title(("Nepal Korea Friendship Hospital (01-6633442)")));
+                mMap.addMarker(new MarkerOptions().position(kmc).title(("Kathmandu Modal College (01-4476152)")));
+                mMap.addMarker(new MarkerOptions().position(cec).title(("District Communiy Eye Center (01-6618058)")));
+                mMap.addMarker(new MarkerOptions().position(kcc).title(("Kathmandu Cancer Center(01-5091629)")));
+                mMap.addMarker(new MarkerOptions().position(jsc).title(("Jana Swastha(01-6610317)")));
+                mMap.addMarker(new MarkerOptions().position(jskb).title(("Jana Swastha ")));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(bhaktapur1));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(bhaktapur1,13));
+                break;
+            case 1002:
+                Toast.makeText(this, "Currency Conversion", Toast.LENGTH_SHORT).show();
+
         }
 
     }
