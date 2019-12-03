@@ -15,6 +15,7 @@ import com.example.bta.R;
 import com.example.bta.fragments.DetailBisketFragment;
 import com.example.bta.fragments.DetailChangunarayanFragment;
 import com.example.bta.fragments.DetailDattatrayaFragment;
+import com.example.bta.fragments.DetailDhauFragment;
 import com.example.bta.fragments.DetailDurbarSquareFragment;
 import com.example.bta.fragments.DetailGathamugaFragment;
 import com.example.bta.fragments.DetailGhintangisiFragment;
@@ -27,8 +28,10 @@ import com.example.bta.fragments.DetailPilotbabaFragment;
 import com.example.bta.fragments.DetailPotterysqFragment;
 import com.example.bta.fragments.DetailPulukisiFragment;
 import com.example.bta.fragments.DetailRanikotFragment;
+import com.example.bta.fragments.DetailSamebajiFragment;
 import com.example.bta.fragments.DetailTahamachaFragment;
 import com.example.bta.fragments.DetailYomariFragment;
+import com.example.bta.fragments.DetailYomarisFragment;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -197,8 +200,29 @@ public class DetailActivity extends AppCompatActivity {
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.muhan);
                 toolbar.setTitle(R.string.muhan_title);
-//                Toast.makeText(this, "fragment 24", Toast.LENGTH_SHORT).show();
                 break;
+            case 40:
+                DetailDhauFragment fragment40 = new DetailDhauFragment();
+                transaction.replace(R.id.container, fragment40);
+                transaction.commit();
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.juju_dhau);
+                toolbar.setTitle(R.string.dhau_title);
+                break;
+            case 41:
+                DetailYomarisFragment fragment41 = new DetailYomarisFragment();
+                transaction.replace(R.id.container, fragment41);
+                transaction.commit();
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.yomaris);
+                toolbar.setTitle(R.string.yomari_title);
+                break;
+            case 42:
+                DetailSamebajiFragment fragment42 = new DetailSamebajiFragment();
+                transaction.replace(R.id.container, fragment42);
+                transaction.commit();
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.newari_khaja_set);
+                toolbar.setTitle(R.string.samebaji_title);
+                break;
+
             default:
                 throw new IllegalStateException("Unexpected value: " + key);
         }
@@ -216,7 +240,14 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-
+    collapsingToolbarLayout.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(DetailActivity.this, GalleryActivity.class);
+            intent.putExtra("photo",key);
+            startActivity(intent);
+        }
+    });
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

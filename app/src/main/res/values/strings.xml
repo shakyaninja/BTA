@@ -168,4 +168,9 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="service_text">Services</string>
+
+    <string name="title_activity_gallery">GalleryActivity</string>
+    <string name="yomari_title">Yomari</string>
+    <string name="dhau_title">Juju Dhau</string>
+    <string name="samebaji_title">Newari Samebaji</string>
 </resources>

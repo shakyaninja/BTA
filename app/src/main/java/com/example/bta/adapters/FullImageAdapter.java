@@ -10,7 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.bumptech.glide.Glide;
 import com.example.bta.R;
 
-public class ImageAdapter extends PagerAdapter {
+public class FullImageAdapter extends PagerAdapter {
     Context mContext;
 
     public int[] getSliderImageId() {
@@ -21,7 +21,7 @@ public class ImageAdapter extends PagerAdapter {
         this.sliderImageId = sliderImageId;
     }
 
-    public ImageAdapter(Context context) {
+    public FullImageAdapter(Context context) {
         this.mContext = context;
     }
 
@@ -31,13 +31,13 @@ public class ImageAdapter extends PagerAdapter {
     }
 
     private int[] sliderImageId = new int[]{
-            R.drawable.carvingsedit, R.drawable.potterysquare, R.drawable.street,R.drawable.dattatraya, R.drawable.akhijhyal,
+            R.drawable.nyatapola, R.drawable.dattatraya2, R.drawable.street,R.drawable.dattatraya, R.drawable.akhijhyal,
     };
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         ImageView imageView = new ImageView(mContext);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 //        imageView.setImageResource(sliderImageId[position]);
         Glide.
                 with(mContext)
