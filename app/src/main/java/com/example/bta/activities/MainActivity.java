@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 //                Toast.makeText(getApplicationContext(), "Elocation", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this,FindusActivity.class);
-                intent.putExtra("KEY",30);
+                intent.putExtra("KEY",239842978);
                 startActivity(intent);
             }
         });
@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,FindusActivity.class);
-                intent.putExtra("KEY", 40);
+                intent.putExtra("KEY", 289347923);
                 startActivity(intent);
             }
         });

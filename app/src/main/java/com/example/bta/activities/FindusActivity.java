@@ -40,8 +40,7 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-        fetchLastLocation();
+
     }
 
     private void fetchLastLocation() {
@@ -58,7 +57,10 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                     currentLocation = location;
                     current_latitude = currentLocation.getLatitude();
                     current_longitude = currentLocation.getLongitude();
-                    Toast.makeText(getApplicationContext(), "You are at:"+current_latitude+" "+current_longitude, Toast.LENGTH_LONG).show();
+                    LatLng you = new LatLng(current_latitude,current_longitude);
+                    mMap.addMarker(new MarkerOptions().position(you).title("You Are here"));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(you));
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(you,15));
                 }
             }
         });
@@ -81,13 +83,6 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
         Bundle bundle= getIntent().getExtras();
         int key = bundle.getInt("KEY");
         switch (key){
-            case 40:
-                Toast.makeText(this, "bhaktapur", Toast.LENGTH_SHORT).show();
-                LatLng bhaktapur = new LatLng(27.671890, 85.428913);
-                mMap.addMarker(new MarkerOptions().position(bhaktapur).title("Marker in bhaktapur"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(bhaktapur));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(bhaktapur,16));
-                break;
             case 30:
 //                LatLng current_location = new LatLng( currentLocation.getLatitude(),currentLocation.getLongitude());//get current latitude and longitude
                 LatLng current_location = new LatLng(current_latitude, current_longitude);
@@ -97,7 +92,7 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
 //                mMap.addMarker(markerOptions);
                 break;
             case 1:
-                Toast.makeText(this, "Nyatapola Mandin", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Nyatapola Mandir", Toast.LENGTH_SHORT).show();
                 LatLng Nyatapola = new LatLng(27.6715018,85.4291461);
                 mMap.addMarker(new MarkerOptions().position(Nyatapola).title("Nyatapola Mandir"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(Nyatapola));
@@ -207,19 +202,12 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(bme));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(bme,15));
                 break;
-        }
-
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case REQUEST_CODE:
-                if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    fetchLastLocation();
-                }
-                break;
+            default:
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation();
         }
     }
+
+
 }
 
