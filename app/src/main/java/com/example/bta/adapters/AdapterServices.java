@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,10 +45,41 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder{
         protected ImageView imageView;
         protected TextView textView;
-        public MyViewHolder(@NonNull View itemView) {
+        int position;
+        public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.serviceImage);
             textView = itemView.findViewById(R.id.serviceTitle);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    position = getAdapterPosition();
+                    switch (position){
+                        case 0:
+                            Toast.makeText(itemView.getContext(), "Restaurant", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 1:
+                            Toast.makeText(itemView.getContext(), "Car Stand", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 2:
+                            Toast.makeText(itemView.getContext(), "Toilet", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 3:
+                            Toast.makeText(itemView.getContext(), "Bust Stand", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 4:
+                            Toast.makeText(itemView.getContext(), "Currency Conversion", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 5:
+                            Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();
+                            break;
+                        default:
+                            Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();
+
+                    }
+
+                }
+            });
         }
     }
 }
