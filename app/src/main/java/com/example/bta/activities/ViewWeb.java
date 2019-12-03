@@ -85,6 +85,24 @@ protected WebView webView;
 //            case 40:
 //                webView.loadUrl("https://www.google.com/maps/place/Nyatapola+Temple/@27.6713593,85.4271398,17z/data=!3m1!4b1!4m5!3m4!1s0x39eb1aafaf52a8d9:0x8552bfb072200f12!8m2!3d27.6713593!4d85.4293285");
 //                break;
+            case 2000:
+                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/'27.6775259,85.4378709'/@27.6734949,85.4346578,16z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m3!2m2!1d85.4378709!2d27.6775259!3e2");
+                break;
+            case 2001:
+                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/27.6736493,85.4399309/@27.6716322,85.437798,17z/data=!3m1!4b1!4m9!4m8!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m0!3e2");
+                break;
+            case 2002:
+                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/'27.6764997,85.4326782'/@27.6729494,85.4316802,16z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m3!2m2!1d85.4326782!2d27.6764997!3e2");
+                break;
+            case 2003:
+                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/'27.6733098,85.4382718'/@27.6717539,85.4368465,17z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m3!2m2!1d85.4382718!2d27.6733098!3e2");
+                break;
+            case 2004:
+                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/'27.6733098,85.4382718'/@27.6717539,85.4368465,17z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m3!2m2!1d85.4382718!2d27.6733098!3e2");
+                break;
+            case 2005:
+                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/'27.6762717,85.4372272'/@27.6728706,85.434381,16z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m3!2m2!1d85.4372272!2d27.6762717!3e2");
+                break;
             default:
                 throw new IllegalStateException("Unexpected value: " + key);
         }
