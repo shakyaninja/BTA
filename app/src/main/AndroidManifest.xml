@@ -18,7 +18,6 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".activities.Contact"></activity>
         <activity android:name=".activities.ViewWeb"></activity>
-        <activity android:name=".activities.InfoActivity" />
         <activity
             android:name=".activities.SplashscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

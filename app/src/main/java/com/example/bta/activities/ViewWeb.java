@@ -94,9 +94,12 @@ protected String url;
             case 1003:
                 webView.loadUrl("https://www.google.com/maps/search/restaurants/@27.6766147,85.4353258,16z/data=!3m1!4b1");
                 break;
-//            case 40:
-//                webView.loadUrl("https://www.google.com/maps/place/Nyatapola+Temple/@27.6713593,85.4271398,17z/data=!3m1!4b1!4m5!3m4!1s0x39eb1aafaf52a8d9:0x8552bfb072200f12!8m2!3d27.6713593!4d85.4293285");
-//                break;
+            case 1005:
+                webView.loadUrl("https://www.google.com/search?&q=currency+converter");
+                break;
+            case 1006:
+                webView.loadUrl("https://www.google.com/maps/search/?api=1&query=restaurants");
+                break;
             case 2000:
                 fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
                 fetchLastLocation(27.6775259,85.4378709);
@@ -122,7 +125,8 @@ protected String url;
                 fetchLastLocation(27.6762717,85.4372272);
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + key);
+                webView.loadUrl("https://en.wikipedia.org/wiki/Nyatapola_Temple");
+
         }
     }
     private void fetchLastLocation(final double destination_latitude, final double destination_longitude) {
