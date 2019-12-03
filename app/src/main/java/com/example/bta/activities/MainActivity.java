@@ -263,17 +263,15 @@ public class MainActivity extends AppCompatActivity {
     private void linearFoods() {
         arrayList5 = new ArrayList<>();
 
-        arrayList5.add(new ImageTitle("Juju Dhau",R.drawable.nagarkot));
-        arrayList5.add(new ImageTitle("Yomari",R.drawable.nagarkot));
-        arrayList5.add(new ImageTitle("Newari Samebaji",R.drawable.pilot_baba));
-        arrayList5.add(new ImageTitle("Swoo Puka",R.drawable.ranikot));
-        arrayList5.add(new ImageTitle("Choyela",R.drawable.mahamanjushree));
-        arrayList5.add(new ImageTitle("Kachila",R.drawable.mahamanjushree));
-        arrayList5.add(new ImageTitle("Nyakhwa",R.drawable.mahamanjushree));
-        arrayList5.add(new ImageTitle("Takhaa",R.drawable.mahamanjushree));
-        arrayList5.add(new ImageTitle("Syakwa",R.drawable.mahamanjushree));
-        arrayList5.add(new ImageTitle("Bara ",R.drawable.mahamanjushree));
-        arrayList5.add(new ImageTitle("Bara wo",R.drawable.mahamanjushree));
-        arrayList5.add(new ImageTitle("Chatamari",R.drawable.mahamanjushree));
+        arrayList5.add(new ImageTitle("Juju Dhau",R.drawable.juju_dhau));
+        arrayList5.add(new ImageTitle("Yomari",R.drawable.yomaris));
+        arrayList5.add(new ImageTitle("Newari Samebaji",R.drawable.newari_khaja_set));
+        arrayList5.add(new ImageTitle("Swoo Puka",R.drawable.swoo_puka));
+        arrayList5.add(new ImageTitle("Choyela",R.drawable.choila));
+        arrayList5.add(new ImageTitle("Kachila",R.drawable.kachila));
+        arrayList5.add(new ImageTitle("Nyakhwa",R.drawable.sanyakhuna));
+        arrayList5.add(new ImageTitle("Takhaa",R.drawable.takhwa));
+        arrayList5.add(new ImageTitle("Bara wo",R.drawable.bara));
+        arrayList5.add(new ImageTitle("Chatamari",R.drawable.chatamari));
     }
 }

@@ -13,7 +13,6 @@ import com.example.bta.R;
 import com.example.bta.activities.ServicesActivity;
 import com.example.bta.modals.Services;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyViewHolder> {
