@@ -24,13 +24,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 public class FindusActivity extends FragmentActivity implements OnMapReadyCallback {
-
     private GoogleMap mMap;
     Location currentLocation;
     FusedLocationProviderClient fusedLocationProviderClient;
     private static final int REQUEST_CODE = 101;
     double current_latitude,current_longitude;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +37,7 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
     }
-
     private void fetchLastLocation() {
         if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this,new String[]
@@ -65,32 +60,12 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
             }
         });
     }
-
-
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         Bundle bundle= getIntent().getExtras();
         int key = bundle.getInt("KEY");
         switch (key){
-            case 30:
-//                LatLng current_location = new LatLng( currentLocation.getLatitude(),currentLocation.getLongitude());//get current latitude and longitude
-                LatLng current_location = new LatLng(current_latitude, current_longitude);
-                mMap.addMarker(new MarkerOptions().position(current_location).title("You are here!!"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(current_location));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(current_location,16));
-//                mMap.addMarker(markerOptions);
-                break;
             case 1:
                 Toast.makeText(this, "Nyatapola Mandir", Toast.LENGTH_SHORT).show();
                 LatLng Nyatapola = new LatLng(27.6715018,85.4291461);
@@ -207,7 +182,5 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 fetchLastLocation();
         }
     }
-
-
 }
 
