@@ -16,8 +16,9 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".activities.Contact"></activity>
-        <activity android:name=".activities.ViewWeb"></activity>
+        <activity android:name=".activities.BusStand"></activity>
+        <activity android:name=".activities.Contact" />
+        <activity android:name=".activities.ViewWeb" />
         <activity android:name=".activities.InfoActivity" />
         <activity
             android:name=".activities.SplashscreenActivity"
