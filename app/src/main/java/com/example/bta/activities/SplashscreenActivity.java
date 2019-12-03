@@ -3,8 +3,6 @@ package com.example.bta.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.bta.R;
 
 public class SplashscreenActivity extends AppCompatActivity {
-    int SPLASH_TIME = 1000; //This is 1 second
+    int SPLASH_TIME = 3000; //This is 3 second
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
