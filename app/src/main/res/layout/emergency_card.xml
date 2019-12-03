@@ -3,28 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/colorPrimary"
+    android:backgroundTint="@color/colorAccent"
     app:cardCornerRadius="10dp"
-    android:elevation="3dp"
     android:layout_margin="10dp">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_horizontal">
+        android:orientation="vertical">
 
-        <ImageView
+        <TextView
+            android:id="@+id/emergencyServiceProvider"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/serviceImage"
-            android:layout_gravity="center_horizontal">
-        </ImageView>
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:padding="15dp">
+        </TextView>
         <TextView
-            android:id="@+id/serviceTitle"
-            android:layout_width="match_parent"
+            android:id="@+id/emergencyContact"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="20sp">
+            android:textSize="16sp"
+            android:text="@color/black_overlay"
+            android:paddingLeft="15dp">
         </TextView>
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

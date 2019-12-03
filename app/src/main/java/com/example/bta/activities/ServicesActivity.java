@@ -23,7 +23,7 @@ AdapterServices adapterServices;
 
         linearServices();
 
-        recyclerView = findViewById(R.id.serviceGrid);;
+        recyclerView = findViewById(R.id.serviceGrid);
         RecyclerView.LayoutManager  layoutManager = new GridLayoutManager(this,2,RecyclerView.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         adapterServices= new AdapterServices(this, arrayList);
@@ -33,9 +33,9 @@ AdapterServices adapterServices;
     private void linearServices(){
         arrayList = new ArrayList<>();
         arrayList.add(new Services("Restaurant",R.drawable.ic_restaurant));
-        arrayList.add(new Services("Car Stand",R.drawable.ic_car_stand));
-        arrayList.add(new Services("Toiled",R.drawable.ic_toilet));
-        arrayList.add(new Services("Bus Stand",R.drawable.ic_bus_stop));
+        arrayList.add(new Services("Emergency",R.drawable.ic_emergency_contact));
+        arrayList.add(new Services("Toilet",R.drawable.ic_toilet));
+        arrayList.add(new Services("Bus Stop",R.drawable.ic_bus_stop));
         arrayList.add(new Services("Money Exchange",R.drawable.ic_currency));
         arrayList.add((new Services("Health",R.drawable.ic_local_hospital_black_24dp)));
     }
