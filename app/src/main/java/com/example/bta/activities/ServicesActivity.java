@@ -23,7 +23,7 @@ AdapterServices adapterServices;
 
         linearServices();
 
-        recyclerView = findViewById(R.id.serviceGrid);;
+        recyclerView = findViewById(R.id.serviceGrid);
         RecyclerView.LayoutManager  layoutManager = new GridLayoutManager(this,2,RecyclerView.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         adapterServices= new AdapterServices(this, arrayList);
