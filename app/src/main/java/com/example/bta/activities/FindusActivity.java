@@ -2,6 +2,7 @@ package com.example.bta.activities;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Camera;
 import android.location.Location;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -193,7 +194,19 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 break;
             case 1002:
                 Toast.makeText(this, "Currency Conversion", Toast.LENGTH_SHORT).show();
-
+                LatLng bme = new LatLng(27.671432, 85.430115);
+                LatLng dmc = new LatLng(27.673291, 85.434976);
+                LatLng tmc = new LatLng(27.672308, 85.427224);
+                LatLng nme = new LatLng(27.671472, 85.429118);
+                LatLng nbl = new LatLng(27.672308, 85.427224);
+                mMap.addMarker(new MarkerOptions().position(bme).title("Bhaktapur Money Exchange"));
+                mMap.addMarker(new MarkerOptions().position(dmc).title("Dattatraya Money Changer"));
+                mMap.addMarker(new MarkerOptions().position(tmc).title("Temple Money Changer"));
+                mMap.addMarker(new MarkerOptions().position(nme).title("Nyatapola Money Exchange"));
+                mMap.addMarker(new MarkerOptions().position(nbl).title("Nepal Bank Ltd."));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(bme));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(bme,15));
+                break;
         }
 
     }

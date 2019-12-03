@@ -79,6 +79,9 @@ protected WebView webView;
             case 24:
                 webView.loadUrl("https://www.youtube.com/watch?v=C_3d-p3OhOU");
                 break;
+            case 1003:
+                webView.loadUrl("https://www.google.com/maps/search/restaurants/@27.6766147,85.4353258,16z/data=!3m1!4b1");
+                break;
 //            case 40:
 //                webView.loadUrl("https://www.google.com/maps/place/Nyatapola+Temple/@27.6713593,85.4271398,17z/data=!3m1!4b1!4m5!3m4!1s0x39eb1aafaf52a8d9:0x8552bfb072200f12!8m2!3d27.6713593!4d85.4293285");
 //                break;
