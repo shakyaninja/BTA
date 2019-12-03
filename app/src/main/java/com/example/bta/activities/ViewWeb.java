@@ -1,17 +1,29 @@
 package com.example.bta.activities;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.example.bta.R;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 
 public class ViewWeb extends AppCompatActivity {
 protected WebView webView;
-
+FusedLocationProviderClient fusedLocationProviderClient;
+Location currentLocation;
+public static final int REQUEST_CODE = 101;
+double mid_latitude, mid_longitude;
+protected String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,25 +98,56 @@ protected WebView webView;
 //                webView.loadUrl("https://www.google.com/maps/place/Nyatapola+Temple/@27.6713593,85.4271398,17z/data=!3m1!4b1!4m5!3m4!1s0x39eb1aafaf52a8d9:0x8552bfb072200f12!8m2!3d27.6713593!4d85.4293285");
 //                break;
             case 2000:
-                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/'27.6775259,85.4378709'/@27.6734949,85.4346578,16z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m3!2m2!1d85.4378709!2d27.6775259!3e2");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6775259,85.4378709);
                 break;
             case 2001:
-                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/27.6736493,85.4399309/@27.6716322,85.437798,17z/data=!3m1!4b1!4m9!4m8!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m0!3e2");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6736493,85.4399309);
                 break;
             case 2002:
-                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/'27.6764997,85.4326782'/@27.6729494,85.4316802,16z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m3!2m2!1d85.4326782!2d27.6764997!3e2");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6764997,85.4326782);
                 break;
             case 2003:
-                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/'27.6733098,85.4382718'/@27.6717539,85.4368465,17z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m3!2m2!1d85.4382718!2d27.6733098!3e2");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6733098,85.4382718);
                 break;
             case 2004:
-                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/'27.6733098,85.4382718'/@27.6717539,85.4368465,17z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m3!2m2!1d85.4382718!2d27.6733098!3e2");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6733098,85.4382717);
                 break;
             case 2005:
-                webView.loadUrl("https://www.google.com/maps/dir/Bhaktapur/'27.6762717,85.4372272'/@27.6728706,85.434381,16z/data=!3m1!4b1!4m12!4m11!1m5!1m1!1s0x39eb05539de38ee1:0xc657de2839fc700f!2m2!1d85.4401795!2d27.6695238!1m3!2m2!1d85.4372272!2d27.6762717!3e2");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6762717,85.4372272);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + key);
         }
     }
+    private void fetchLastLocation(final double destination_latitude, final double destination_longitude) {
+        final double[] current_latitude = new double[1];
+        final double[] current_longitude = new double[1];
+        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]
+                    {Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+            return;
+        }
+        Task<Location> task = fusedLocationProviderClient.getLastLocation();
+        task.addOnSuccessListener(new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+                if(location != null){
+                    currentLocation = location;
+                    current_latitude[0] = currentLocation.getLatitude();
+                    current_longitude[0] = currentLocation.getLongitude();
+                    mid_latitude = (destination_latitude + current_latitude[0])/2;
+                    mid_longitude = (destination_longitude + current_longitude[0])/2;
+                    url = "https://www.google.com/maps/dir/'"+ current_latitude[0] +","+ current_longitude[0] +"'/'"+destination_latitude+","+destination_longitude+"'/@"+mid_latitude+","+mid_longitude+",12z";
+                    webView.loadUrl(url);
+                }
+            }
+        });
+    }
+
 }
