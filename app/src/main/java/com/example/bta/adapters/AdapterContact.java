@@ -1,7 +1,6 @@
 package com.example.bta.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,12 +51,12 @@ public class AdapterContact  extends RecyclerView.Adapter<AdapterContact.MyViewH
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    switch(getAdapterPosition()){
-                        case 0:
-                            Intent intent = new Intent(Intent.ACTION_CALL);
-                            Intent intent1 = intent.putExtra("phoneno", arrayList.get(getAdapterPosition()));
-                            break;
-                    }
+//                    switch(getAdapterPosition()){
+//                        case 0:
+//                            Intent intent = new Intent(Intent.ACTION_CALL);
+//                            Intent intent1 = intent.putExtra("phoneno", arrayList.get(getAdapterPosition()));
+//                            break;
+//                    }
                     Toast.makeText(context, "contact:", Toast.LENGTH_SHORT).show();
                 }
             });

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private FloatingActionButton fab_main, fab1_location, fab2_Info,fab3_guide;
     private Animation fab_open, fab_close, fab_clock, fab_anticlock;
-    TextView history;
+    TextView services;
 
     Boolean isOpen = false;
     RecyclerView.LayoutManager layoutManager;
@@ -79,9 +79,9 @@ public class MainActivity extends AppCompatActivity {
 
 //        for history buttons
 
-        history = findViewById(R.id.history_text);
+        services = findViewById(R.id.history_text);
 
-        history.setOnClickListener(new View.OnClickListener() {
+        services.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ServicesActivity.class);
