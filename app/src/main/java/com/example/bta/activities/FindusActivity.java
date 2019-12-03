@@ -96,41 +96,48 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
 //                mMap.addMarker(markerOptions);
                 break;
             case 1:
-                Toast.makeText(this, "bhaktapur", Toast.LENGTH_SHORT).show();
-                LatLng Nyatapola = new LatLng(27.671890, 85.428913);
-                mMap.addMarker(new MarkerOptions().position(Nyatapola).title("Marker in Nyatapola"));
+                Toast.makeText(this, "Nyatapola Mandin", Toast.LENGTH_SHORT).show();
+                LatLng Nyatapola = new LatLng(27.6715018,85.4291461);
+                mMap.addMarker(new MarkerOptions().position(Nyatapola).title("Nyatapola Mandir"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(Nyatapola));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Nyatapola,16));
                 break;
             case 2:
-                Toast.makeText(this, "bhaktapur", Toast.LENGTH_SHORT).show();
-                LatLng dattatraya = new LatLng(27.671890, 85.428913);
-                mMap.addMarker(new MarkerOptions().position(dattatraya).title("Marker in Dattatraya"));
+                Toast.makeText(this, "Dattatraya Mandir", Toast.LENGTH_SHORT).show();
+                LatLng dattatraya = new LatLng(27.6735732,85.4352401);
+                mMap.addMarker(new MarkerOptions().position(dattatraya).title("Dattatraya Mandir"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(dattatraya));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dattatraya,16));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dattatraya,17));
                 break;
             case 3:
-                Toast.makeText(this, "bhaktapur", Toast.LENGTH_SHORT).show();
-                LatLng pottery = new LatLng(27.671890, 85.428913);
-                mMap.addMarker(new MarkerOptions().position(pottery).title("Marker in Pottery Square"));
+                Toast.makeText(this, "Pottery Square", Toast.LENGTH_SHORT).show();
+                LatLng pottery = new LatLng(27.6698678,85.4261262);
+                mMap.addMarker(new MarkerOptions().position(pottery).title("Pottery Square"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(pottery));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pottery,16));
                 break;
             case 4:
             case 10:
-                Toast.makeText(this, "Durbarsquare", Toast.LENGTH_SHORT).show();
-                LatLng DurbarSquare = new LatLng(27.671890, 85.428913);
-                mMap.addMarker(new MarkerOptions().position(DurbarSquare).title("Marker in Durbar Square"));
+                Toast.makeText(this, "Bhaktapur Durbar Square", Toast.LENGTH_SHORT).show();
+                LatLng DurbarSquare = new LatLng(27.6720649,85.4282954);
+                mMap.addMarker(new MarkerOptions().position(DurbarSquare).title("Bhaktapur Durbar Square"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(DurbarSquare));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(DurbarSquare,16));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(DurbarSquare,17));
                 break;
             case 11:
             case 22:
-                Toast.makeText(this, "Durbarsquare", Toast.LENGTH_SHORT).show();
-                LatLng Changu = new LatLng(27.671890, 85.428913);
-                mMap.addMarker(new MarkerOptions().position(Changu).title("Marker in Changu"));
+                Toast.makeText(this, "Changu Narayan Temple", Toast.LENGTH_SHORT).show();
+                LatLng Changu = new LatLng(27.7167038,85.4288589);
+                mMap.addMarker(new MarkerOptions().position(Changu).title("Changu Narayan Temple"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(Changu));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Changu,16));
+                break;
+            case 18:
+                Toast.makeText(this, "Nagarkot", Toast.LENGTH_SHORT).show();
+                LatLng nagarkot = new LatLng(27.692168,85.5177437);
+                mMap.addMarker(new MarkerOptions().position(nagarkot).title("Nagarkot"));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(nagarkot));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(nagarkot,16));
                 break;
         }
     }

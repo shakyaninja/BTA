@@ -62,7 +62,7 @@ protected WebView webView;
                 webView.loadUrl("https://www.youtube.com/watch?v=R0DHH1uZeJI");
                 break;
             case 18:
-                webView.loadUrl("https://en.wikipedia.org/wiki/Nagarkot");
+                webView.loadUrl("https://www.google.com/maps/dir/27.6694853,85.4400925/Nagarkot+View+Tower,+44804/@27.6832663,85.4628323,14z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x39eb05df7d3eff5b:0xdf125feb925fb7d4!2m2!1d85.5199324!2d27.692168!3e2");
                 break;
             case 19:
                 webView.loadUrl("https://www.nepalsanctuarytreks.com/package/suryabinayak-pilot-baba-ashram-hiking/");

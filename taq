@@ -1,0 +1,49 @@
+[1mdiff --git a/app/src/main/java/com/example/bta/adapters/AdapterServices.java b/app/src/main/java/com/example/bta/adapters/AdapterServices.java[m
+[1mindex c7078e5..354d6e5 100644[m
+[1m--- a/app/src/main/java/com/example/bta/adapters/AdapterServices.java[m
+[1m+++ b/app/src/main/java/com/example/bta/adapters/AdapterServices.java[m
+[36m@@ -4,6 +4,7 @@[m [mimport android.view.LayoutInflater;[m
+ import android.view.View;[m
+ import android.view.ViewGroup;[m
+ import android.widget.ImageView;[m
+[32m+[m[32mimport android.widget.TextView;[m
+ [m
+ import androidx.annotation.NonNull;[m
+ import androidx.recyclerview.widget.RecyclerView;[m
+[36m@@ -34,6 +35,7 @@[m [mpublic class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView[m
+     @Override[m
+     public void onBindViewHolder(@NonNull AdapterServices.MyViewHolder holder, int position) {[m
+         holder.imageView.setImageResource(arrayList.get(position).getImage());[m
+[32m+[m[32m        holder.textView.setText(arrayList.get(position).getName());[m
+     }[m
+ [m
+     @Override[m
+[36m@@ -42,9 +44,11 @@[m [mpublic class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView[m
+     }[m
+     public class MyViewHolder extends RecyclerView.ViewHolder{[m
+         protected ImageView imageView;[m
+[32m+[m[32m        protected TextView textView;[m
+         public MyViewHolder(@NonNull View itemView) {[m
+             super(itemView);[m
+             imageView = itemView.findViewById(R.id.serviceImage);[m
+[32m+[m[32m            textView = itemView.findViewById(R.id.serviceTitle);[m
+         }[m
+     }[m
+ }[m
+[1mdiff --git a/app/src/main/res/layout/services_card.xml b/app/src/main/res/layout/services_card.xml[m
+[1mindex 0cd3c9f..5daf89d 100644[m
+[1m--- a/app/src/main/res/layout/services_card.xml[m
+[1m+++ b/app/src/main/res/layout/services_card.xml[m
+[36m@@ -6,4 +6,11 @@[m
+         android:layout_height="wrap_content"[m
+         android:id="@+id/serviceImage">[m
+     </ImageView>[m
+[32m+[m[32m    <TextView[m
+[32m+[m[32m        android:id="@+id/serviceTitle"[m
+[32m+[m[32m        android:layout_width="wrap_content"[m
+[32m+[m[32m        android:layout_height="wrap_content"[m
+[32m+[m[32m        android:layout_marginTop="10dp">[m
+[32m+[m
+[32m+[m[32m    </TextView>[m
+ </androidx.cardview.widget.CardView>[m
+\ No newline at end of file[m
