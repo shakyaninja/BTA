@@ -1,5 +1,6 @@
 package com.example.bta.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bta.R;
+import com.example.bta.activities.Contact;
+import com.example.bta.activities.FindusActivity;
 import com.example.bta.activities.ServicesActivity;
 import com.example.bta.modals.Services;
 
@@ -59,19 +62,27 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                             Toast.makeText(itemView.getContext(), "Restaurant", Toast.LENGTH_SHORT).show();
                             break;
                         case 1:
-                            Toast.makeText(itemView.getContext(), "Car Stand", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(itemView.getContext(), "Emergency Contact", Toast.LENGTH_SHORT).show();
+                            Intent intent1 = new Intent(context, Contact.class);
+                            context.startActivity(intent1);
                             break;
                         case 2:
                             Toast.makeText(itemView.getContext(), "Toilet", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(context,FindusActivity.class);
+                            intent.putExtra("KEY",1000);
+                            context.startActivity(intent);
                             break;
                         case 3:
-                            Toast.makeText(itemView.getContext(), "Bust Stand", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(itemView.getContext(), "Bus Stand", Toast.LENGTH_SHORT).show();
                             break;
                         case 4:
                             Toast.makeText(itemView.getContext(), "Currency Conversion", Toast.LENGTH_SHORT).show();
                             break;
                         case 5:
                             Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();
+                            Intent intent5 = new Intent(context,FindusActivity.class);
+                            intent5.putExtra("KEY",1001);
+                            context.startActivity(intent5);
                             break;
                         default:
                             Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();

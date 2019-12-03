@@ -139,7 +139,50 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(nagarkot));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(nagarkot,16));
                 break;
+            case 1000:
+                Toast.makeText(this, "Toilet", Toast.LENGTH_SHORT).show();
+                LatLng kamalbinayak1 = new LatLng(27.676372,85.4376489);
+                LatLng kamalbinayak2 = new LatLng(27.6770153,85.439282);
+                LatLng chayamasingh = new LatLng(27.6736984,85.4393027);
+                LatLng Siddhapokhari = new LatLng(27.6719787,85.421788);
+                LatLng khasibazar = new LatLng(27.6707015,85.4298535);
+                LatLng dbsq = new LatLng(27.6726737,85.4290403);
+                LatLng ram = new LatLng(27.6687115,85.4277505);
+                LatLng dudpati = new LatLng(27.6712024,85.4240544);
+                LatLng you = new LatLng(current_latitude,current_longitude);
+                mMap.addMarker(new MarkerOptions().position(you).title("You are Here"));
+                mMap.addMarker(new MarkerOptions().position(kamalbinayak1).title("Kamal Binayak Bus Park"));
+                mMap.addMarker(new MarkerOptions().position(kamalbinayak2).title(("Kamal Pokhari")));
+                mMap.addMarker(new MarkerOptions().position(chayamasingh).title(("Chayamasingh")));
+                mMap.addMarker(new MarkerOptions().position(Siddhapokhari).title(("Siddha Pokhari")));
+                mMap.addMarker(new MarkerOptions().position(khasibazar).title(("Khasi Bazar")));
+                mMap.addMarker(new MarkerOptions().position(dbsq).title(("Durbar Square")));
+                mMap.addMarker(new MarkerOptions().position(ram).title(("Ram Mandir")));
+                mMap.addMarker(new MarkerOptions().position(dudpati).title(("Dudhpati")));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(khasibazar));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(khasibazar,14));
+            case 1001:
+                Toast.makeText(this, "Hospital", Toast.LENGTH_SHORT).show();
+//                LatLng chayamsingh = new LatLng(27.676372,85.4376489);
+//                LatLng bhaktapur = new LatLng(27.6770153,85.439282);
+//                LatLng khasibazar = new LatLng(27.6736984,85.4393027);
+//                LatLng iwamura = new LatLng(27.6719787,85.421788);
+//                LatLng cancer = new LatLng(27.6707015,85.4298535);
+//                LatLng dbsq = new LatLng(27.6726737,85.4290403);
+//                LatLng ram = new LatLng(27.6687115,85.4277505);
+//                LatLng dudpati = new LatLng(27.6712024,85.4240544);
+//                mMap.addMarker(new MarkerOptions().position(kamalbinayak1).title("Kamal Binayak Bus Park"));
+//                mMap.addMarker(new MarkerOptions().position(kamalbinayak2).title(("Kamal Pokhari")));
+//                mMap.addMarker(new MarkerOptions().position(chayamasingh).title(("Chayamasingh")));
+//                mMap.addMarker(new MarkerOptions().position(Siddhapokhari).title(("Siddha Pokhari")));
+//                mMap.addMarker(new MarkerOptions().position(khasibazar).title(("Khasi Bazar")));
+//                mMap.addMarker(new MarkerOptions().position(dbsq).title(("Durbar Square")));
+//                mMap.addMarker(new MarkerOptions().position(ram).title(("Ram Mandir")));
+//                mMap.addMarker(new MarkerOptions().position(dudpati).title(("Dudhpati")));
+//                mMap.moveCamera(CameraUpdateFactory.newLatLng(khasibazar));
+//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(khasibazar,14));
         }
+
     }
 
     @Override
