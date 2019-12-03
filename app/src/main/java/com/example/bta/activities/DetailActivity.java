@@ -12,24 +12,31 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.bta.R;
+import com.example.bta.fragments.DetailBaraFragment;
 import com.example.bta.fragments.DetailBisketFragment;
 import com.example.bta.fragments.DetailChangunarayanFragment;
+import com.example.bta.fragments.DetailChatamariFragment;
+import com.example.bta.fragments.DetailChoyelaFragment;
 import com.example.bta.fragments.DetailDattatrayaFragment;
 import com.example.bta.fragments.DetailDhauFragment;
 import com.example.bta.fragments.DetailDurbarSquareFragment;
 import com.example.bta.fragments.DetailGathamugaFragment;
 import com.example.bta.fragments.DetailGhintangisiFragment;
 import com.example.bta.fragments.DetailGhyampeFragment;
+import com.example.bta.fragments.DetailKachilaFragment;
 import com.example.bta.fragments.DetailManjushreeFragment;
 import com.example.bta.fragments.DetailMuhanFragment;
 import com.example.bta.fragments.DetailNagarkotFragment;
+import com.example.bta.fragments.DetailNyakhwaFragment;
 import com.example.bta.fragments.DetailNyatapolaFragment;
 import com.example.bta.fragments.DetailPilotbabaFragment;
 import com.example.bta.fragments.DetailPotterysqFragment;
 import com.example.bta.fragments.DetailPulukisiFragment;
 import com.example.bta.fragments.DetailRanikotFragment;
 import com.example.bta.fragments.DetailSamebajiFragment;
+import com.example.bta.fragments.DetailSwopukaFragment;
 import com.example.bta.fragments.DetailTahamachaFragment;
+import com.example.bta.fragments.DetailTakhaaFragment;
 import com.example.bta.fragments.DetailYomariFragment;
 import com.example.bta.fragments.DetailYomarisFragment;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -202,6 +209,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.muhan_title);
                 break;
             case 40:
+                fab.setVisibility(View.INVISIBLE);
                 DetailDhauFragment fragment40 = new DetailDhauFragment();
                 transaction.replace(R.id.container, fragment40);
                 transaction.commit();
@@ -209,6 +217,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.dhau_title);
                 break;
             case 41:
+                fab.setVisibility(View.INVISIBLE);
                 DetailYomarisFragment fragment41 = new DetailYomarisFragment();
                 transaction.replace(R.id.container, fragment41);
                 transaction.commit();
@@ -216,15 +225,71 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.yomari_title);
                 break;
             case 42:
+                fab.setVisibility(View.INVISIBLE);
                 DetailSamebajiFragment fragment42 = new DetailSamebajiFragment();
                 transaction.replace(R.id.container, fragment42);
                 transaction.commit();
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.newari_khaja_set);
                 toolbar.setTitle(R.string.samebaji_title);
                 break;
-
+            case 43:
+                fab.setVisibility(View.INVISIBLE);
+                DetailSwopukaFragment fragment43 = new DetailSwopukaFragment();
+                transaction.replace(R.id.container, fragment43);
+                transaction.commit();
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.swoo_puka);
+                toolbar.setTitle(R.string.swo_puka_title);
+                break;
+            case 44:
+                fab.setVisibility(View.INVISIBLE);
+                DetailChoyelaFragment fragment44 = new DetailChoyelaFragment();
+                transaction.replace(R.id.container, fragment44);
+                transaction.commit();
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.choila);
+                toolbar.setTitle(R.string.choila_title);
+                break;
+            case 45:
+                fab.setVisibility(View.INVISIBLE);
+                DetailKachilaFragment fragment45 = new DetailKachilaFragment();
+                transaction.replace(R.id.container, fragment45);
+                transaction.commit();
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.kachila);
+                toolbar.setTitle(R.string.kachila_title);
+                break;
+            case 46:
+                fab.setVisibility(View.INVISIBLE);
+                DetailNyakhwaFragment fragment46 = new DetailNyakhwaFragment();
+                transaction.replace(R.id.container, fragment46);
+                transaction.commit();
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.sanyakhuna);
+                toolbar.setTitle(R.string.nyakhwa_title);
+                break;
+            case 47:
+                fab.setVisibility(View.INVISIBLE);
+                DetailTakhaaFragment fragment47 = new DetailTakhaaFragment();
+                transaction.replace(R.id.container, fragment47);
+                transaction.commit();
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.takhwa);
+                toolbar.setTitle(R.string.takha_title);
+                break;
+            case 48:
+                fab.setVisibility(View.INVISIBLE);
+                DetailBaraFragment fragment48 = new DetailBaraFragment();
+                transaction.replace(R.id.container, fragment48);
+                transaction.commit();
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.bara);
+                toolbar.setTitle(R.string.bara_title);
+                break;
+            case 49:
+                fab.setVisibility(View.INVISIBLE);
+                DetailChatamariFragment fragment49 = new DetailChatamariFragment();
+                transaction.replace(R.id.container, fragment49);
+                transaction.commit();
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.chatamari);
+                toolbar.setTitle(R.string.chatamari_title);
+                break;
             default:
-                throw new IllegalStateException("Unexpected value: " + key);
+                Toast.makeText(this, "Invalid Choice", Toast.LENGTH_SHORT).show();
         }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

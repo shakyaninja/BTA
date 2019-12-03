@@ -24,7 +24,6 @@ protected WebView webView;
         webView.setWebChromeClient(new WebChromeClient());
         webView.setWebViewClient(new WebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setDomStorageEnabled(true);
         switch (key){
             case 1:
                 webView.loadUrl("https://en.wikipedia.org/wiki/Nyatapola_Temple");

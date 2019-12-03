@@ -11,7 +11,6 @@ import com.example.bta.adapters.AdapterServices;
 import com.example.bta.modals.Services;
 
 import java.util.ArrayList;
-
 public class ServicesActivity extends AppCompatActivity {
 ArrayList<Services> arrayList;
 RecyclerView recyclerView;
