@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,10 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bta.R;
+import com.example.bta.activities.BusStand;
 import com.example.bta.activities.Contact;
 import com.example.bta.activities.FindusActivity;
 import com.example.bta.activities.ServicesActivity;
 import com.example.bta.activities.ViewWeb;
+import com.example.bta.modals.Bus;
 import com.example.bta.modals.Services;
 
 import java.util.ArrayList;
@@ -78,11 +81,14 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                             break;
                         case 3:
                             Toast.makeText(itemView.getContext(), "Bus Stand", Toast.LENGTH_SHORT).show();
+                            Intent intent3 = new Intent(context, BusStand.class);
+                            context.startActivity(intent3);
                             break;
                         case 4:
                             Toast.makeText(itemView.getContext(), "Currency Conversion", Toast.LENGTH_SHORT).show();
                             Intent intent4 = new Intent(context,FindusActivity.class);
                             intent4.putExtra("KEY",1002);
+                            context.startActivity(intent4);
                             break;
                         case 5:
                             Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();

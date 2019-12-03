@@ -1,17 +1,29 @@
 package com.example.bta.activities;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.example.bta.R;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 
 public class ViewWeb extends AppCompatActivity {
 protected WebView webView;
-
+FusedLocationProviderClient fusedLocationProviderClient;
+Location currentLocation;
+public static final int REQUEST_CODE = 101;
+double mid_latitude, mid_longitude;
+protected String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,10 +92,62 @@ protected WebView webView;
                 webView.loadUrl("https://www.youtube.com/watch?v=C_3d-p3OhOU");
                 break;
             case 1003:
-                webView.loadUrl("https://www.google.com/maps/search/?api=1&query=restaurants");
+                webView.loadUrl("https://www.google.com/maps/search/restaurants/@27.6766147,85.4353258,16z/data=!3m1!4b1");
+                break;
+//            case 40:
+//                webView.loadUrl("https://www.google.com/maps/place/Nyatapola+Temple/@27.6713593,85.4271398,17z/data=!3m1!4b1!4m5!3m4!1s0x39eb1aafaf52a8d9:0x8552bfb072200f12!8m2!3d27.6713593!4d85.4293285");
+//                break;
+            case 2000:
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6775259,85.4378709);
+                break;
+            case 2001:
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6736493,85.4399309);
+                break;
+            case 2002:
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6764997,85.4326782);
+                break;
+            case 2003:
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6733098,85.4382718);
+                break;
+            case 2004:
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6733098,85.4382717);
+                break;
+            case 2005:
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6762717,85.4372272);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + key);
         }
     }
+    private void fetchLastLocation(final double destination_latitude, final double destination_longitude) {
+        final double[] current_latitude = new double[1];
+        final double[] current_longitude = new double[1];
+        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]
+                    {Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+            return;
+        }
+        Task<Location> task = fusedLocationProviderClient.getLastLocation();
+        task.addOnSuccessListener(new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+                if(location != null){
+                    currentLocation = location;
+                    current_latitude[0] = currentLocation.getLatitude();
+                    current_longitude[0] = currentLocation.getLongitude();
+                    mid_latitude = (destination_latitude + current_latitude[0])/2;
+                    mid_longitude = (destination_longitude + current_longitude[0])/2;
+                    url = "https://www.google.com/maps/dir/'"+ current_latitude[0] +","+ current_longitude[0] +"'/'"+destination_latitude+","+destination_longitude+"'/@"+mid_latitude+","+mid_longitude+",12z";
+                    webView.loadUrl(url);
+                }
+            }
+        });
+    }
+
 }
