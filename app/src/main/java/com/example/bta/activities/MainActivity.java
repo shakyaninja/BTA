@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.bta.R;
+import com.example.bta.adapters.AdapterFoods;
 import com.example.bta.adapters.AdapterJatras;
 import com.example.bta.adapters.AdapterNatural;
 import com.example.bta.adapters.AdapterSquares;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private FloatingActionButton fab_main, fab1_location, fab2_Info,fab3_guide;
     private Animation fab_open, fab_close, fab_clock, fab_anticlock;
-    TextView history;
+    TextView services;
 
     Boolean isOpen = false;
     RecyclerView.LayoutManager layoutManager;
@@ -45,15 +46,20 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerViewNatural;
     RecyclerView.LayoutManager layoutManagerNatural;
 
+    private RecyclerView recyclerViewFood;
+    RecyclerView.LayoutManager layoutManagerFood;
+
     AdapterSquares adapterSquares;
     AdapterWorld adapterWorld;
     AdapterJatras adapterJatras;
     AdapterNatural adapterNatural;
+    AdapterFoods adapterFoods;
 
     ArrayList<ImageTitle> arrayList;
     ArrayList<ImageTitle> arrayList2;
     ArrayList<ImageTitle> arrayList3;
     ArrayList<ImageTitle> arrayList4;
+    ArrayList<ImageTitle> arrayList5;
 
 
     @Override
@@ -73,12 +79,12 @@ public class MainActivity extends AppCompatActivity {
 
 //        for history buttons
 
-        history = findViewById(R.id.history_text);
+        services = findViewById(R.id.service_text);
 
-        history.setOnClickListener(new View.OnClickListener() {
+        services.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,HistoryActivity.class);
+                Intent intent = new Intent(MainActivity.this, ServicesActivity.class);
                 startActivity(intent);
             }
         });
@@ -154,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
         linearWHS();
         linearJatra();
         linearNatural();
+        linearFoods();
 
 
         recyclerView = findViewById(R.id.recycler);
@@ -183,6 +190,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewNatural.setLayoutManager(layoutManagerNatural);
         adapterNatural = new AdapterNatural(this, arrayList4);
         recyclerViewNatural.setAdapter(adapterNatural);
+
+        recyclerViewFood = findViewById(R.id.recyclerFood);
+
+        layoutManagerFood = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewFood.setLayoutManager(layoutManagerFood);
+        adapterFoods = new AdapterFoods(this, arrayList5);
+        recyclerViewFood.setAdapter(adapterFoods);
 
 
 
@@ -245,5 +259,21 @@ public class MainActivity extends AppCompatActivity {
     arrayList4.add(new ImageTitle("MuhanPokhari",R.drawable.muhan));
 }
 
+// foods
+    private void linearFoods() {
+        arrayList5 = new ArrayList<>();
 
+        arrayList5.add(new ImageTitle("Juju Dhau",R.drawable.nagarkot));
+        arrayList5.add(new ImageTitle("Yomari",R.drawable.nagarkot));
+        arrayList5.add(new ImageTitle("Newari Samebaji",R.drawable.pilot_baba));
+        arrayList5.add(new ImageTitle("Swoo Puka",R.drawable.ranikot));
+        arrayList5.add(new ImageTitle("Choyela",R.drawable.mahamanjushree));
+        arrayList5.add(new ImageTitle("Kachila",R.drawable.mahamanjushree));
+        arrayList5.add(new ImageTitle("Nyakhwa",R.drawable.mahamanjushree));
+        arrayList5.add(new ImageTitle("Takhaa",R.drawable.mahamanjushree));
+        arrayList5.add(new ImageTitle("Syakwa",R.drawable.mahamanjushree));
+        arrayList5.add(new ImageTitle("Bara ",R.drawable.mahamanjushree));
+        arrayList5.add(new ImageTitle("Bara wo",R.drawable.mahamanjushree));
+        arrayList5.add(new ImageTitle("Chatamari",R.drawable.mahamanjushree));
+    }
 }
