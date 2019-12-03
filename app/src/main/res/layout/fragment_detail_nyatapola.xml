@@ -27,11 +27,6 @@
                     android:layout_marginBottom="10dp"
                     android:textSize="16sp"
                     android:text="@string/nyatapola_details2"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/nyatapola_link"
-                android:text="@string/wiki_link" />
         </LinearLayout>
     </ScrollView>
 

@@ -20,11 +20,6 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="10dp"
                 android:text="@string/pilotbaba_detail"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pilotbaba_link"
-                android:text="@string/wiki_link" />
         </LinearLayout>
     </ScrollView>
 

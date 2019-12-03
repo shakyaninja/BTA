@@ -19,11 +19,6 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="10dp"
                 android:text="@string/manjushree_detail1"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/manjushree_link"
-                android:text="@string/wiki_link" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
