@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+
 
     <application
         android:allowBackup="true"
@@ -16,9 +18,12 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".activities.BusStand"></activity>
-        <activity android:name=".activities.Contact" />
-        <activity android:name=".activities.ViewWeb" />
+        <activity android:name=".activities.Contact">
+
+        </activity>
+        <activity android:name=".activities.ViewWeb">
+
+        </activity>
         <activity android:name=".activities.InfoActivity" />
         <activity
             android:name=".activities.SplashscreenActivity"
@@ -30,6 +35,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.GalleryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_gallery"
+            android:theme="@style/FullscreenTheme"></activity>
         <activity
             android:name=".activities.DetailGuideActivity"
             android:label="@string/title_activity_detail_guide"
@@ -57,6 +67,9 @@
         <activity
             android:name=".activities.MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

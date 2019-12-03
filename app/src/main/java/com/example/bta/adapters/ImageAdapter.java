@@ -13,6 +13,14 @@ import com.example.bta.R;
 public class ImageAdapter extends PagerAdapter {
     Context mContext;
 
+    public int[] getSliderImageId() {
+        return sliderImageId;
+    }
+
+    public void setSliderImageId(int[] sliderImageId) {
+        this.sliderImageId = sliderImageId;
+    }
+
     public ImageAdapter(Context context) {
         this.mContext = context;
     }

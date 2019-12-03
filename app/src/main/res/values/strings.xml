@@ -168,4 +168,18 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="service_text">Services</string>
+
+    <string name="title_activity_gallery">GalleryActivity</string>
+    <string name="yomari_title">Yomari</string>
+    <string name="dhau_title">Juju Dhau</string>
+    <string name="samebaji_title">Newari Samebaji</string>
+    <string name="swo_puka_title">Swoo Puka</string>
+    <string name="choila_title">Choyela</string>
+    <string name="kachila_title">Kachila</string>
+    <string name="nyakhwa_title">Nyakhwa</string>
+    <string name="takha_title">Takhaa</string>
+    <string name="bara_title">Bara</string>
+    <string name="chatamari_title">Chatamari</string>
+    =======
+    >>>>>>> parent of 50d8b51... Sets guides and corrects Taumadhi Square
 </resources>
