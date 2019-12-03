@@ -36,7 +36,7 @@
             android:name=".activities.GuidesActivity"
             android:label="@string/title_activity_guides"
             android:theme="@style/NoActionBar" />
-        <activity android:name=".activities.HistoryActivity" />
+        <activity android:name=".activities.ServicesActivity" />
         <activity
             android:name=".activities.DetailActivity"
             android:label="@string/title_activity_detail"

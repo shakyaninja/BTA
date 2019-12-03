@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.bta.R;
 import com.example.bta.fragments.HistoryPlaceFragment;
 
-public class HistoryActivity extends AppCompatActivity {
+public class ServicesActivity extends AppCompatActivity {
 
     FrameLayout frameLayout;
     @Override
