@@ -15,6 +15,7 @@ import com.example.bta.R;
 import com.example.bta.activities.Contact;
 import com.example.bta.activities.FindusActivity;
 import com.example.bta.activities.ServicesActivity;
+import com.example.bta.activities.ViewWeb;
 import com.example.bta.modals.Services;
 
 import java.util.ArrayList;
@@ -60,6 +61,9 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                     switch (position){
                         case 0:
                             Toast.makeText(itemView.getContext(), "Restaurant", Toast.LENGTH_SHORT).show();
+                            Intent intent0 = new Intent(context, ViewWeb.class);
+                            intent0.putExtra("key",1003);
+                            context.startActivity(intent0);
                             break;
                         case 1:
                             Toast.makeText(itemView.getContext(), "Emergency Contact", Toast.LENGTH_SHORT).show();
