@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +35,7 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
     @Override
     public void onBindViewHolder(@NonNull AdapterServices.MyViewHolder holder, int position) {
         holder.imageView.setImageResource(arrayList.get(position).getImage());
+        holder.textView.setText(arrayList.get(position).getName());
     }
 
     @Override
@@ -42,9 +44,11 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
     }
     public class MyViewHolder extends RecyclerView.ViewHolder{
         protected ImageView imageView;
+        protected TextView textView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.serviceImage);
+            textView = itemView.findViewById(R.id.serviceTitle);
         }
     }
 }
