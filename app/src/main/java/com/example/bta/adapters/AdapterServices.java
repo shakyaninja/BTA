@@ -98,9 +98,7 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                             break;
                         default:
                             Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();
-
                     }
-
                 }
             });
         }
