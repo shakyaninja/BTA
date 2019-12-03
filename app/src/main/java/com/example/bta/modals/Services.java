@@ -2,7 +2,7 @@ package com.example.bta.modals;
 
 public class Services {
     protected String name;
-    protected String image;
+    protected int image;
 
     public String getName() {
         return name;
@@ -12,15 +12,15 @@ public class Services {
         this.name = name;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
-    public Services(String name, String image) {
+    public Services(String name, int image) {
         this.name = name;
         this.image = image;
     }
