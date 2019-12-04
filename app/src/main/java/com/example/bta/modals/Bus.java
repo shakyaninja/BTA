@@ -22,6 +22,6 @@ public class Bus {
     }
 
     public void setFrom(String from) {
-        this.from = "from: "+from;
+        this.from = from;
     }
 }

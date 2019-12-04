@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
     TextView findus;
     ImageView imageView;
     private RecyclerView recyclerView;
-    private FloatingActionButton fab_main, fab1_location, fab2_Info,fab3_guide;
+    private FloatingActionButton fab_main, fab1_location, fab2_currency,fab3_guide;
     private Animation fab_open, fab_close, fab_clock, fab_anticlock;
-    TextView history;
+    TextView services;
 
     Boolean isOpen = false;
     RecyclerView.LayoutManager layoutManager;
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         //for floating action  button
         fab_main = findViewById(R.id.fab);
         fab1_location = findViewById(R.id.fab1);
-        fab2_Info = findViewById(R.id.fab2);
+        fab2_currency = findViewById(R.id.fab2);
         fab3_guide = findViewById(R.id.fab3);
         fab_close = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_close);
         fab_open = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
@@ -79,9 +79,9 @@ public class MainActivity extends AppCompatActivity {
 
 //        for history buttons
 
-        history = findViewById(R.id.history_text);
+        services = findViewById(R.id.history_text);
 
-        history.setOnClickListener(new View.OnClickListener() {
+        services.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ServicesActivity.class);
@@ -99,33 +99,34 @@ public class MainActivity extends AppCompatActivity {
 //                    textview_location.setVisibility(View.INVISIBLE);
 //                    textview_Info.setVisibility(View.INVISIBLE);
                     fab3_guide.startAnimation(fab_close);
-                    fab2_Info.startAnimation(fab_close);
+                    fab2_currency.startAnimation(fab_close);
                     fab1_location.startAnimation(fab_close);
                     fab_main.startAnimation(fab_anticlock);
                     fab3_guide.setClickable(false);
-                    fab2_Info.setClickable(false);
+                    fab2_currency.setClickable(false);
                     fab1_location.setClickable(false);
                     isOpen = false;
                 } else {
 //                    textview_location.setVisibility(View.VISIBLE);
 //                    textview_Info.setVisibility(View.VISIBLE);
                     fab3_guide.startAnimation(fab_open);
-                    fab2_Info.startAnimation(fab_open);
+                    fab2_currency.startAnimation(fab_open);
                     fab1_location.startAnimation(fab_open);
                     fab_main.startAnimation(fab_clock);
                     fab3_guide.setClickable(true);
-                    fab2_Info.setClickable(true);
+                    fab2_currency.setClickable(true);
                     fab1_location.setClickable(true);
                     isOpen = true;
                 }
 
             }
         });
-        fab2_Info.setOnClickListener(new View.OnClickListener() {
+        fab2_currency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Info", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this,InfoActivity.class);
+                Intent intent = new Intent(MainActivity.this,ViewWeb.class);
+                intent.putExtra("key",1005);
                 startActivity(intent);
             }
         });

@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +17,6 @@ import com.example.bta.activities.Contact;
 import com.example.bta.activities.FindusActivity;
 import com.example.bta.activities.ServicesActivity;
 import com.example.bta.activities.ViewWeb;
-import com.example.bta.modals.Bus;
 import com.example.bta.modals.Services;
 
 import java.util.ArrayList;
@@ -64,41 +62,43 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                     switch (position){
                         case 0:
                             Toast.makeText(itemView.getContext(), "Restaurant", Toast.LENGTH_SHORT).show();
-                            Intent intent0 = new Intent(context, ViewWeb.class);
-                            intent0.putExtra("key",1003);
-                            context.startActivity(intent0);
+                            Intent intent = new Intent(context, ViewWeb.class);
+                            intent.putExtra("key",1003);
+                            context.startActivity(intent);
                             break;
                         case 1:
-                            Toast.makeText(itemView.getContext(), "Emergency Contact", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(itemView.getContext(), "Emergency Contact", Toast.LENGTH_SHORT).show();
                             Intent intent1 = new Intent(context, Contact.class);
                             context.startActivity(intent1);
                             break;
                         case 2:
-                            Toast.makeText(itemView.getContext(), "Toilet", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(context,FindusActivity.class);
-                            intent.putExtra("KEY",1000);
-                            context.startActivity(intent);
+//                            Toast.makeText(itemView.getContext(), "Toilet", Toast.LENGTH_SHORT).show();
+                            Intent intent3 = new Intent(context,FindusActivity.class);
+                            intent3.putExtra("KEY",1000);
+                            context.startActivity(intent3);
                             break;
                         case 3:
                             Toast.makeText(itemView.getContext(), "Bus Stand", Toast.LENGTH_SHORT).show();
-                            Intent intent3 = new Intent(context, BusStand.class);
-                            context.startActivity(intent3);
+                            Intent intent2 = new Intent(context, BusStand.class);
+                            context.startActivity(intent2);
                             break;
                         case 4:
-                            Toast.makeText(itemView.getContext(), "Currency Conversion", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(itemView.getContext(), "Currency Conversion", Toast.LENGTH_SHORT).show();
                             Intent intent4 = new Intent(context,FindusActivity.class);
                             intent4.putExtra("KEY",1002);
                             context.startActivity(intent4);
                             break;
                         case 5:
-                            Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();
                             Intent intent5 = new Intent(context,FindusActivity.class);
                             intent5.putExtra("KEY",1001);
                             context.startActivity(intent5);
                             break;
                         default:
-                            Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(itemView.getContext(), "Invalid click", Toast.LENGTH_SHORT).show();
+
                     }
+
                 }
             });
         }
