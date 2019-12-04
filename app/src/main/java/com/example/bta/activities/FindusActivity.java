@@ -2,6 +2,7 @@ package com.example.bta.activities;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Camera;
 import android.location.Location;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -23,13 +24,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 public class FindusActivity extends FragmentActivity implements OnMapReadyCallback {
-
     private GoogleMap mMap;
     Location currentLocation;
     FusedLocationProviderClient fusedLocationProviderClient;
     private static final int REQUEST_CODE = 101;
     double current_latitude,current_longitude;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +37,7 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-        fetchLastLocation();
     }
-
     private void fetchLastLocation() {
         if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this,new String[]
@@ -57,46 +52,22 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                     currentLocation = location;
                     current_latitude = currentLocation.getLatitude();
                     current_longitude = currentLocation.getLongitude();
-                    Toast.makeText(getApplicationContext(), "You are at:"+current_latitude+" "+current_longitude, Toast.LENGTH_LONG).show();
+                    LatLng you = new LatLng(current_latitude,current_longitude);
+                    mMap.addMarker(new MarkerOptions().position(you).title("You Are here"));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(you));
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(you,15));
                 }
             }
         });
     }
-
-
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         Bundle bundle= getIntent().getExtras();
         int key = bundle.getInt("KEY");
         switch (key){
-            case 40:
-                Toast.makeText(this, "bhaktapur", Toast.LENGTH_SHORT).show();
-                LatLng bhaktapur = new LatLng(27.671890, 85.428913);
-                mMap.addMarker(new MarkerOptions().position(bhaktapur).title("Marker in bhaktapur"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(bhaktapur));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(bhaktapur,16));
-                break;
-            case 30:
-//                LatLng current_location = new LatLng( currentLocation.getLatitude(),currentLocation.getLongitude());//get current latitude and longitude
-                LatLng current_location = new LatLng(current_latitude, current_longitude);
-                mMap.addMarker(new MarkerOptions().position(current_location).title("You are here!!"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(current_location));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(current_location,16));
-//                mMap.addMarker(markerOptions);
-                break;
             case 1:
-                Toast.makeText(this, "Nyatapola Mandin", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Nyatapola Mandir", Toast.LENGTH_SHORT).show();
                 LatLng Nyatapola = new LatLng(27.6715018,85.4291461);
                 mMap.addMarker(new MarkerOptions().position(Nyatapola).title("Nyatapola Mandir"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(Nyatapola));
@@ -193,19 +164,22 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 break;
             case 1002:
                 Toast.makeText(this, "Currency Conversion", Toast.LENGTH_SHORT).show();
-
-        }
-
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case REQUEST_CODE:
-                if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    fetchLastLocation();
-                }
+                LatLng bme = new LatLng(27.671432, 85.430115);
+                LatLng dmc = new LatLng(27.673291, 85.434976);
+                LatLng tmc = new LatLng(27.672308, 85.427224);
+                LatLng nme = new LatLng(27.671472, 85.429118);
+                LatLng nbl = new LatLng(27.672308, 85.427224);
+                mMap.addMarker(new MarkerOptions().position(bme).title("Bhaktapur Money Exchange"));
+                mMap.addMarker(new MarkerOptions().position(dmc).title("Dattatraya Money Changer"));
+                mMap.addMarker(new MarkerOptions().position(tmc).title("Temple Money Changer"));
+                mMap.addMarker(new MarkerOptions().position(nme).title("Nyatapola Money Exchange"));
+                mMap.addMarker(new MarkerOptions().position(nbl).title("Nepal Bank Ltd."));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(bme));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(bme,15));
                 break;
+            default:
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation();
         }
     }
 }

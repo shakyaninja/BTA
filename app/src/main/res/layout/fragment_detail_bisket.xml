@@ -19,13 +19,15 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/biska_detail1"/>
+                android:text="@string/biska_detail1"
+                android:justificationMode="inter_word"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:textSize="16sp"
-                android:text="@string/biska_detail2"/>
+                android:text="@string/biska_detail2"
+                android:justificationMode="inter_word"/>
         </LinearLayout>
     </ScrollView>
 

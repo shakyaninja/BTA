@@ -33,7 +33,7 @@
         android:visibility="invisible"
         app:backgroundTint="@color/colorPrimary"
         app:pressedTranslationZ="12dp"
-        app:srcCompat="@drawable/ic_info"
+        app:srcCompat="@drawable/ic_currency"
         />
 
 <!--    <TextView-->

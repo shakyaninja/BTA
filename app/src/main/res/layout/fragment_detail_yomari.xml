@@ -19,7 +19,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/tahamacha_detail"/>
+                android:justificationMode="inter_word"
+                android:text="@string/yomari_punhni_description"/>
         </LinearLayout>
     </ScrollView>
 
