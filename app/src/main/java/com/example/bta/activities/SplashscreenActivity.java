@@ -15,13 +15,11 @@ public class SplashscreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        another paste
         setTheme(android.R.style.Theme_Black_NoTitleBar_Fullscreen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-//        paste ends
 
         setContentView(R.layout.activity_splashscreen);
         //Code to start timer and take action after the timer ends

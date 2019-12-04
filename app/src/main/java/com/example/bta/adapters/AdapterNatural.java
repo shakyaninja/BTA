@@ -63,7 +63,6 @@ public class AdapterNatural extends RecyclerView.Adapter<AdapterNatural.MyHolder
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(itemView.getContext(), "Position" + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context, DetailActivity.class);
                     intent.putExtra("KEY",getAdapterPosition()+18);
                     context.startActivity(intent);

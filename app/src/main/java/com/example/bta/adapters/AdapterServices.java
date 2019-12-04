@@ -61,35 +61,29 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                     position = getAdapterPosition();
                     switch (position){
                         case 0:
-                            Toast.makeText(itemView.getContext(), "Restaurant", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(context, ViewWeb.class);
                             intent.putExtra("key",1003);
                             context.startActivity(intent);
                             break;
                         case 1:
-//                            Toast.makeText(itemView.getContext(), "Emergency Contact", Toast.LENGTH_SHORT).show();
                             Intent intent1 = new Intent(context, Contact.class);
                             context.startActivity(intent1);
                             break;
                         case 2:
-//                            Toast.makeText(itemView.getContext(), "Toilet", Toast.LENGTH_SHORT).show();
                             Intent intent3 = new Intent(context,FindusActivity.class);
                             intent3.putExtra("KEY",1000);
                             context.startActivity(intent3);
                             break;
                         case 3:
-                            Toast.makeText(itemView.getContext(), "Bus Stand", Toast.LENGTH_SHORT).show();
                             Intent intent2 = new Intent(context, BusStand.class);
                             context.startActivity(intent2);
                             break;
                         case 4:
-//                            Toast.makeText(itemView.getContext(), "Currency Conversion", Toast.LENGTH_SHORT).show();
                             Intent intent4 = new Intent(context,FindusActivity.class);
                             intent4.putExtra("KEY",1002);
                             context.startActivity(intent4);
                             break;
                         case 5:
-//                            Toast.makeText(itemView.getContext(), "Health", Toast.LENGTH_SHORT).show();
                             Intent intent5 = new Intent(context,FindusActivity.class);
                             intent5.putExtra("KEY",1001);
                             context.startActivity(intent5);

@@ -18,7 +18,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/changu_detail2"/>
+                android:text="@string/bara_description1"
+                android:justificationMode="inter_word"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

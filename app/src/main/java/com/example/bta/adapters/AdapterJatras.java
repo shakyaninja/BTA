@@ -41,7 +41,6 @@ public class AdapterJatras extends RecyclerView.Adapter<AdapterJatras.MyHolder> 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(itemView.getContext(), "Position of jatra " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context, DetailActivity.class);
                     intent.putExtra("KEY",getAdapterPosition()+12);
                     context.startActivity(intent);
