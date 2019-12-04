@@ -2,6 +2,7 @@ package com.example.bta.activities;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Camera;
 import android.location.Location;
 import android.os.Bundle;
 import android.widget.Toast;

@@ -20,8 +20,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.bta.R;
 import com.example.bta.modals.EmergencyContact;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class AdapterContact  extends RecyclerView.Adapter<AdapterContact.MyViewHolder> {

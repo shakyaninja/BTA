@@ -138,6 +138,7 @@
                                     android:textSize="68sp"
                                     android:textStyle="bold"
                                     android:textColor="@color/white"
+                                    android:textAlignment="center"
                                     />
                          </LinearLayout>
                     </androidx.cardview.widget.CardView>

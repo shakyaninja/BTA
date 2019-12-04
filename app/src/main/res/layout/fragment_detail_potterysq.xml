@@ -19,12 +19,14 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:layout_marginBottom="10dp"
+                android:justificationMode="inter_word"
                 android:text="@string/pottery_location_detail1"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:textSize="16sp"
+                android:justificationMode="inter_word"
                 android:text="@string/pottery_detail2"/>
         </LinearLayout>
     </ScrollView>
