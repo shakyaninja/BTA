@@ -90,9 +90,7 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                             break;
                         default:
                             Toast.makeText(itemView.getContext(), "Invalid click", Toast.LENGTH_SHORT).show();
-
                     }
-
                 }
             });
         }

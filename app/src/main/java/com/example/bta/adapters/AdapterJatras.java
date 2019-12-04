@@ -27,17 +27,14 @@ public class AdapterJatras extends RecyclerView.Adapter<AdapterJatras.MyHolder> 
         this.context = context;
         this.arrayList = arrayList;
     }
-
     public class MyHolder extends RecyclerView.ViewHolder {
         TextView title;
         ImageView image;
 
         public MyHolder(final View itemView){
             super(itemView);
-
             title = itemView.findViewById(R.id.title);
             image = itemView.findViewById(R.id.image);
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -56,17 +53,14 @@ public class AdapterJatras extends RecyclerView.Adapter<AdapterJatras.MyHolder> 
         MyHolder myHolder = new MyHolder(view);
         return myHolder;
     }
-
     @Override
     public void onBindViewHolder(@NonNull AdapterJatras.MyHolder myHolder, int position) {
         myHolder.title.setText(arrayList.get(position).getTitle());
-//        myHolder.image.setImageResource(arrayList.get(position).getImages());
         Glide
                 .with(context)
                 .load(arrayList.get(position).getImages())
                 .into(myHolder.image);
     }
-
     @Override
     public int getItemCount() {
         return arrayList.size();

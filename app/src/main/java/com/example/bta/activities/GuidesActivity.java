@@ -34,7 +34,6 @@ public class GuidesActivity extends AppCompatActivity {
         adapterGuides = new AdapterGuides(this, arrayList5);
         recyclerViewGuide.setAdapter(adapterGuides);
     }
-    //guides
     private void linearGuide(){
         arrayList5 = new ArrayList<>();
 

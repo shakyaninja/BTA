@@ -53,13 +53,10 @@ public class AdapterWorld extends RecyclerView.Adapter<AdapterWorld.MyHolder> {
     public class MyHolder extends RecyclerView.ViewHolder {
         TextView title;
         ImageView image;
-
         public MyHolder(final View itemView){
             super(itemView);
-
             title = itemView.findViewById(R.id.title);
             image = itemView.findViewById(R.id.image);
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

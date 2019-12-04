@@ -19,15 +19,12 @@ AdapterServices adapterServices;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
-
         linearServices();
-
         recyclerView = findViewById(R.id.serviceGrid);
         RecyclerView.LayoutManager  layoutManager = new GridLayoutManager(this,2,RecyclerView.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         adapterServices= new AdapterServices(this, arrayList);
         recyclerView.setAdapter(adapterServices);
-
     }
     private void linearServices(){
         arrayList = new ArrayList<>();

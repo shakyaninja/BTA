@@ -64,8 +64,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //for floating action  button
         fab_main = findViewById(R.id.fab);
         fab1_location = findViewById(R.id.fab1);
         fab2_currency = findViewById(R.id.fab2);
@@ -74,11 +72,7 @@ public class MainActivity extends AppCompatActivity {
         fab_open = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
         fab_clock = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_rotate_clock);
         fab_anticlock = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_rotate_anticlock);
-
-//        for history buttons
-
         services = findViewById(R.id.history_text);
-
         services.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         fab_main.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -187,21 +180,14 @@ public class MainActivity extends AppCompatActivity {
         adapterFoods = new AdapterFoods(this, arrayList5);
         recyclerViewFood.setAdapter(adapterFoods);
     }
-
-
-    //world heritage sites
-
     private void linearWHS() {
         arrayList2 = new ArrayList<>();
 
         arrayList2.add(new ImageTitle("Durbar Square",R.drawable.durbar_square_bhaktapur));
         arrayList2.add(new ImageTitle("Changunarayan",R.drawable.changunarayan));
     }
-
-    //jatras lists
     private void linearJatra() {
         arrayList3 = new ArrayList<>();
-
         arrayList3.add(new ImageTitle("Ghintangisi",R.drawable.gaijatra));
         arrayList3.add(new ImageTitle("Tahamacha",R.drawable.tahamacha));
         arrayList3.add(new ImageTitle("Yomari punhi",R.drawable.yomaripunhi));
@@ -209,35 +195,25 @@ public class MainActivity extends AppCompatActivity {
         arrayList3.add(new ImageTitle("Biska Jatra",R.drawable.bisket));
         arrayList3.add(new ImageTitle("Pulu Kisi",R.drawable.pulu_kisi));
     }
-
-//popular squares
     private void linearSquaresList() {
         arrayList = new ArrayList<>();
-
         arrayList.add(new ImageTitle("Taumadhi Square",R.drawable.nyatapola));
         arrayList.add(new ImageTitle("Dattatraya Square",R.drawable.dattatraya));
         arrayList.add(new ImageTitle("Pottery Square",R.drawable.potterysquare));
         arrayList.add(new ImageTitle("Durbar Square",R.drawable.durbar_square_bhaktapur));
-
     }
-
-//    natural beauties
     private void linearNatural() {
-    arrayList4 = new ArrayList<>();
-
-    arrayList4.add(new ImageTitle("Nagarkot",R.drawable.nagarkot));
-    arrayList4.add(new ImageTitle("Pilot Baba",R.drawable.pilot_baba));
-    arrayList4.add(new ImageTitle("Ranikot Dada",R.drawable.ranikot));
-    arrayList4.add(new ImageTitle("Maha Manjushree",R.drawable.mahamanjushree));
-    arrayList4.add(new ImageTitle("Changu",R.drawable.changu));
-    arrayList4.add(new ImageTitle("Ghyampe Dada",R.drawable.ghyampedada));
-    arrayList4.add(new ImageTitle("MuhanPokhari",R.drawable.muhanpokhari));
-}
-
-// foods
+        arrayList4 = new ArrayList<>();
+        arrayList4.add(new ImageTitle("Nagarkot",R.drawable.nagarkot));
+        arrayList4.add(new ImageTitle("Pilot Baba",R.drawable.pilot_baba));
+        arrayList4.add(new ImageTitle("Ranikot Dada",R.drawable.ranikot));
+        arrayList4.add(new ImageTitle("Maha Manjushree",R.drawable.mahamanjushree));
+        arrayList4.add(new ImageTitle("Changu",R.drawable.changu));
+        arrayList4.add(new ImageTitle("Ghyampe Dada",R.drawable.ghyampedada));
+        arrayList4.add(new ImageTitle("MuhanPokhari",R.drawable.muhanpokhari));
+    }
     private void linearFoods() {
         arrayList5 = new ArrayList<>();
-
         arrayList5.add(new ImageTitle("Juju Dhau",R.drawable.juju_dhau));
         arrayList5.add(new ImageTitle("Yomari",R.drawable.yomaris));
         arrayList5.add(new ImageTitle("Newari Samebaji",R.drawable.newari_khaja_set));

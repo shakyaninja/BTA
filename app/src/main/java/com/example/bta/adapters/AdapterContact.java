@@ -65,7 +65,6 @@ public class AdapterContact  extends RecyclerView.Adapter<AdapterContact.MyViewH
                     Intent intentCall = new Intent(Intent.ACTION_CALL);
                     telNum=arrayList.get(getAdapterPosition()).getContactno();
                     if(telNum.trim().isEmpty()){
-                        //intentCall.setData(Uri.parse("tel:9841637912"));
                         Toast.makeText(itemView.getContext(),"Please Enter Number",Toast.LENGTH_SHORT).show();
                     }else{
                         intentCall.setData(Uri.parse("tel:"+telNum));
@@ -77,7 +76,6 @@ public class AdapterContact  extends RecyclerView.Adapter<AdapterContact.MyViewH
                         context.startActivity(intentCall);
                     }
                 }
-
                 private void requestPermissions() {
                     ActivityCompat.requestPermissions((Activity)context, new String[]{Manifest.permission.CALL_PHONE},1);
                 }

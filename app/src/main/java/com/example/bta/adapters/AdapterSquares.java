@@ -57,10 +57,8 @@ public class AdapterSquares extends RecyclerView.Adapter<AdapterSquares.MyHolder
 
         public MyHolder(final View itemView){
             super(itemView);
-
             title = itemView.findViewById(R.id.title);
             image = itemView.findViewById(R.id.image);
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

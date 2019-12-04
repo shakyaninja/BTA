@@ -233,9 +233,7 @@ public class GalleryActivity extends AppCompatActivity {
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
                 break;
-
         }
-        //for the top horizontal scrolling images
     }
 
 }

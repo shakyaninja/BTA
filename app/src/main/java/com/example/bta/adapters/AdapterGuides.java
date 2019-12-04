@@ -34,7 +34,6 @@ public class AdapterGuides extends RecyclerView.Adapter<AdapterGuides.MyHolder> 
 
         public MyHolder(final View itemView){
             super(itemView);
-
             name = itemView.findViewById(R.id.name);
             location = itemView.findViewById(R.id.location);
             description = itemView.findViewById(R.id.description);

@@ -11,7 +11,6 @@ import com.example.bta.R;
 
 public class SplashscreenActivity extends AppCompatActivity {
     int SPLASH_TIME = 3000; //This is 3 second
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,15 +19,12 @@ public class SplashscreenActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-
         setContentView(R.layout.activity_splashscreen);
-        //Code to start timer and take action after the timer ends
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent mySuperIntent = new Intent(SplashscreenActivity.this, MainActivity.class);
                 startActivity(mySuperIntent);
-                //This 'finish()' is for exiting the app when back button pressed from Home page which is ActivityHome
                 finish();
             }
         }, SPLASH_TIME);
