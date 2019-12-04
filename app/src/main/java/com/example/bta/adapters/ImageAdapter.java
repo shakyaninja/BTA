@@ -38,7 +38,6 @@ public class ImageAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         ImageView imageView = new ImageView(mContext);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-//        imageView.setImageResource(sliderImageId[position]);
         Glide.
                 with(mContext)
                 .load(sliderImageId[position])

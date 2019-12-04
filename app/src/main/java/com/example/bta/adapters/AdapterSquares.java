@@ -40,7 +40,6 @@ public class AdapterSquares extends RecyclerView.Adapter<AdapterSquares.MyHolder
     @Override
     public void onBindViewHolder(@NonNull AdapterSquares.MyHolder myHolder, int position) {
         myHolder.title.setText(arrayList.get(position).getTitle());
-//        myHolder.image.setImageResource(arrayList.get(position).getImages());
         Glide
                 .with(context)
                 .load(arrayList.get(position).getImages())
@@ -65,7 +64,6 @@ public class AdapterSquares extends RecyclerView.Adapter<AdapterSquares.MyHolder
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(itemView.getContext(), "Position" + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context, DetailActivity.class);
                     intent.putExtra("KEY",getAdapterPosition()+1);
                     context.startActivity(intent);

@@ -39,7 +39,6 @@ public class AdapterNatural extends RecyclerView.Adapter<AdapterNatural.MyHolder
     @Override
     public void onBindViewHolder(@NonNull AdapterNatural.MyHolder myHolder, int position) {
         myHolder.title.setText(arrayList.get(position).getTitle());
-//        myHolder.image.setImageResource(arrayList.get(position).getImages());
         Glide
                 .with(context)
                 .load(arrayList.get(position).getImages())
@@ -64,7 +63,6 @@ public class AdapterNatural extends RecyclerView.Adapter<AdapterNatural.MyHolder
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(itemView.getContext(), "Position" + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context, DetailActivity.class);
                     intent.putExtra("KEY",getAdapterPosition()+18);
                     context.startActivity(intent);

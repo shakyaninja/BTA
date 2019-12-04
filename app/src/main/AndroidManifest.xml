@@ -29,17 +29,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--        <activity-->
-<!--            android:name=".activities.BusStand"-->
-<!--            android:label="BusStanActivity"-->
-<!--            >-->
-
-<!--        </activity>-->
         <activity
             android:name=".activities.GalleryActivity"
             android:label="GalleryActivity"
             >
-
         </activity>
         <activity
             android:name=".activities.DetailGuideActivity"

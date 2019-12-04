@@ -17,7 +17,6 @@ public class GuidesActivity extends AppCompatActivity {
     private RecyclerView recyclerViewGuide;
     AdapterGuides adapterGuides;
     RecyclerView.LayoutManager layoutManagerGuide;
-    Toolbar toolbar;
     ArrayList<Guides> arrayList5;
 
     @Override

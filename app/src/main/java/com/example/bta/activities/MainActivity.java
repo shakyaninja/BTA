@@ -7,7 +7,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -27,7 +26,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    TextView findus;
     ImageView imageView;
     private RecyclerView recyclerView;
     private FloatingActionButton fab_main, fab1_location, fab2_currency,fab3_guide;
@@ -95,9 +93,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (isOpen) {
-//
-//                    textview_location.setVisibility(View.INVISIBLE);
-//                    textview_Info.setVisibility(View.INVISIBLE);
                     fab3_guide.startAnimation(fab_close);
                     fab2_currency.startAnimation(fab_close);
                     fab1_location.startAnimation(fab_close);
@@ -107,8 +102,6 @@ public class MainActivity extends AppCompatActivity {
                     fab1_location.setClickable(false);
                     isOpen = false;
                 } else {
-//                    textview_location.setVisibility(View.VISIBLE);
-//                    textview_Info.setVisibility(View.VISIBLE);
                     fab3_guide.startAnimation(fab_open);
                     fab2_currency.startAnimation(fab_open);
                     fab1_location.startAnimation(fab_open);
@@ -124,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
         fab2_currency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Info", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this,ViewWeb.class);
                 intent.putExtra("key",1005);
                 startActivity(intent);
@@ -134,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
         fab1_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(getApplicationContext(), "Elocation", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this,FindusActivity.class);
                 intent.putExtra("KEY",239842978);
                 startActivity(intent);
@@ -143,11 +134,8 @@ public class MainActivity extends AppCompatActivity {
         fab3_guide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Guide Info", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this,GuidesActivity.class);
                 startActivity(intent);
-
-
             }
         });
 
@@ -243,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
     arrayList4.add(new ImageTitle("Maha Manjushree",R.drawable.mahamanjushree));
     arrayList4.add(new ImageTitle("Changu",R.drawable.changu));
     arrayList4.add(new ImageTitle("Ghyampe Dada",R.drawable.ghyampedada));
-    arrayList4.add(new ImageTitle("MuhanPokhari",R.drawable.muhan));
+    arrayList4.add(new ImageTitle("MuhanPokhari",R.drawable.muhanpokhari));
 }
 
 // foods

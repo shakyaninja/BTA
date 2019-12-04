@@ -54,7 +54,6 @@ public class AdapterGuides extends RecyclerView.Adapter<AdapterGuides.MyHolder> 
     @Override
     public void onBindViewHolder(@NonNull MyHolder myHolder, int position) {
         myHolder.name.setText(arrayList.get(position).getName());
-//        myHolder.image.setImageResource(arrayList.get(position).getImage());
         Glide
                 .with(context)
                 .load(arrayList.get(position).getImage())
