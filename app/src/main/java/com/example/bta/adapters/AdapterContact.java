@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,11 +54,13 @@ public class AdapterContact  extends RecyclerView.Adapter<AdapterContact.MyViewH
     public class MyViewHolder extends RecyclerView.ViewHolder{
         protected TextView serviceprovider;
         protected TextView contact;
+        protected ImageView caller;
         public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
             serviceprovider = itemView.findViewById(R.id.emergencyServiceProvider);
             contact = itemView.findViewById(R.id.emergencyContact);
-            itemView.setOnClickListener(new View.OnClickListener() {
+            caller = itemView.findViewById(R.id.contactcaller);
+            caller.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(itemView.getContext(),"Contact: "+arrayList.get(getAdapterPosition()).getContactno() ,Toast.LENGTH_SHORT).show();
