@@ -198,20 +198,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewFood.setLayoutManager(layoutManagerFood);
         adapterFoods = new AdapterFoods(this, arrayList5);
         recyclerViewFood.setAdapter(adapterFoods);
-
-
-
-
-        findus = findViewById(R.id.find_us);
-
-        findus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,FindusActivity.class);
-                intent.putExtra("KEY", 289347923);
-                startActivity(intent);
-            }
-        });
     }
 
 
