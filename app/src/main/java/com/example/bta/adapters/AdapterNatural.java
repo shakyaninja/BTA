@@ -39,7 +39,6 @@ public class AdapterNatural extends RecyclerView.Adapter<AdapterNatural.MyHolder
     @Override
     public void onBindViewHolder(@NonNull AdapterNatural.MyHolder myHolder, int position) {
         myHolder.title.setText(arrayList.get(position).getTitle());
-//        myHolder.image.setImageResource(arrayList.get(position).getImages());
         Glide
                 .with(context)
                 .load(arrayList.get(position).getImages())
