@@ -74,31 +74,34 @@ protected String url;
                 webView.loadUrl("https://www.youtube.com/watch?v=R0DHH1uZeJI");
                 break;
             case 18:
-                webView.loadUrl("https://www.google.com/maps/dir/27.6694853,85.4400925/Nagarkot+View+Tower,+44804/@27.6832663,85.4628323,14z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x39eb05df7d3eff5b:0xdf125feb925fb7d4!2m2!1d85.5199324!2d27.692168!3e2");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.692472,85.5205439);
                 break;
             case 19:
-                webView.loadUrl("https://www.nepalsanctuarytreks.com/package/suryabinayak-pilot-baba-ashram-hiking/");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6401489,85.4204704);
                 break;
             case 20:
-                webView.loadUrl("https://www.youtube.com/watch?v=u1tzN6K_520");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6247445,85.4272971);
                 break;
             case 21:
-                webView.loadUrl("https://www.youtube.com/watch?v=TlGKciHku4c");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6912664,85.4918565);
                 break;
             case 23:
-                webView.loadUrl("https://www.youtube.com/watch?v=AOSSSUL7LMQ");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.7037671,85.4339727);
                 break;
             case 24:
-                webView.loadUrl("https://www.youtube.com/watch?v=C_3d-p3OhOU");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.7051032,85.4830467);
                 break;
             case 1003:
                 webView.loadUrl("https://www.google.com/maps/search/restaurants/@27.6766147,85.4353258,16z/data=!3m1!4b1");
                 break;
             case 1005:
                 webView.loadUrl("https://www.google.com/search?&q=currency+converter");
-                break;
-            case 1006:
-                webView.loadUrl("https://www.google.com/maps/search/?api=1&query=restaurants");
                 break;
             case 2000:
                 fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);

@@ -39,9 +39,9 @@ public class GuidesActivity extends AppCompatActivity {
     private void linearGuide(){
         arrayList5 = new ArrayList<>();
 
-        arrayList5.add(new Guides("Sailesh Deshemaru",R.drawable.dattatarya,"Dattatraya","Hi I'm Sailesh! I really love traveling and tourism industry. I have graduated in travel and tourism management and at the moment I organize tours, treks and other activities. I have experience of 3 years in this field.","9860688916"));
-        arrayList5.add(new Guides("Roshan ",R.drawable.durbar_square_bhaktapur,"Skuldhoka","I am born and raised in Bhaktapur. We are working hard to rebuild our lives after the horrible earthquake. I work as a guide for about 6 years and I love meeting travellers from all over the world. I want to tell them everything I know about our city and culture, which I am very proud of. Hope to see you soon! ","9864238945"));
-        arrayList5.add(new Guides("Anil",R.drawable.nyatapola,"Gundu","Namaste and Greetings from the land of Mt. Everest. I am a local certified guide from Kathmandu to make your holiday the most memorable and pleasant one. No lots of researches and investigation on internet. Simply book me.","9860695379"));
+        arrayList5.add(new Guides("Sailesh Deshemaru",R.drawable.sailesh,"Dattatraya","Hi I'm Sailesh! I really love traveling and tourism industry. I have graduated in travel and tourism management and at the moment I organize tours, treks and other activities. I have experience of 3 years in this field.","9860688916"));
+        arrayList5.add(new Guides("Roshan ",R.drawable.roshan,"Skuldhoka","I am born and raised in Bhaktapur. We are working hard to rebuild our lives after the horrible earthquake. I work as a guide for about 6 years and I love meeting travellers from all over the world. I want to tell them everything I know about our city and culture, which I am very proud of. Hope to see you soon! ","9864238945"));
+        arrayList5.add(new Guides("Anil",R.drawable.anil,"Gundu","Namaste and Greetings from the land of Mt. Everest. I am a local certified guide from Kathmandu to make your holiday the most memorable and pleasant one. No lots of researches and investigation on internet. Simply book me.","9860695379"));
 
     }
 }

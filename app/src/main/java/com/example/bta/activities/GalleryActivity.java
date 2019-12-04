@@ -109,7 +109,7 @@ public class GalleryActivity extends AppCompatActivity {
                 break;
             case 18:
                 list = new int[]{
-                        R.drawable.nagarkot,R.drawable.nagarkot1,R.drawable.nagarkot2,R.drawable.nagarkot3,R.drawable.nagarkot4,R.drawable.nagarkot6,
+                        R.drawable.nagarkot,R.drawable.nagarkot1,R.drawable.nagarkot3,R.drawable.nagarkot4,R.drawable.nagarkot6,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
@@ -130,7 +130,7 @@ public class GalleryActivity extends AppCompatActivity {
                 break;
             case 21:
                 list = new int[]{
-                        R.drawable.mahamanjushree,R.drawable.mahamanjushree1,R.drawable.mahamanjushree2,
+                        R.drawable.mahamanjushree,R.drawable.mahamanjushree2,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);

@@ -63,7 +63,7 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                         case 0:
                             Toast.makeText(itemView.getContext(), "Restaurant", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(context, ViewWeb.class);
-                            intent.putExtra("key",1006);
+                            intent.putExtra("key",1003);
                             context.startActivity(intent);
                             break;
                         case 1:
@@ -78,7 +78,7 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                             context.startActivity(intent3);
                             break;
                         case 3:
-//                            Toast.makeText(itemView.getContext(), "Bus Stand", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(itemView.getContext(), "Bus Stand", Toast.LENGTH_SHORT).show();
                             Intent intent2 = new Intent(context, BusStand.class);
                             context.startActivity(intent2);
                             break;

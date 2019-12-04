@@ -100,57 +100,6 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(Changu));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Changu,16));
                 break;
-//            case 22:
-//                Toast.makeText(this, "Changu Narayan Temple", Toast.LENGTH_SHORT).show();
-//                LatLng Changu = new LatLng(27.7167038,85.4288589);
-//                mMap.addMarker(new MarkerOptions().position(Changu).title("Changu Narayan Temple"));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(Changu));
-//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Changu,16));
-//                break;
-//            case 18:
-//                Toast.makeText(this, "Nagarkot", Toast.LENGTH_SHORT).show();
-//                LatLng nagarkot = new LatLng(27.692168,85.5177437);
-//                mMap.addMarker(new MarkerOptions().position(nagarkot).title("Nagarkot"));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(nagarkot));
-//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(nagarkot,16));
-//                break;
-//
-//            case 19:
-//                Toast.makeText(this, "Pilot Baba", Toast.LENGTH_SHORT).show();
-//                LatLng pilotbaba = new LatLng(27.692168,85.5177437);
-//                mMap.addMarker(new MarkerOptions().position(pilotbaba).title("Pilot baba"));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(pilotbaba));
-//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pilotbaba,16));
-//                break;
-//            case 20:
-//                Toast.makeText(this, "Ranikot", Toast.LENGTH_SHORT).show();
-//                LatLng nagarkot = new LatLng(27.692168,85.5177437);
-//                mMap.addMarker(new MarkerOptions().position(nagarkot).title("Nagarkot"));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(nagarkot));
-//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(nagarkot,16));
-//                break;
-//            case 21:
-//                Toast.makeText(this, "Maha Manjushree", Toast.LENGTH_SHORT).show();
-//                LatLng nagarkot = new LatLng(27.692168,85.5177437);
-//                mMap.addMarker(new MarkerOptions().position(nagarkot).title("Nagarkot"));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(nagarkot));
-//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(nagarkot,16));
-//                break;
-//            case 23:
-//                Toast.makeText(this, "Ghyam", Toast.LENGTH_SHORT).show();
-//                LatLng nagarkot = new LatLng(27.692168,85.5177437);
-//                mMap.addMarker(new MarkerOptions().position(nagarkot).title("Nagarkot"));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(nagarkot));
-//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(nagarkot,16));
-//                break;
-//            case 24:
-//                Toast.makeText(this, "MuhanPokhari", Toast.LENGTH_SHORT).show();
-//                LatLng nagarkot = new LatLng(27.692168,85.5177437);
-//                mMap.addMarker(new MarkerOptions().position(nagarkot).title("Nagarkot"));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(nagarkot));
-//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(nagarkot,16));
-//                break;
-
             case 1000:
                 Toast.makeText(this, "Toilet", Toast.LENGTH_SHORT).show();
                 LatLng kamalbinayak1 = new LatLng(27.676372,85.4376489);
