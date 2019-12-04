@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -98,7 +99,8 @@ protected String url;
                 fetchLastLocation(27.7051032,85.4830467);
                 break;
             case 1003:
-                webView.loadUrl("https://www.google.com/maps/search/restaurants/@27.6766147,85.4353258,16z/data=!3m1!4b1");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation1();
                 break;
             case 1005:
                 webView.loadUrl("https://www.google.com/search?&q=currency+converter");
@@ -151,6 +153,28 @@ protected String url;
                     mid_latitude = (destination_latitude + current_latitude[0])/2;
                     mid_longitude = (destination_longitude + current_longitude[0])/2;
                     url = "https://www.google.com/maps/dir/'"+ current_latitude[0] +","+ current_longitude[0] +"'/'"+destination_latitude+","+destination_longitude+"'/@"+mid_latitude+","+mid_longitude+",12z";
+                    webView.loadUrl(url);
+                }
+            }
+        });
+    }
+    private void fetchLastLocation1() {
+        final double[] current_latitude = new double[1];
+        final double[] current_longitude = new double[1];
+        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]
+                    {Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+            return;
+        }
+        Task<Location> task = fusedLocationProviderClient.getLastLocation();
+        task.addOnSuccessListener(new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+                if(location != null){
+                    currentLocation = location;
+                    current_latitude[0] = currentLocation.getLatitude();
+                    current_longitude[0] = currentLocation.getLongitude();
+                    url = "https://www.google.com/maps/search/restaurants/@"+current_latitude[0]+","+current_longitude[0]+",16z/data=!3m1!4b1";
                     webView.loadUrl(url);
                 }
             }

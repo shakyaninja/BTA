@@ -7,25 +7,40 @@
     android:layout_margin="10dp"
     app:cardCornerRadius="10dp">
     <LinearLayout
-        android:id="@+id/busstopcard"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingHorizontal="15dp"
-        android:paddingVertical="20dp">
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/destination"
+        <LinearLayout
+            android:id="@+id/busstopcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="20dp">
+
+            <TextView
+                android:id="@+id/destination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black">
+            </TextView>
+            <TextView
+                android:id="@+id/busStand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black_overlay"></TextView>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/showDirection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="@color/black">
-        </TextView>
-        <TextView
-            android:id="@+id/busStand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/black_overlay"></TextView>
+            android:src="@drawable/ic_directions"
+            android:layout_marginLeft="-40dp"
+            android:layout_marginTop="30dp"
+            >
+        </ImageView>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

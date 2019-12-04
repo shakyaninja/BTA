@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,12 +50,14 @@ public class AdapterBus extends RecyclerView.Adapter<AdapterBus.MyViewHolder> {
     public class MyViewHolder extends RecyclerView.ViewHolder{
     protected TextView destination;
     protected TextView busStand;
+    protected ImageView direction;
     protected int position;
         public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
             destination = itemView.findViewById(R.id.destination);
             busStand = itemView.findViewById(R.id.busStand);
-            destination.setOnClickListener(new View.OnClickListener() {
+            direction = itemView.findViewById(R.id.showDirection);
+            direction.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     position = getAdapterPosition();

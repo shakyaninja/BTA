@@ -29,7 +29,7 @@ protected AdapterBus adapterBus;
 
     private void getBusStandList() {
         arrayList = new ArrayList<>();
-        arrayList.add(new Bus("Nagrakot","Kamal Binayak"));
+        arrayList.add(new Bus("Nagarkot","Kamal Binayak"));
         arrayList.add(new Bus("Nala Gumba","Chayamasingh"));
         arrayList.add(new Bus("Changu Narayan Temple","Dekocha"));
         arrayList.add(new Bus("Kalanki","Chayamasingh"));
