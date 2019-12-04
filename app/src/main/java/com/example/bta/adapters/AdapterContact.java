@@ -1,6 +1,11 @@
 package com.example.bta.adapters;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,15 +13,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bta.R;
 import com.example.bta.modals.EmergencyContact;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class AdapterContact  extends RecyclerView.Adapter<AdapterContact.MyViewHolder> {
     Context context;
+    String telNum;
 
     public AdapterContact(Context context, ArrayList<EmergencyContact> arrayList) {
         this.context = context;
@@ -50,14 +59,27 @@ public class AdapterContact  extends RecyclerView.Adapter<AdapterContact.MyViewH
             contact = itemView.findViewById(R.id.emergencyContact);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-//                    switch(getAdapterPosition()){
-//                        case 0:
-//                            Intent intent = new Intent(Intent.ACTION_CALL);
-//                            Intent intent1 = intent.putExtra("phoneno", arrayList.get(getAdapterPosition()));
-//                            break;
-//                    }
-                    Toast.makeText(context, "contact:", Toast.LENGTH_SHORT).show();
+                public void onClick(View v) {
+                    Toast.makeText(itemView.getContext(),"Contact: "+arrayList.get(getAdapterPosition()).getContactno() ,Toast.LENGTH_SHORT).show();
+                    Intent intentCall = new Intent(Intent.ACTION_CALL);
+                    telNum=arrayList.get(getAdapterPosition()).getContactno();
+                    if(telNum.trim().isEmpty()){
+                        //intentCall.setData(Uri.parse("tel:9841637912"));
+                        Toast.makeText(itemView.getContext(),"Please Enter Number",Toast.LENGTH_SHORT).show();
+                    }else{
+                        intentCall.setData(Uri.parse("tel:"+telNum));
+                    }
+                    if(ActivityCompat.checkSelfPermission(itemView.getContext(), Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
+                        Toast.makeText(itemView.getContext(),"Please grant permission",Toast.LENGTH_SHORT).show();
+                        requestPermissions();
+                    }else{
+                        context.startActivity(intentCall);
+                    }
+
+                }
+
+                private void requestPermissions() {
+                    ActivityCompat.requestPermissions((Activity)context, new String[]{Manifest.permission.CALL_PHONE},1);
                 }
             });
         }
