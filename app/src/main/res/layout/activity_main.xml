@@ -23,8 +23,6 @@
                     android:layout_height="224dp" >
                 </androidx.viewpager.widget.ViewPager>
 
-
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -147,25 +145,18 @@
                             android:id="@+id/footer"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="20dp"
+                            android:padding="5dp"
                             android:background="@color/colorPrimaryDark"
-                            android:layout_gravity="center"
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             >
-                            <ImageView
-                                android:id="@+id/logo_footer"
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_marginRight="20dp"
-                                android:src="@drawable/logo"/>
                             <TextView
                                 android:id="@+id/find_us"
-                                android:textAlignment="center"
                                 android:layout_gravity="center"
-                                android:layout_marginRight="20dp"
+                                android:textColor="@color/white"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Find Us" />
+                                android:text="Bhaktapur Tourism App"
+                                />
                         </LinearLayout>
             </LinearLayout>
         </ScrollView>
