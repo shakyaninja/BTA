@@ -45,6 +45,10 @@
             android:label="@string/title_activity_detail_guide"
             android:theme="@style/NoActionBar" />
         <activity
+            android:name=".activities.BusStand"
+            android:label="BusStand"
+            android:theme="@style/NoActionBar" />
+        <activity
             android:name=".activities.GuidesActivity"
             android:label="@string/title_activity_guides"
             android:theme="@style/NoActionBar" />

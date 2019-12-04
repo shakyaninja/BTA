@@ -109,7 +109,7 @@ public class GalleryActivity extends AppCompatActivity {
                 break;
             case 18:
                 list = new int[]{
-                        R.drawable.nagarkot,R.drawable.nagarkot1,R.drawable.nagarkot2,R.drawable.nagarkot3,R.drawable.nagarkot4,R.drawable.nagarkot6,
+                        R.drawable.nagarkot,R.drawable.nagarkot1,R.drawable.nagarkot3,R.drawable.nagarkot4,R.drawable.nagarkot6,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
@@ -130,7 +130,7 @@ public class GalleryActivity extends AppCompatActivity {
                 break;
             case 21:
                 list = new int[]{
-                        R.drawable.mahamanjushree,R.drawable.mahamanjushree1,R.drawable.mahamanjushree2,
+                        R.drawable.mahamanjushree,R.drawable.mahamanjushree2,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
@@ -158,7 +158,7 @@ public class GalleryActivity extends AppCompatActivity {
                 break;
             case 40:
                 list = new int[]{
-                        R.drawable.juju_dhau,
+                        R.drawable.juju_dhau,R.drawable.yomari_futako,R.drawable.yomaripunhi,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
@@ -172,56 +172,56 @@ public class GalleryActivity extends AppCompatActivity {
                 break;
             case 42:
                 list = new int[]{
-                        R.drawable.newari_khaja_set,
+                        R.drawable.newari_khaja_set,R.drawable.yomari_futako,R.drawable.yomaripunhi,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
                 break;
             case 43:
                 list = new int[]{
-                        R.drawable.swoo_puka,
+                        R.drawable.swoo_puka,R.drawable.yomari_futako,R.drawable.yomaripunhi,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
                 break;
             case 44:
                 list = new int[]{
-                        R.drawable.choila,
+                        R.drawable.choila,R.drawable.yomari_futako,R.drawable.yomaripunhi,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
                 break;
             case 45:
                 list = new int[]{
-                        R.drawable.kachila,
+                        R.drawable.kachila,R.drawable.yomari_futako,R.drawable.yomaripunhi,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
                 break;
             case 46:
                 list = new int[]{
-                        R.drawable.sanyakhuna,
+                        R.drawable.sanyakhuna,R.drawable.yomari_futako,R.drawable.yomaripunhi,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
                 break;
             case 47:
                 list = new int[]{
-                        R.drawable.takhwa,
+                        R.drawable.takhwa,R.drawable.yomari_futako,R.drawable.yomaripunhi,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
                 break;
             case 48:
                 list = new int[]{
-                        R.drawable.bara,
+                        R.drawable.bara,R.drawable.yomari_futako,R.drawable.yomaripunhi,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);
                 break;
             case 49:
                 list = new int[]{
-                        R.drawable.chatamari,
+                        R.drawable.chatamari,R.drawable.yomari_futako,R.drawable.yomaripunhi,
                 };
                 imageAdapter.setSliderImageId(list);
                 mViewPager.setAdapter(imageAdapter);

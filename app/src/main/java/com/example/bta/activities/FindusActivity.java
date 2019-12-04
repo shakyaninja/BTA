@@ -2,12 +2,10 @@ package com.example.bta.activities;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.graphics.Camera;
 import android.location.Location;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -96,19 +94,11 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(DurbarSquare,17));
                 break;
             case 11:
-            case 22:
                 Toast.makeText(this, "Changu Narayan Temple", Toast.LENGTH_SHORT).show();
                 LatLng Changu = new LatLng(27.7167038,85.4288589);
                 mMap.addMarker(new MarkerOptions().position(Changu).title("Changu Narayan Temple"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(Changu));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Changu,16));
-                break;
-            case 18:
-                Toast.makeText(this, "Nagarkot", Toast.LENGTH_SHORT).show();
-                LatLng nagarkot = new LatLng(27.692168,85.5177437);
-                mMap.addMarker(new MarkerOptions().position(nagarkot).title("Nagarkot"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(nagarkot));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(nagarkot,16));
                 break;
             case 1000:
                 Toast.makeText(this, "Toilet", Toast.LENGTH_SHORT).show();

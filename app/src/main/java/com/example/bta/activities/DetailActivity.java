@@ -173,7 +173,7 @@ public class DetailActivity extends AppCompatActivity {
                 DetailPilotbabaFragment fragment19 = new DetailPilotbabaFragment();
                 transaction.replace(R.id.container, fragment19);
                 transaction.commit();
-                collapsingToolbarLayout.setBackgroundResource(R.drawable.pilot_baba);
+                collapsingToolbarLayout.setBackgroundResource(R.drawable.pilotbaba1);
                 toolbar.setTitle(R.string.pilotbaba_title);
                 Toast.makeText(this, "fragment 19", Toast.LENGTH_SHORT).show();
                 break;
@@ -316,9 +316,19 @@ public class DetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                        Intent intent = new Intent(DetailActivity.this,FindusActivity.class);
-                        intent.putExtra("KEY",key);
-                        startActivity(intent);
+                if(key == 18||key == 19||key == 20||key == 21||key == 22||key == 23||key == 24||key == 25){
+                    Intent intent = new Intent(DetailActivity.this,ViewWeb.class);
+                    intent.putExtra("key",key);
+                    startActivity(intent);
+
+                }
+                else{
+                    Intent intent = new Intent(DetailActivity.this,FindusActivity.class);
+                    intent.putExtra("KEY",key);
+                    startActivity(intent);
+
+                }
+
             }
         });
     }

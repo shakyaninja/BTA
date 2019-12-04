@@ -75,7 +75,6 @@ public class AdapterContact  extends RecyclerView.Adapter<AdapterContact.MyViewH
                     }else{
                         context.startActivity(intentCall);
                     }
-
                 }
 
                 private void requestPermissions() {

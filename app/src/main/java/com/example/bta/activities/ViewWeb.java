@@ -75,7 +75,7 @@ protected String url;
                 break;
             case 18:
                 fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-                fetchLastLocation(27.6694853,85.4400925);
+                fetchLastLocation(27.692472,85.5205439);
                 break;
             case 19:
                 fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
