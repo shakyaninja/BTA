@@ -12,6 +12,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import com.example.bta.R;
+import com.example.bta.modals.GetShortestLatLag;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -25,12 +26,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
+import java.util.ArrayList;
+
 public class FindusActivity extends FragmentActivity implements OnMapReadyCallback {
     private GoogleMap mMap;
     Location currentLocation;
     FusedLocationProviderClient fusedLocationProviderClient;
+    private ArrayList<LatLng> markerPoints = new ArrayList();
+
     private static final int REQUEST_CODE = 101;
     double current_latitude,current_longitude;
+    private GetShortestLatLag getShortestLatLag;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +61,7 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                     current_latitude = currentLocation.getLatitude();
                     current_longitude = currentLocation.getLongitude();
                     LatLng you = new LatLng(current_latitude,current_longitude);
-                    mMap.addMarker(new MarkerOptions().position(you).title("You Are here"));
+                    mMap.addMarker(new MarkerOptions().position(you).title("You Are here").icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(you));
                     mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(you,15));
                 }
@@ -64,6 +71,8 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        LatLng shortest;
+
         Bundle bundle= getIntent().getExtras();
         int key = bundle.getInt("KEY");
         switch (key){
@@ -115,18 +124,17 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 LatLng dbsq = new LatLng(27.6726737,85.4290403);
                 LatLng ram = new LatLng(27.6687115,85.4277505);
                 LatLng dudpati = new LatLng(27.6712024,85.4240544);
-                LatLng you = new LatLng(current_latitude,current_longitude);
-                mMap.addMarker(new MarkerOptions().position(you).title("You are Here"));
-                mMap.addMarker(new MarkerOptions().position(kamalbinayak1).title("Kamal Binayak Bus Park").icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet_icon)));
-                mMap.addMarker(new MarkerOptions().position(kamalbinayak2).title(("Kamal Pokhari")).icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet_icon)));
-                mMap.addMarker(new MarkerOptions().position(chayamasingh).title(("Chayamasingh")).icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet_icon)));
-                mMap.addMarker(new MarkerOptions().position(Siddhapokhari).title(("Siddha Pokhari")).icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet_icon)));
-                mMap.addMarker(new MarkerOptions().position(khasibazar).title(("Khasi Bazar")).icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet_icon)));
-                mMap.addMarker(new MarkerOptions().position(dbsq).title(("Durbar Square")).icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet_icon)));
-                mMap.addMarker(new MarkerOptions().position(ram).title(("Ram Mandir")).icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet_icon)));
-                mMap.addMarker(new MarkerOptions().position(dudpati).title(("Dudhpati")).icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet_icon)));
+                markerPoints.add(kamalbinayak1);
+                markerPoints.add(kamalbinayak2);
+                markerPoints.add(chayamasingh);
+                markerPoints.add(Siddhapokhari);
+                markerPoints.add(khasibazar);
+                markerPoints.add(dbsq);
+                markerPoints.add(ram);
+                markerPoints.add(dudpati);
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(khasibazar));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(khasibazar,14));
+                getShortestLatLag = new GetShortestLatLag(markerPoints,new LatLng(27.6758458,85.4412985));
                 break;
             case 1001:
                 Toast.makeText(this, "Hospital", Toast.LENGTH_SHORT).show();
@@ -164,11 +172,11 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 LatLng tmc = new LatLng(27.672308, 85.427224);
                 LatLng nme = new LatLng(27.671472, 85.429118);
                 LatLng nbl = new LatLng(27.672308, 85.427224);
-                mMap.addMarker(new MarkerOptions().position(bme).title("Bhaktapur Money Exchange").icon(BitmapDescriptorFactory.fromResource(R.drawable.money_icon)));
-                mMap.addMarker(new MarkerOptions().position(dmc).title("Dattatraya Money Changer").icon(BitmapDescriptorFactory.fromResource(R.drawable.money_icon)));
-                mMap.addMarker(new MarkerOptions().position(tmc).title("Temple Money Changer").icon(BitmapDescriptorFactory.fromResource(R.drawable.money_icon)));
-                mMap.addMarker(new MarkerOptions().position(nme).title("Nyatapola Money Exchange").icon(BitmapDescriptorFactory.fromResource(R.drawable.money_icon)));
-                mMap.addMarker(new MarkerOptions().position(nbl).title("Nepal Bank Ltd.").icon(BitmapDescriptorFactory.fromResource(R.drawable.money_icon)));
+                mMap.addMarker(new MarkerOptions().position(bme).title("Bhaktapur Money Exchange").icon(BitmapDescriptorFactory.fromResource(R.drawable.money)));
+                mMap.addMarker(new MarkerOptions().position(dmc).title("Dattatraya Money Changer").icon(BitmapDescriptorFactory.fromResource(R.drawable.money)));
+                mMap.addMarker(new MarkerOptions().position(tmc).title("Temple Money Changer").icon(BitmapDescriptorFactory.fromResource(R.drawable.money)));
+                mMap.addMarker(new MarkerOptions().position(nme).title("Nyatapola Money Exchange").icon(BitmapDescriptorFactory.fromResource(R.drawable.money)));
+                mMap.addMarker(new MarkerOptions().position(nbl).title("Nepal Bank Ltd.").icon(BitmapDescriptorFactory.fromResource(R.drawable.money)));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(bme));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(bme,15));
                 break;

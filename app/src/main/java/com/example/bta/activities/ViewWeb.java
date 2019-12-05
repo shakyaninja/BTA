@@ -13,16 +13,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.bta.R;
+import com.example.bta.modals.GetShortestLatLag;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+
+import java.util.ArrayList;
 
 public class ViewWeb extends AppCompatActivity {
 protected WebView webView;
 FusedLocationProviderClient fusedLocationProviderClient;
 Location currentLocation;
-public static final int REQUEST_CODE = 101;
+    private ArrayList<LatLng> markerPoints = new ArrayList();
+    private GetShortestLatLag getShortestLatLag;
+    LatLng shortest;
+
+    public static final int REQUEST_CODE = 101;
 double mid_latitude, mid_longitude;
 protected String url;
     @Override
@@ -40,7 +49,7 @@ protected String url;
         switch (key){
             case 1:
                 fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-                fetchLastLocation(27.6715018,85.4291461);
+                fetchLastLocation(27.67116,85.42921);
                 break;
             case 2:
                 fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -48,7 +57,7 @@ protected String url;
                 break;
             case 3:
                 fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-                fetchLastLocation(27.6698678,85.4261262);
+                fetchLastLocation(27.66986,85.42762);
                 break;
             case 4:
             case 10:
@@ -101,6 +110,26 @@ protected String url;
             case 24:
                 fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
                 fetchLastLocation(27.7051032,85.4830467);
+                break;
+            case 1000:
+                LatLng kamalbinayak1 = new LatLng(27.676372,85.4376489);
+                LatLng kamalbinayak2 = new LatLng(27.6770153,85.439282);
+                LatLng chayamasingh = new LatLng(27.6736984,85.4393027);
+                LatLng Siddhapokhari = new LatLng(27.6719787,85.421788);
+                LatLng khasibazar = new LatLng(27.6707015,85.4298535);
+                LatLng dbsq = new LatLng(27.6726737,85.4290403);
+                LatLng ram = new LatLng(27.6687115,85.4277505);
+                LatLng dudpati = new LatLng(27.6712024,85.4240544);
+                markerPoints.add(kamalbinayak1);
+                markerPoints.add(kamalbinayak2);
+                markerPoints.add(chayamasingh);
+                markerPoints.add(Siddhapokhari);
+                markerPoints.add(khasibazar);
+                markerPoints.add(dbsq);
+                markerPoints.add(ram);
+                markerPoints.add(dudpati);
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation2();
                 break;
             case 1003:
                 fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -183,5 +212,33 @@ protected String url;
             }
         });
     }
+    private void fetchLastLocation2() {
+        final double[] current_latitude = new double[1];
+        final double[] current_longitude = new double[1];
+        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]
+                    {Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+            return;
+        }
+        Task<Location> task = fusedLocationProviderClient.getLastLocation();
+        task.addOnSuccessListener(new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+                if(location != null){
+                    currentLocation = location;
+                    current_latitude[0] = currentLocation.getLatitude();
+                    current_longitude[0] = currentLocation.getLongitude();
+                    getShortestLatLag = new GetShortestLatLag(markerPoints,new LatLng(current_latitude[0],current_longitude[0]));
+                    shortest = getShortestLatLag.result();
+                    mid_latitude = (shortest.latitude + current_latitude[0])/2;
+                    mid_longitude = (shortest.longitude + current_longitude[0])/2;
+                    url = "https://www.google.com/maps/dir/'"+ current_latitude[0] +","+ current_longitude[0] +"'/'"+shortest.latitude+","+shortest.longitude+"'/@"+mid_latitude+","+mid_longitude+",12z";
+                    Toast.makeText(ViewWeb.this, url, Toast.LENGTH_SHORT).show();
+                    webView.loadUrl(url);
+                }
+            }
+        });
+    }
+
 
 }

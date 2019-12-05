@@ -70,8 +70,8 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                             context.startActivity(intent1);
                             break;
                         case 2:
-                            Intent intent3 = new Intent(context,FindusActivity.class);
-                            intent3.putExtra("KEY",1000);
+                            Intent intent3 = new Intent(context,ViewWeb.class);
+                            intent3.putExtra("key",1000);
                             context.startActivity(intent3);
                             break;
                         case 3:
