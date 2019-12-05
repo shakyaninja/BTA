@@ -164,11 +164,11 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
                 LatLng tmc = new LatLng(27.672308, 85.427224);
                 LatLng nme = new LatLng(27.671472, 85.429118);
                 LatLng nbl = new LatLng(27.672308, 85.427224);
-                mMap.addMarker(new MarkerOptions().position(bme).title("Bhaktapur Money Exchange"));
-                mMap.addMarker(new MarkerOptions().position(dmc).title("Dattatraya Money Changer"));
-                mMap.addMarker(new MarkerOptions().position(tmc).title("Temple Money Changer"));
-                mMap.addMarker(new MarkerOptions().position(nme).title("Nyatapola Money Exchange"));
-                mMap.addMarker(new MarkerOptions().position(nbl).title("Nepal Bank Ltd."));
+                mMap.addMarker(new MarkerOptions().position(bme).title("Bhaktapur Money Exchange").icon(BitmapDescriptorFactory.fromResource(R.drawable.money_icon)));
+                mMap.addMarker(new MarkerOptions().position(dmc).title("Dattatraya Money Changer").icon(BitmapDescriptorFactory.fromResource(R.drawable.money_icon)));
+                mMap.addMarker(new MarkerOptions().position(tmc).title("Temple Money Changer").icon(BitmapDescriptorFactory.fromResource(R.drawable.money_icon)));
+                mMap.addMarker(new MarkerOptions().position(nme).title("Nyatapola Money Exchange").icon(BitmapDescriptorFactory.fromResource(R.drawable.money_icon)));
+                mMap.addMarker(new MarkerOptions().position(nbl).title("Nepal Bank Ltd.").icon(BitmapDescriptorFactory.fromResource(R.drawable.money_icon)));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(bme));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(bme,15));
                 break;
