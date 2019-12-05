@@ -15,6 +15,7 @@ import com.example.bta.R;
 import com.example.bta.activities.BusStand;
 import com.example.bta.activities.Contact;
 import com.example.bta.activities.FindusActivity;
+import com.example.bta.activities.GuidesActivity;
 import com.example.bta.activities.ServicesActivity;
 import com.example.bta.activities.ViewWeb;
 import com.example.bta.modals.Services;
@@ -61,33 +62,48 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                     position = getAdapterPosition();
                     switch (position){
                         case 0:
+                            //Restaurant
                             Intent intent = new Intent(context, ViewWeb.class);
                             intent.putExtra("key",1003);
                             context.startActivity(intent);
                             break;
                         case 1:
+                            //Emergency
                             Intent intent1 = new Intent(context, Contact.class);
                             context.startActivity(intent1);
                             break;
                         case 2:
-                            Intent intent3 = new Intent(context,ViewWeb.class);
-                            intent3.putExtra("key",1000);
+                            //Washroom
+                            Intent intent3 = new Intent(context,FindusActivity.class);
+                            intent3.putExtra("KEY",1000);
                             context.startActivity(intent3);
                             break;
                         case 3:
+                            //Nearest WashRoom
+                            Intent intent6 = new Intent(context,ViewWeb.class);
+                            intent6.putExtra("key",1000);
+                            context.startActivity(intent6);
+                        case 4:
+                            //Bus Stop
                             Intent intent2 = new Intent(context, BusStand.class);
                             context.startActivity(intent2);
                             break;
-                        case 4:
+                        case 5:
+                            //Money Exchange
                             Intent intent4 = new Intent(context,FindusActivity.class);
                             intent4.putExtra("KEY",1002);
                             context.startActivity(intent4);
                             break;
-                        case 5:
+                        case 6:
+                            //Hospitals
                             Intent intent5 = new Intent(context,FindusActivity.class);
                             intent5.putExtra("KEY",1001);
                             context.startActivity(intent5);
                             break;
+                        case 7:
+                            //Guide
+                            Intent intent7 = new Intent(context, GuidesActivity.class);
+                            context.startActivity(intent7);
                         default:
                             Toast.makeText(itemView.getContext(), "Invalid click", Toast.LENGTH_SHORT).show();
                     }
