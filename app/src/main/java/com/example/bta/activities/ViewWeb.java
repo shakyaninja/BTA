@@ -39,23 +39,27 @@ protected String url;
         webView.getSettings().setJavaScriptEnabled(true);
         switch (key){
             case 1:
-                webView.loadUrl("https://en.wikipedia.org/wiki/Nyatapola_Temple");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6715018,85.4291461);
                 break;
             case 2:
-                webView.loadUrl("https://en.wikipedia.org/wiki/Dattatreya");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6735732,85.4352401);
                 break;
             case 3:
-                webView.loadUrl("https://www.thelongestwayhome.com/blog/nepal/pottery-square-in-bhaktapur/");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6698678,85.4261262);
                 break;
             case 4:
             case 10:
-                webView.loadUrl("https://en.wikipedia.org/wiki/Bhaktapur_Durbar_Square");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.6720221,85.4283008);
                 break;
             case 11:
             case 22:
-                webView.loadUrl("https://en.wikipedia.org/wiki/Changu_Narayan_Temple");
+                fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+                fetchLastLocation(27.7167038,85.4288589);
                 break;
-
             case 12:
                 webView.loadUrl("https://en.wikipedia.org/wiki/Gai_Jatra");
                 break;
@@ -131,7 +135,6 @@ protected String url;
                 break;
             default:
                 webView.loadUrl("https://en.wikipedia.org/wiki/Nyatapola_Temple");
-
         }
     }
     private void fetchLastLocation(final double destination_latitude, final double destination_longitude) {

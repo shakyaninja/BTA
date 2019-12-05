@@ -67,44 +67,44 @@ public class FindusActivity extends FragmentActivity implements OnMapReadyCallba
         Bundle bundle= getIntent().getExtras();
         int key = bundle.getInt("KEY");
         switch (key){
-            case 1:
-                Toast.makeText(this, "Nyatapola Mandir", Toast.LENGTH_SHORT).show();
-                LatLng Nyatapola = new LatLng(27.6715018,85.4291461);
-                mMap.addMarker(new MarkerOptions().position(Nyatapola).title("Nyatapola Mandir"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(Nyatapola));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Nyatapola,16));
-                break;
-            case 2:
-                Toast.makeText(this, "Dattatraya Mandir", Toast.LENGTH_SHORT).show();
-                LatLng dattatraya = new LatLng(27.6735732,85.4352401);
-                mMap.addMarker(new MarkerOptions().position(dattatraya).title("Dattatraya Mandir"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(dattatraya));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dattatraya,17));
-                break;
-            case 3:
-                Toast.makeText(this, "Pottery Square", Toast.LENGTH_SHORT).show();
-                LatLng pottery = new LatLng(27.6698678,85.4261262);
-                LatLng MELBOURNE = new LatLng(-37.813, 144.962);
-
-                mMap.addMarker(new MarkerOptions().position(pottery).title("Pottery Square"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(pottery));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pottery,16));
-                break;
-            case 4:
-            case 10:
-                Toast.makeText(this, "Bhaktapur Durbar Square", Toast.LENGTH_SHORT).show();
-                LatLng DurbarSquare = new LatLng(27.6720649,85.4282954);
-                mMap.addMarker(new MarkerOptions().position(DurbarSquare).title("Bhaktapur Durbar Square"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(DurbarSquare));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(DurbarSquare,17));
-                break;
-            case 11:
-                Toast.makeText(this, "Changu Narayan Temple", Toast.LENGTH_SHORT).show();
-                LatLng Changu = new LatLng(27.7167038,85.4288589);
-                mMap.addMarker(new MarkerOptions().position(Changu).title("Changu Narayan Temple"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(Changu));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Changu,16));
-                break;
+//            case 1:
+//                Toast.makeText(this, "Nyatapola Mandir", Toast.LENGTH_SHORT).show();
+//                LatLng Nyatapola = new LatLng(27.6715018,85.4291461);
+//                mMap.addMarker(new MarkerOptions().position(Nyatapola).title("Nyatapola Mandir"));
+//                mMap.moveCamera(CameraUpdateFactory.newLatLng(Nyatapola));
+//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Nyatapola,16));
+//                break;
+//            case 2:
+//                Toast.makeText(this, "Dattatraya Mandir", Toast.LENGTH_SHORT).show();
+//                LatLng dattatraya = new LatLng(27.6735732,85.4352401);
+//                mMap.addMarker(new MarkerOptions().position(dattatraya).title("Dattatraya Mandir"));
+//                mMap.moveCamera(CameraUpdateFactory.newLatLng(dattatraya));
+//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dattatraya,17));
+//                break;
+//            case 3:
+//                Toast.makeText(this, "Pottery Square", Toast.LENGTH_SHORT).show();
+//                LatLng pottery = new LatLng(27.6698678,85.4261262);
+//                LatLng MELBOURNE = new LatLng(-37.813, 144.962);
+//
+//                mMap.addMarker(new MarkerOptions().position(pottery).title("Pottery Square"));
+//                mMap.moveCamera(CameraUpdateFactory.newLatLng(pottery));
+//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pottery,16));
+//                break;
+//            case 4:
+//            case 10:
+//                Toast.makeText(this, "Bhaktapur Durbar Square", Toast.LENGTH_SHORT).show();
+//                LatLng DurbarSquare = new LatLng(27.6720649,85.4282954);
+//                mMap.addMarker(new MarkerOptions().position(DurbarSquare).title("Bhaktapur Durbar Square"));
+//                mMap.moveCamera(CameraUpdateFactory.newLatLng(DurbarSquare));
+//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(DurbarSquare,17));
+//                break;
+//            case 11:
+//                Toast.makeText(this, "Changu Narayan Temple", Toast.LENGTH_SHORT).show();
+//                LatLng Changu = new LatLng(27.7167038,85.4288589);
+//                mMap.addMarker(new MarkerOptions().position(Changu).title("Changu Narayan Temple"));
+//                mMap.moveCamera(CameraUpdateFactory.newLatLng(Changu));
+//                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Changu,16));
+//                break;
             case 1000:
                 Toast.makeText(this, "Toilet", Toast.LENGTH_SHORT).show();
                 LatLng kamalbinayak1 = new LatLng(27.676372,85.4376489);

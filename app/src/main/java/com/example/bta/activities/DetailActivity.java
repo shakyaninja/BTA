@@ -42,6 +42,9 @@ import com.example.bta.fragments.DetailYomarisFragment;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.Arrays;
+
+
 public class DetailActivity extends AppCompatActivity {
 
     CollapsingToolbarLayout collapsingToolbarLayout;
@@ -102,7 +105,6 @@ public class DetailActivity extends AppCompatActivity {
                 collapsingToolbarLayout.setBackgroundResource(R.drawable.changunarayan);
                 toolbar.setTitle(R.string.changu_title);
                 break;
-
             case 12:
                 fab.setVisibility(View.INVISIBLE);
                 DetailGhintangisiFragment fragment12 = new DetailGhintangisiFragment();
@@ -317,7 +319,8 @@ public class DetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(key == 18||key == 19||key == 20||key == 21||key == 22||key == 24){
+                Integer []arr = {18,19,20,21,22,24,1,2,3,4,10,11,22};
+                if(check(arr,key)){
                     Intent intent = new Intent(DetailActivity.this,ViewWeb.class);
                     intent.putExtra("key",key);
                     startActivity(intent);
@@ -332,5 +335,12 @@ public class DetailActivity extends AppCompatActivity {
 
             }
         });
+    }
+    private static boolean check(Integer[] arr, int toCheckValue)
+    {
+        boolean test
+                = Arrays.asList(arr)
+                .contains(toCheckValue);
+        return test;
     }
 }
