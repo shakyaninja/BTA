@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -28,9 +28,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ImageView imageView;
     private RecyclerView recyclerView;
-    private FloatingActionButton fab_main, fab1_location, fab2_currency,fab3_guide;
+    private FloatingActionButton fab_main;
+    private CardView fab1_location, fab2_currency,fab3_services;
     private Animation fab_open, fab_close, fab_clock, fab_anticlock;
-    TextView services;
 
     Boolean isOpen = false;
     RecyclerView.LayoutManager layoutManager;
@@ -67,44 +67,34 @@ public class MainActivity extends AppCompatActivity {
         fab_main = findViewById(R.id.fab);
         fab1_location = findViewById(R.id.fab1);
         fab2_currency = findViewById(R.id.fab2);
-        fab3_guide = findViewById(R.id.fab3);
+        fab3_services = findViewById(R.id.fab3);
         fab_close = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_close);
         fab_open = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
         fab_clock = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_rotate_clock);
         fab_anticlock = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_rotate_anticlock);
-        services = findViewById(R.id.history_text);
-        services.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ServicesActivity.class);
-                startActivity(intent);
-            }
-        });
 
         fab_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if (isOpen) {
-                    fab3_guide.startAnimation(fab_close);
+                    fab3_services.startAnimation(fab_close);
                     fab2_currency.startAnimation(fab_close);
                     fab1_location.startAnimation(fab_close);
                     fab_main.startAnimation(fab_anticlock);
-                    fab3_guide.setClickable(false);
+                    fab3_services.setClickable(false);
                     fab2_currency.setClickable(false);
                     fab1_location.setClickable(false);
                     isOpen = false;
                 } else {
-                    fab3_guide.startAnimation(fab_open);
+                    fab3_services.startAnimation(fab_open);
                     fab2_currency.startAnimation(fab_open);
                     fab1_location.startAnimation(fab_open);
                     fab_main.startAnimation(fab_clock);
-                    fab3_guide.setClickable(true);
+                    fab3_services.setClickable(true);
                     fab2_currency.setClickable(true);
                     fab1_location.setClickable(true);
                     isOpen = true;
                 }
-
             }
         });
         fab2_currency.setOnClickListener(new View.OnClickListener() {
@@ -124,10 +114,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        fab3_guide.setOnClickListener(new View.OnClickListener() {
+        fab3_services.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,GuidesActivity.class);
+                Intent intent = new Intent(MainActivity.this,ServicesActivity.class);
                 startActivity(intent);
             }
         });

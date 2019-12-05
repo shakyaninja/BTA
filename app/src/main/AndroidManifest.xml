@@ -73,6 +73,10 @@
             android:label="@string/title_activity_detail"
             android:theme="@style/NoActionBar" />
         <activity
+            android:name=".activities.DetailTabbedInfoActivity"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/NoActionBar" />
+        <activity
             android:name=".activities.FindusActivity"
             android:label="@string/title_activity_findus" />
         <!--

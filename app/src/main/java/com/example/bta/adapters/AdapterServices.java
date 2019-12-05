@@ -83,6 +83,7 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                             Intent intent6 = new Intent(context,ViewWeb.class);
                             intent6.putExtra("key",1000);
                             context.startActivity(intent6);
+                            break;
                         case 4:
                             //Bus Stop
                             Intent intent2 = new Intent(context, BusStand.class);
