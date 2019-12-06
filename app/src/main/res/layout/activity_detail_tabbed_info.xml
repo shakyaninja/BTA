@@ -13,8 +13,6 @@
         android:theme="@style/AppBarOverlay"
         android:backgroundTint="@color/colorPrimary"
         android:id="@+id/app_bar">
-
-
         <TextView
             android:id="@+id/title_detail"
             android:layout_width="match_parent"

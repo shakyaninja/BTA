@@ -3,28 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/colorPrimary"
+    android:backgroundTint="@color/colorPrimaryDark"
     app:cardCornerRadius="10dp"
     android:elevation="3dp"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:id="@+id/cardView">
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/linearView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_horizontal">
-
+        android:orientation="horizontal">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/serviceImage"
-            android:layout_gravity="center_horizontal">
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/restaurant_image">
         </ImageView>
-        <TextView
-            android:id="@+id/serviceTitle"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="20sp">
-        </TextView>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp">
+            <TextView
+                android:id="@+id/serviceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restaurant"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"></TextView>
+            <TextView
+                android:id="@+id/serviceDescript"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nearby Service"
+                android:textSize="15sp"
+                android:textColor="@color/white">
+
+            </TextView>
+        </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
