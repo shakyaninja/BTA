@@ -4,65 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.FamousHereFragment">
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
         android:orientation="vertical">
-        <LinearLayout
+        <ImageView
+            android:id="@+id/tabImage"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp">
+
+        </ImageView>
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="40dp"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/famous_fact1"
-                android:justificationMode="inter_word"
-                tools:text="@string/ranikot_deail1"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/famous_fact2"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:justificationMode="inter_word"
-                tools:text="@string/ranikot_deail1"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/famous_fact3"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:justificationMode="inter_word"
-                tools:text="@string/ranikot_deail1"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/famous_fact4"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:justificationMode="inter_word"
-                tools:text="@string/ranikot_deail1"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/famous_fact5"
-                android:textColor="@color/black"
-                android:justificationMode="inter_word"
-                tools:text="@string/ranikot_deail1"/>
-        </LinearLayout>
-    </ScrollView>
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/tabContet"
+            android:justificationMode="inter_word" />
+    </LinearLayout>
 </FrameLayout>

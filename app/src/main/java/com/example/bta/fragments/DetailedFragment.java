@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,9 +17,19 @@ import com.example.bta.R;
 public class DetailedFragment extends Fragment {
     TextView textView;
     String str;
-    public DetailedFragment(String text) {
+    int im;
+    ImageView imageView;
+
+    @NonNull
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    public DetailedFragment(String text, int image) {
         // Required empty public constructor
         str = text;
+        im = image;
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,7 +47,10 @@ public class DetailedFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        textView = view.findViewById(R.id.tabbed_text3);
+        textView = view.findViewById(R.id.detailContent);
         textView.setText(str);
+
+        imageView = view.findViewById(R.id.detailImage);
+        imageView.setImageResource(im);
     }
 }
