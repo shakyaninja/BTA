@@ -1,5 +1,6 @@
 package com.example.bta.fragments;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,14 +17,14 @@ import com.example.bta.R;
 
 public class FamousHereFragment extends Fragment {
     TextView textView1;
-    ImageView image1;
-    int imgkey;
+    ImageView imageView;
 
-    String str1,str2,str3,str4,str5;
-    public FamousHereFragment(int key1,String text1) {
+    String str1;
+    int image;
+    public FamousHereFragment(String text1,int im) {
         // Required empty public constructor
         str1 = text1;
-        imgkey = key1;
+        image = im;
 
     }
     @Override
@@ -42,9 +43,11 @@ public class FamousHereFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        image1= view.findViewById(R.id.famous_img1);
-        image1.setImageResource(imgkey);
-        textView1 = view.findViewById(R.id.famous_fact1);
+        textView1 = view.findViewById(R.id.tabContet);
         textView1.setText(str1);
+
+        imageView = view.findViewById(R.id.tabImage);
+        imageView.setImageResource(image);
+
     }
 }

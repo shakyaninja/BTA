@@ -42,6 +42,9 @@ import com.example.bta.fragments.DetailYomarisFragment;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.Arrays;
+
+
 public class DetailActivity extends AppCompatActivity {
 
     CollapsingToolbarLayout collapsingToolbarLayout;
@@ -63,16 +66,15 @@ public class DetailActivity extends AppCompatActivity {
 
         Bundle bundle= getIntent().getExtras();
         final int key = bundle.getInt("KEY");
-
         link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DetailActivity.this,DetailTabbedInfoActivity.class);
                 intent.putExtra("newKey",key);
                 startActivity(intent);
+
             }
         });
-
         switch (key){
             case 1:
                 DetailNyatapolaFragment fragmentOne = new DetailNyatapolaFragment();
@@ -161,6 +163,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.pulukisi_title);
                 break;
             case 18:
+                link.setVisibility(View.INVISIBLE);
                 DetailNagarkotFragment fragment18 = new DetailNagarkotFragment();
                 transaction.replace(R.id.container, fragment18);
                 transaction.commit();
@@ -168,6 +171,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.nagarkot_title);
                 break;
             case 19:
+                link.setVisibility(View.INVISIBLE);
                 DetailPilotbabaFragment fragment19 = new DetailPilotbabaFragment();
                 transaction.replace(R.id.container, fragment19);
                 transaction.commit();
@@ -175,6 +179,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.pilotbaba_title);
                 break;
             case 20:
+                link.setVisibility(View.INVISIBLE);
                 DetailRanikotFragment fragment20 = new DetailRanikotFragment();
                 transaction.replace(R.id.container, fragment20);
                 transaction.commit();
@@ -182,6 +187,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.ranikot_title);
                 break;
             case 21:
+                link.setVisibility(View.INVISIBLE);
                 DetailManjushreeFragment fragment21 = new DetailManjushreeFragment();
                 transaction.replace(R.id.container, fragment21);
                 transaction.commit();
@@ -291,21 +297,22 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.chatamari_title);
         }
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
 
     collapsingToolbarLayout.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(DetailActivity.this, GalleryActivity.class);
-            intent.putExtra("photo",key);
-            startActivity(intent);
+    Intent intent = new Intent(DetailActivity.this, GalleryActivity.class);
+    intent.putExtra("photo",key);
+    startActivity(intent);
         }
     });
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(key == 18||key == 19||key == 20||key == 21||key == 22||key == 24){
+                Integer []arr = {18,19,20,21,22,24,1,2,3,4,10,11,22};
+                if(check(arr,key)){
                     Intent intent = new Intent(DetailActivity.this,ViewWeb.class);
                     intent.putExtra("key",key);
                     startActivity(intent);
@@ -321,5 +328,11 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
     }
-
+    private static boolean check(Integer[] arr, int toCheckValue)
+    {
+        boolean test
+                = Arrays.asList(arr)
+                .contains(toCheckValue);
+        return test;
+    }
 }

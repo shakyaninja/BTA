@@ -10,7 +10,7 @@ public class Bus {
     }
 
     public String getDestination() {
-        return destination;
+        return "Destination: "+destination;
     }
 
     public void setDestination(String destination) {
@@ -18,7 +18,7 @@ public class Bus {
     }
 
     public String getFrom() {
-        return from;
+        return "Bus Stop: "+from;
     }
 
     public void setFrom(String from) {

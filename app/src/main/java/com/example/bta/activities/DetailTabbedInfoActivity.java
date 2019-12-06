@@ -41,12 +41,12 @@ ViewPager viewPager;
     public void setupViewPager(ViewPager viewPager,int key) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         switch(key){
-            case 1:
-                titletext.setText(getText(R.string.nyatapola_title));
-                adapter.addFragment(new FamousHereFragment(R.drawable.nyatapola,"hello nyatapola"),"Famous Here");
-                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-                break;
+//            case 1:
+//                titletext.setText(getText(R.string.nyatapola_title));
+//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
+//                adapter.addFragment(new MapFragment("hi you !!"), "Map");
+//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
+//                break;
 //            case 2:
 //                titletext.setText(getText(R.string.dattatraya_title));
 //                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
@@ -56,8 +56,8 @@ ViewPager viewPager;
 //            case 3:
 //                titletext.setText(getText(R.string.pottery_title));
 //                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
+//                adapter.addFragment(new MapFragment("Khutruke are sukayo",R.drawable.potterysquare), "Khutruke");
+////                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
 //                 break;
 //            case 4:
 //            case 10:
@@ -66,13 +66,13 @@ ViewPager viewPager;
 //                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
 //                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
 //                break;
-//            case 11:
-//            case 22:
-//                titletext.setText(getText(R.string.changu_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
+            case 11:
+            case 22:
+                titletext.setText(getText(R.string.changu_title));
+                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.",R.drawable.changu1), "Changu Front View");
+                adapter.addFragment(new MapFragment("Changu Narayan",R.drawable.changu2), "Changu Blue Sky");
+                adapter.addFragment(new DetailedFragment("Hello everyone",R.drawable.changu3), "Gate");
+                break;
 //            case 12:
 //                titletext.setText(getText(R.string.ghintangisi_title));
 //                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");

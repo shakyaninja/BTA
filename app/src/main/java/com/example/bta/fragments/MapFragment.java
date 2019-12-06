@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,14 +12,18 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.bta.R;
+import com.google.android.gms.maps.model.LatLng;
 
 
 public class MapFragment extends Fragment {
     TextView textView;
+    ImageView imageView;
     String str;
-    public MapFragment(String text) {
+    protected int imageId;
+    public MapFragment(String text,int imageId) {
         // Required empty public constructor
         str = text;
+        this.imageId = imageId;
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,7 +41,11 @@ public class MapFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        textView = view.findViewById(R.id.tabbed_text2);
+
+        textView = view.findViewById(R.id.mapContent);
         textView.setText(str);
+
+        imageView = view.findViewById(R.id.mapImage);
+        imageView.setImageResource(imageId);
     }
 }
