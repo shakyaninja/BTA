@@ -113,7 +113,7 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
                             Intent intent7 = new Intent(context, GuidesActivity.class);
                             context.startActivity(intent7);
                         default:
-                            Toast.makeText(itemView.getContext(), "Invalid click", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(itemView.getContext(), "Invalid click", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

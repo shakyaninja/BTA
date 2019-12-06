@@ -80,9 +80,15 @@ ViewPager viewPager;
             case 4:
             case 10:
                 titletext.setText(getText(R.string.durbar_title));
-                adapter.addFragment(new FamousHereFragment("Golden Gate",R.drawable.durbarsq1), "Golder Gate");
-                adapter.addFragment(new MapFragment("Reconstructed Bastola Temple",R.drawable.durbarsq3), "Bustola Temple");
-                adapter.addFragment(new DetailedFragment("55 Window Palace",R.drawable.durbarsq2), "55 Window Palace");
+                adapter.addFragment(new DetailedFragment("The royal palace of the old Bhaktapur Kingdom.\n" +
+                        "Located in the center of Bhaktapur Durbar square the 55 window palace, or Palace of Fifty-Five Windows, was built by King Bhupatindra Malla.\n" +
+                        "Today the 55 Window Palace still stands as Bhaktapur's Royal Palace on ceremonial occasions.\n" +
+                        "The interior of the 55 Window Palace is closed (for many decades). There was a lot of damage done to it during the 1934 earthquake. " +
+                        "There are plans to renovate the area but a lot of this is held up due to funding.",R.drawable.durbarsq2), "55 Window Palace");
+                adapter.addFragment(new FamousHereFragment("Lun Dhwakha(Golden Gate) is said to be the most beautiful and richly molded specimen of its kind in the entire world.\n" +
+                        "There is an entrance to several inner courtyards around the palace through including the Golden Gate, one of the most lavish and important artifacts in Nepal today. " +
+                        "Non-hindus may only continue on to Taleju Chowk but everyone can visit the ornate royal water tank Naga Pokhari.",R.drawable.durbarsq1), "Golder Gate");
+                adapter.addFragment(new MapFragment("Vatsala Temple is a stone temple dedicated to godess Vastala Devi.",R.drawable.durbarsq3), "Vatsala Temple");
                 break;
             case 11:
             case 22:
@@ -91,7 +97,17 @@ ViewPager viewPager;
                 adapter.addFragment(new MapFragment("Changu Narayan",R.drawable.changu2), "Changu Blue Sky");
                 adapter.addFragment(new DetailedFragment("Hello everyone",R.drawable.changu3), "Gate");
                 break;
-//            case 12:
+            case 12:
+            case 13:
+                titletext.setText("Ghintangisi");
+                adapter.addFragment(new FamousHereFragment("Celebrated in mid of august\n" +
+                        "Celebrated to remember the lost ones and to ease the pain.\n" +
+                        "Celebrated in Newar Community but nowadays people of other casts also take part in it.\n" +
+                        "Many local musicians, and a cultural dance called Ghintang Ghisi follow in the wake of a chariot.",R.drawable.saparu), "Saparu");
+                adapter.addFragment(new MapFragment("People Dressed up funnily, childrn dressed up as Gods and girls on hakupatasi is seen while over the city.\n" +
+                        "The Ghintag Ghisi dance is celebrated for almost a week, starting from the day of Gaijatra to Krishna Janmashtami. ",R.drawable.dress), "Cultural Dress");
+                adapter.addFragment(new DetailedFragment("Maka Pyakhan and Bhalu Pyakhan is done in Gai Jatra.",R.drawable.makhajpg), "Maka Pyakha");
+                break;
 //                titletext.setText(getText(R.string.ghintangisi_title));
 //                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
 //                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
@@ -103,12 +119,34 @@ ViewPager viewPager;
 //                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
 //                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
 //                break;
-//            case 14:
-//                titletext.setText(getText(R.string.yomaripunhi_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
+            case 14:
+                titletext.setText(getText(R.string.yomaripunhi_title));
+                adapter.addFragment(new FamousHereFragment("(Kids in group sing this song while asking yamari going neighborhood)\n" +
+                        "त्यछिं त्य वकछीं त्य लातापाता कुलेचाँ जुछिंत्य । \n" +
+                        "योमरी च्वामु उकी दुने हाकु ब्युसा माकु मब्युसा ।।\n" +
+                        "फाकु ब्युसाल्यासे मब्युस बुढी कुटी ।   \n" +
+                        "Yomari Punhi is observed during very cold days. It is said eating of yamari takes away cold. It is believed so long the tail of yamari as short the winter will be. \n" +
+                        "\n" +
+                        "Yomari is made by steaming a confection of rice-flour (from the new harvest) dough shaped like fig and filled with brown cane sugar (chaku) and " +
+                        "sesame seeds. Yamari is the main item on the menu during the post-harvest celebration of Yomari Purnima. ",R.drawable.yomarisong), "Yomari Song");
+                adapter.addFragment(new MapFragment("Ingredients\n" +
+                        "--------------------\n"+
+                        "400 gm Rice flour\n" +
+                        "50 gm Wheat flour\n" +
+                        "200 gm Chaku (Molasses)\n" +
+                        "½ cup Roasted Sesame seeds (ground)\n" +
+                        "½ cup Roasted Cashew nut or peanuts (ground)\n" +
+                        "½ cup Coconut (grated)\n" +
+                        "Vegetable oil",R.drawable.yomari_futako), "Yomari Receipt");
+                adapter.addFragment(new DetailedFragment("For fillings:\n" +
+                        "---------------\n"+
+                        "Break the Chaku (molasses) to small pieces, so that it can be evenly cooked. In a saucepan, put the Chaku and pour a cup of hot water. Heat the pan until Chaku completely melts in water. Add crushed sesame seed, cashew nuts, coconut and a tablespoon of rice flour. Cook in low heat with continuous stirring until the paste becomes gooey (honey consistency).\n" +
+                        "For making Yomari:\n" +
+                        "--------------------\n"+
+                        "In a bowl, take rice flour and wheat flour, mix them together and add around one and half cup of lukewarm water. Mix it together using your hand or food processer. Dough should be very soft but not runny. Add some water if it’s hard and some more rice floor if it’s runny.\n" +
+                        "Then oil your hand with vegetable oil to make sure that dough doesn’t stick to your hand. Take a small portion of dough in your hand; start making the shape of Yomari and cavity for fillings with your index finger. Fill the Yomari with the fillings. Check out this video for making the Yomari.\n" +
+                        "Steam Yomari in a momo steamer for around 10-15 mins. Sweet and fluffy Yomari is ready. Eat it when it is hot.  I love the bitter sweetness of Chaku and nuttiness of roasted sesame seed and cashew nuts.",R.drawable.yomarimaking), "Making of Yomari");
+                break;
 //            case 15:
 //                titletext.setText(getText(R.string.gathamuga_title));
 //                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
