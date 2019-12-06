@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -51,6 +51,7 @@ public class DetailActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     TextView link;
+    CardView card;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +61,7 @@ public class DetailActivity extends AppCompatActivity {
         collapsingToolbarLayout = findViewById(R.id.toolbar_layout);
         toolbar = findViewById(R.id.toolbar);
         link = findViewById(R.id.link_tabbed);
-
+        card= findViewById(R.id.card_bottom);
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
 
@@ -140,6 +141,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 15:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailGathamugaFragment fragment15 = new DetailGathamugaFragment();
                 transaction.replace(R.id.container, fragment15);
                 transaction.commit();
@@ -156,6 +158,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 17:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailPulukisiFragment fragment17 = new DetailPulukisiFragment();
                 transaction.replace(R.id.container, fragment17);
                 transaction.commit();
@@ -163,6 +166,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.pulukisi_title);
                 break;
             case 18:
+                card.setVisibility(View.INVISIBLE);
                 DetailNagarkotFragment fragment18 = new DetailNagarkotFragment();
                 transaction.replace(R.id.container, fragment18);
                 transaction.commit();
@@ -170,6 +174,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.nagarkot_title);
                 break;
             case 19:
+                card.setVisibility(View.INVISIBLE);
                 DetailPilotbabaFragment fragment19 = new DetailPilotbabaFragment();
                 transaction.replace(R.id.container, fragment19);
                 transaction.commit();
@@ -177,6 +182,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.pilotbaba_title);
                 break;
             case 20:
+                card.setVisibility(View.INVISIBLE);
                 DetailRanikotFragment fragment20 = new DetailRanikotFragment();
                 transaction.replace(R.id.container, fragment20);
                 transaction.commit();
@@ -184,6 +190,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.ranikot_title);
                 break;
             case 21:
+                card.setVisibility(View.INVISIBLE);
                 DetailManjushreeFragment fragment21 = new DetailManjushreeFragment();
                 transaction.replace(R.id.container, fragment21);
                 transaction.commit();
@@ -191,6 +198,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.manjushree_title);
                 break;
             case 23:
+                card.setVisibility(View.INVISIBLE);
                 fab.setVisibility(View.INVISIBLE);
                 DetailGhyampeFragment fragment23 = new DetailGhyampeFragment();
                 transaction.replace(R.id.container, fragment23);
@@ -199,6 +207,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.ghyampe_title);
                 break;
             case 24:
+                card.setVisibility(View.INVISIBLE);
                 DetailMuhanFragment fragment24 = new DetailMuhanFragment();
                 transaction.replace(R.id.container, fragment24);
                 transaction.commit();
@@ -207,6 +216,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 40:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailDhauFragment fragment40 = new DetailDhauFragment();
                 transaction.replace(R.id.container, fragment40);
                 transaction.commit();
@@ -214,6 +224,7 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.dhau_title);
                 break;
             case 41:
+                card.setVisibility(View.INVISIBLE);
                 fab.setVisibility(View.INVISIBLE);
                 DetailYomarisFragment fragment41 = new DetailYomarisFragment();
                 transaction.replace(R.id.container, fragment41);
@@ -223,6 +234,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 42:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailSamebajiFragment fragment42 = new DetailSamebajiFragment();
                 transaction.replace(R.id.container, fragment42);
                 transaction.commit();
@@ -231,6 +243,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 43:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailSwopukaFragment fragment43 = new DetailSwopukaFragment();
                 transaction.replace(R.id.container, fragment43);
                 transaction.commit();
@@ -239,6 +252,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 44:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailChoyelaFragment fragment44 = new DetailChoyelaFragment();
                 transaction.replace(R.id.container, fragment44);
                 transaction.commit();
@@ -247,6 +261,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 45:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailKachilaFragment fragment45 = new DetailKachilaFragment();
                 transaction.replace(R.id.container, fragment45);
                 transaction.commit();
@@ -255,6 +270,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 46:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailNyakhwaFragment fragment46 = new DetailNyakhwaFragment();
                 transaction.replace(R.id.container, fragment46);
                 transaction.commit();
@@ -263,6 +279,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 47:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailTakhaaFragment fragment47 = new DetailTakhaaFragment();
                 transaction.replace(R.id.container, fragment47);
                 transaction.commit();
@@ -271,6 +288,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 48:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailBaraFragment fragment48 = new DetailBaraFragment();
                 transaction.replace(R.id.container, fragment48);
                 transaction.commit();
@@ -279,6 +297,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case 49:
                 fab.setVisibility(View.INVISIBLE);
+                card.setVisibility(View.INVISIBLE);
                 DetailChatamariFragment fragment49 = new DetailChatamariFragment();
                 transaction.replace(R.id.container, fragment49);
                 transaction.commit();

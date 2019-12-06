@@ -77,9 +77,9 @@ ViewPager viewPager;
             case 11:
             case 22:
                 titletext.setText(getText(R.string.changu_title));
-                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.",R.drawable.changu1), "Changu Front View");
-                adapter.addFragment(new MapFragment("Changu Narayan",R.drawable.changu2), "Changu Blue Sky");
-                adapter.addFragment(new DetailedFragment("Hello everyone",R.drawable.changu3), "Gate");
+                adapter.addFragment(new FamousHereFragment("Changu Narayan the oldest temple in the Nepal built in Lichhavi period.Listed in World Heritage site.",R.drawable.changu1), "Changu Fact");
+                adapter.addFragment(new MapFragment("Here is a musium Changu Musium which has the excellent collection of ancient coins, tools, arts, and architectures. ",R.drawable.changu_mueseum), "Mueseum");
+                adapter.addFragment(new DetailedFragment("Chanda Narayan (Garuda Narayan):- a 7th century stone sculpture of Vishnu riding on Garuda.Sridhar Vishnu:- 9th century stone sculpture of Vishnu, Laxmi, and Garuda which stands on the pedestals of various motifs.",R.drawable.changu2), "Detail Info");
                 break;
 //            case 12:
 //                titletext.setText(getText(R.string.ghintangisi_title));
@@ -99,126 +99,24 @@ ViewPager viewPager;
 //                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
 //                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
 //                break;
-//            case 15:
-//                titletext.setText(getText(R.string.gathamuga_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
             case 16:
                 titletext.setText("Biska Jatra");
                 adapter.addFragment(new FamousHereFragment("Folks from various parts of Madhyapur Thimi gather, carrying their own chariots in Layeku Thimi.",R.drawable.biska1jatra), "Sindur Jatra");
                 adapter.addFragment(new MapFragment("An approximately 25 meter Yoh si Dyo is erected in the yosi khyo in new year eve aand is pulled down in its own way in evening of new year.",R.drawable.biska2jatra), "Lyo Si Dyo");
                 adapter.addFragment(new DetailedFragment("Is stoodup at Morning of new year eve. After it is stood up different rituals and pujas are done.It is kept standing for five days. It is stood up at pottery square.",R.drawable.biska3jatra), "Lha Maru Lyo Si Dyo");
                 break;
-//            case 17:
-//                titletext.setText(getText(R.string.pulukisi_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 18:
-//                titletext.setText(getText(R.string.nagarkot_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 19:
-//                titletext.setText(getText(R.string.pilotbaba_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 20:
-//                titletext.setText(getText(R.string.ranikot_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 21:
-//                titletext.setText(getText(R.string.manjushree_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 23:
-//                titletext.setText(getText(R.string.ghyampe_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 24:
-//                titletext.setText(getText(R.string.muhan_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 40:
-//                titletext.setText(getText(R.string.dhau_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 41:
-//                titletext.setText(getText(R.string.yomari_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 42:
-//                titletext.setText(getText(R.string.samebaji_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 43:
-//                titletext.setText(getText(R.string.swo_puka_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 44:
-//                titletext.setText(getText(R.string.choila_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 45:
-//                titletext.setText(getText(R.string.kachila_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 46:
-//                titletext.setText(getText(R.string.nyakhwa_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 47:
-//                titletext.setText(getText(R.string.takha_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 48:
-//                titletext.setText(getText(R.string.bara_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            case 49:
-//                titletext.setText(getText(R.string.chatamari_title));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
-//            default:
-//                titletext.setText(getText(R.string.service_text));
-//                adapter.addFragment(new FamousHereFragment("Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail.","Made without using single iron nail."), "tab 1");
-//                adapter.addFragment(new MapFragment("hi you !!"), "tab 2");
-//                adapter.addFragment(new DetailedFragment("Hello everyone"), "tab 3");
-//                break;
+            case 17:
+                titletext.setText(getText(R.string.pulukisi_title));
+                adapter.addFragment(new FamousHereFragment("Folks from various parts of Madhyapur Thimi gather, carrying their own chariots in Layeku Thimi.",R.drawable.biska1jatra), "Sindur Jatra");
+                adapter.addFragment(new MapFragment("An approximately 25 meter Yoh si Dyo is erected in the yosi khyo in new year eve aand is pulled down in its own way in evening of new year.",R.drawable.biska2jatra), "Lyo Si Dyo");
+                adapter.addFragment(new DetailedFragment("Is stoodup at Morning of new year eve. After it is stood up different rituals and pujas are done.It is kept standing for five days. It is stood up at pottery square.",R.drawable.biska3jatra), "Lha Maru Lyo Si Dyo");
+                break;
+            default:
+                titletext.setText(getText(R.string.service_text));
+                adapter.addFragment(new FamousHereFragment("Folks from various parts of Madhyapur Thimi gather, carrying their own chariots in Layeku Thimi.",R.drawable.biska1jatra), "Sindur Jatra");
+                adapter.addFragment(new MapFragment("An approximately 25 meter Yoh si Dyo is erected in the yosi khyo in new year eve aand is pulled down in its own way in evening of new year.",R.drawable.biska2jatra), "Lyo Si Dyo");
+                adapter.addFragment(new DetailedFragment("Is stoodup at Morning of new year eve. After it is stood up different rituals and pujas are done.It is kept standing for five days. It is stood up at pottery square.",R.drawable.biska3jatra), "Lha Maru Lyo Si Dyo");
+                break;
         }
         viewPager.setAdapter(adapter);
     }

@@ -58,6 +58,7 @@
             app:cardCornerRadius="10dp"
             android:elevation="3dp"
             android:layout_margin="10dp"
+            android:id="@+id/card_bottom"
             android:backgroundTint="@color/colorPrimaryDark"
             android:layout_gravity="center_horizontal"
             >
