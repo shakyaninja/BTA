@@ -163,7 +163,6 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.pulukisi_title);
                 break;
             case 18:
-                link.setVisibility(View.INVISIBLE);
                 DetailNagarkotFragment fragment18 = new DetailNagarkotFragment();
                 transaction.replace(R.id.container, fragment18);
                 transaction.commit();
@@ -171,7 +170,6 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.nagarkot_title);
                 break;
             case 19:
-                link.setVisibility(View.INVISIBLE);
                 DetailPilotbabaFragment fragment19 = new DetailPilotbabaFragment();
                 transaction.replace(R.id.container, fragment19);
                 transaction.commit();
@@ -179,7 +177,6 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.pilotbaba_title);
                 break;
             case 20:
-                link.setVisibility(View.INVISIBLE);
                 DetailRanikotFragment fragment20 = new DetailRanikotFragment();
                 transaction.replace(R.id.container, fragment20);
                 transaction.commit();
@@ -187,7 +184,6 @@ public class DetailActivity extends AppCompatActivity {
                 toolbar.setTitle(R.string.ranikot_title);
                 break;
             case 21:
-                link.setVisibility(View.INVISIBLE);
                 DetailManjushreeFragment fragment21 = new DetailManjushreeFragment();
                 transaction.replace(R.id.container, fragment21);
                 transaction.commit();
