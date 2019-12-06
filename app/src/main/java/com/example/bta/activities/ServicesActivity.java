@@ -3,7 +3,7 @@ package com.example.bta.activities;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bta.R;
@@ -21,18 +21,20 @@ AdapterServices adapterServices;
         setContentView(R.layout.activity_services);
         linearServices();
         recyclerView = findViewById(R.id.serviceGrid);
-        RecyclerView.LayoutManager  layoutManager = new GridLayoutManager(this,2,RecyclerView.VERTICAL,false);
+        RecyclerView.LayoutManager  layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         adapterServices= new AdapterServices(this, arrayList);
         recyclerView.setAdapter(adapterServices);
     }
     private void linearServices(){
         arrayList = new ArrayList<>();
-        arrayList.add(new Services("Restaurant",R.drawable.ic_restaurant));
-        arrayList.add(new Services("Emergency",R.drawable.ic_emergency_contact));
-        arrayList.add(new Services("Toilet",R.drawable.ic_toilet));
-        arrayList.add(new Services("Bus Stop",R.drawable.ic_bus_stop));
-        arrayList.add(new Services("Money Exchange",R.drawable.ic_currency_big));
-        arrayList.add((new Services("Health",R.drawable.ic_local_hospital_black_24dp)));
+        arrayList.add(new Services("Restaurant","Nearby Service",R.drawable.restaurant_image));
+        arrayList.add(new Services("Emergency","Safety Service",R.drawable.emergency_image));
+        arrayList.add(new Services("Washroom","Comfort Service",R.drawable.washroom_image2));
+        arrayList.add(new Services("Nearby Washroom","Nearby Service",R.drawable.restroom_image));
+        arrayList.add(new Services("Bus Stop","Destination Service",R.drawable.busstop_image));
+        arrayList.add(new Services("Money Exchange","Comfort Service",R.drawable.currency_image));
+        arrayList.add((new Services("Hospitals","Health Care Service",R.drawable.health_image)));
+        arrayList.add((new Services("Guide","Comfort Service",R.drawable.guide_img)));
     }
 }
