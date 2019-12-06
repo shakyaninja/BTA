@@ -18,6 +18,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
+
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
@@ -233,7 +234,6 @@ protected String url;
                     mid_latitude = (shortest.latitude + current_latitude[0])/2;
                     mid_longitude = (shortest.longitude + current_longitude[0])/2;
                     url = "https://www.google.com/maps/dir/'"+ current_latitude[0] +","+ current_longitude[0] +"'/'"+shortest.latitude+","+shortest.longitude+"'/@"+mid_latitude+","+mid_longitude+",12z";
-                    Toast.makeText(ViewWeb.this, url, Toast.LENGTH_SHORT).show();
                     webView.loadUrl(url);
                 }
             }
