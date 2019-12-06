@@ -13,8 +13,6 @@
         android:theme="@style/AppBarOverlay"
         android:backgroundTint="@color/colorPrimary"
         android:id="@+id/app_bar">
-
-
         <TextView
             android:id="@+id/title_detail"
             android:layout_width="match_parent"
@@ -35,6 +33,5 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha= "0.2"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 </LinearLayout>
