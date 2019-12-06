@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bta.R;
@@ -39,9 +41,10 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterServices.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.imageView.setImageResource(arrayList.get(position).getImage());
         holder.textView.setText(arrayList.get(position).getName());
+        holder.descriptionView.setText(arrayList.get(position).getDescription());
     }
 
     @Override
@@ -51,12 +54,16 @@ public class AdapterServices extends RecyclerView.Adapter<AdapterServices.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder{
         protected ImageView imageView;
         protected TextView textView;
+        protected TextView descriptionView;
+        private LinearLayout linearLayout;
         int position;
         public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.serviceImage);
             textView = itemView.findViewById(R.id.serviceTitle);
-            imageView.setOnClickListener(new View.OnClickListener() {
+            descriptionView = itemView.findViewById(R.id.serviceDescript);
+            linearLayout = itemView.findViewById(R.id.linearView);
+            linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     position = getAdapterPosition();
